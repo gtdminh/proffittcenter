@@ -179,7 +179,8 @@ public class Balance extends EscapeDialog {
     }
 
 
-    /** Creates new form Balance */
+    /** Creates new form Balance
+     * @param parent */
     public Balance(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();

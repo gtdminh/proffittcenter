@@ -18,7 +18,6 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.prefs.Preferences;
-import javax.swing.JRootPane;
 
 /**
  *
@@ -112,8 +111,6 @@ public class Offer extends EscapeDialog {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        startChooser = new com.toedter.calendar.JDateChooser();
-        endChooser = new com.toedter.calendar.JDateChooser();
         offerPriceText = new javax.swing.JTextField();
         kindCombo = new javax.swing.JComboBox();
         quantitySpinner = new javax.swing.JSpinner();
@@ -237,12 +234,6 @@ public class Offer extends EscapeDialog {
         jLabel8.setText(bundle.getString("Offer.jLabel8.text")); // NOI18N
         jLabel8.setName("jLabel8"); // NOI18N
 
-        startChooser.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        startChooser.setName("startChooser"); // NOI18N
-
-        endChooser.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        endChooser.setName("endChooser"); // NOI18N
-
         offerPriceText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         offerPriceText.setName("offerPriceText"); // NOI18N
         offerPriceText.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -304,8 +295,6 @@ public class Offer extends EscapeDialog {
                             .addComponent(limitSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
                             .addComponent(offerPriceText, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
                             .addComponent(productPriceText, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
-                            .addComponent(endChooser, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
-                            .addComponent(startChooser, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(kindCombo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -348,15 +337,9 @@ public class Offer extends EscapeDialog {
                     .addComponent(productPriceText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(startChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                        .addComponent(endChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                        .addComponent(jLabel8)))
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(jLabel8)
                 .addGap(8, 8, 8)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -669,7 +652,6 @@ public class Offer extends EscapeDialog {
     private javax.swing.JButton addProductButton;
     private javax.swing.JButton closeBtn;
     private javax.swing.JTextField descriptionText;
-    private com.toedter.calendar.JDateChooser endChooser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -687,6 +669,5 @@ public class Offer extends EscapeDialog {
     private javax.swing.JTextField productPriceText;
     private javax.swing.JTextField productText;
     private javax.swing.JSpinner quantitySpinner;
-    private com.toedter.calendar.JDateChooser startChooser;
     // End of variables declaration//GEN-END:variables
 }

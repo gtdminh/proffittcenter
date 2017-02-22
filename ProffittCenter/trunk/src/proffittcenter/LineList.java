@@ -111,7 +111,7 @@ public class LineList implements Iterator {
     }
 
     public LineList() {
-        lines = new ArrayList<proffittcenterworkingcopy.Line>();
+        lines = new ArrayList<proffittcenter.Line>();
         toPay = 0;
         tax1 = 0;
         lineSelected = -1;
