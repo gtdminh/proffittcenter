@@ -65,14 +65,17 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="tillIdSpinner" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="tillIdSpinner" min="-2" pref="41" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jDateChooser1" min="-2" pref="116" max="-2" attributes="0"/>
+                      </Group>
                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jDateChooser1" min="-2" pref="116" max="-2" attributes="0"/>
-                          <EmptySpace pref="826" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="895" max="32767" attributes="0"/>
                           <Component id="calculateButton" min="-2" pref="22" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="printButton" min="-2" pref="22" max="-2" attributes="0"/>
@@ -97,7 +100,7 @@
                               <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="10" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -168,11 +171,6 @@
             <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
-          <Properties>
-            <Property name="name" type="java.lang.String" value="jDateChooser1" noResource="true"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JSpinner" name="tillIdSpinner">
           <Properties>
             <Property name="name" type="java.lang.String" value="tillIdSpinner" noResource="true"/>
@@ -187,6 +185,11 @@
               <ResourceString bundle="proffittcenterworkingcopy/resource/Takings.properties" key="Print" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="name" type="java.lang.String" value="jLabel4" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jDateChooser1" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>

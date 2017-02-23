@@ -139,7 +139,7 @@ public class Main {
     public static HelpBroker mainHelpBroker = null;
     public static CSH.DisplayHelpFromSource csh = null;
     public static final String mainHelpSetName = "InnoSetupFiles/Html/ProffittCenter.hs";
-    private static final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Main");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Main");
     public static final Logger logger = Logger.getLogger("");
     static FileHandler fHandler;
     public static TempProducts tempProducts;

@@ -24,7 +24,7 @@ import javax.help.CSH;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import static proffittcenterworkingcopy.DatabaseCreate.connectionQuery;
+import static proffittcenter.DatabaseCreate.connectionQuery;
 
 /**
  *
@@ -93,7 +93,7 @@ public class Server extends javax.swing.JPanel {
         setName(bundle.getString("Server.name")); // NOI18N
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation"); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation"); // NOI18N
         jLabel5.setText(bundle1.getString("Settings.jLabel5.text")); // NOI18N
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jLabel5.setName("jLabel5"); // NOI18N
@@ -126,7 +126,7 @@ public class Server extends javax.swing.JPanel {
 
         jPassword2.setName("jPassword2"); // NOI18N
 
-        createDatabaseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/CreateDatabase.png"))); // NOI18N
+        createDatabaseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/CreateDatabase.png"))); // NOI18N
         createDatabaseButton.setToolTipText(bundle.getString("CreateDatabase")); // NOI18N
         createDatabaseButton.setContentAreaFilled(false);
         createDatabaseButton.setEnabled(false);
@@ -137,7 +137,7 @@ public class Server extends javax.swing.JPanel {
             }
         });
 
-        createTablesButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/CreateTables.png"))); // NOI18N
+        createTablesButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/CreateTables.png"))); // NOI18N
         createTablesButton.setToolTipText(bundle.getString("CreateTables")); // NOI18N
         createTablesButton.setContentAreaFilled(false);
         createTablesButton.setEnabled(false);
@@ -185,11 +185,12 @@ public class Server extends javax.swing.JPanel {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText(bundle.getString("Server.jTextArea1.text")); // NOI18N
+        java.util.ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("proffittcenter/resource/Settings"); // NOI18N
+        jTextArea1.setText(bundle2.getString("Server.jTextArea1.text")); // NOI18N
         jTextArea1.setName("jTextArea1"); // NOI18N
         jScrollPane1.setViewportView(jTextArea1);
 
-        locateDropbox.setText(bundle.getString("Server.locateDropbox.text")); // NOI18N
+        locateDropbox.setText(bundle2.getString("Server.locateDropbox.text")); // NOI18N
         locateDropbox.setName("locateDropbox"); // NOI18N
         locateDropbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,7 +201,7 @@ public class Server extends javax.swing.JPanel {
         dropboxLocation.setText(bundle.getString("Server.dropboxLocation.text")); // NOI18N
         dropboxLocation.setName("dropboxLocation"); // NOI18N
 
-        connectButton.setText(bundle.getString("Server.connectButton.text")); // NOI18N
+        connectButton.setText(bundle2.getString("Server.connectButton.text")); // NOI18N
         connectButton.setName("connectButton"); // NOI18N
         connectButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,10 +209,10 @@ public class Server extends javax.swing.JPanel {
             }
         });
 
-        connectionLabel.setText(bundle.getString("Server.connectionLabel.text")); // NOI18N
+        connectionLabel.setText(bundle2.getString("Server.connectionLabel.text")); // NOI18N
         connectionLabel.setName("connectionLabel"); // NOI18N
 
-        testConnectionButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Test.png"))); // NOI18N
+        testConnectionButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Test.png"))); // NOI18N
         testConnectionButton.setToolTipText(bundle.getString("server.Test")); // NOI18N
         testConnectionButton.setContentAreaFilled(false);
         testConnectionButton.setName("testConnectionButton"); // NOI18N
@@ -221,7 +222,7 @@ public class Server extends javax.swing.JPanel {
             }
         });
 
-        dropboxButton.setText(bundle.getString("Server.dropboxButton.text")); // NOI18N
+        dropboxButton.setText(bundle2.getString("Server.dropboxButton.text")); // NOI18N
         dropboxButton.setName("dropboxButton"); // NOI18N
         dropboxButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

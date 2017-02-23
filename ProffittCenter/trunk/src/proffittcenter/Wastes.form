@@ -89,13 +89,13 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jDateChooser1" min="-2" pref="107" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jDateChooser1" min="-2" pref="107" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jDateChooser2" min="-2" pref="106" max="-2" attributes="0"/>
-                  <EmptySpace pref="181" max="32767" attributes="0"/>
+                  <EmptySpace pref="367" max="32767" attributes="0"/>
                   <Component id="jLabel3" min="-2" pref="94" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="totalChargeTextField" min="-2" pref="105" max="-2" attributes="0"/>
@@ -117,13 +117,16 @@
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="okButton" linkSize="1" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                          <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jDateChooser1" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jDateChooser2" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Component id="closeButton" linkSize="1" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jDateChooser2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -133,8 +136,8 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="closeButton">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Close24.png"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proffittcenter/resource/Close24.png"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -148,33 +151,23 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/SalesBy.properties" key="SalesBy.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/SalesBy.properties" key="SalesBy.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
-          <Properties>
-            <Property name="name" type="java.lang.String" value="jDateChooser1" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/SalesBy.properties" key="SalesBy.jLabel2.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/SalesBy.properties" key="SalesBy.jLabel2.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="name" type="java.lang.String" value="jLabel2" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
-          <Properties>
-            <Property name="name" type="java.lang.String" value="jDateChooser2" noResource="true"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="okButton">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/OK.png"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proffittcenter/resource/OK.png"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -193,9 +186,19 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="11"/>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/Wastes.properties" key="Charge" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)+&quot; (&quot;+Main.shop.poundSymbol+&quot;)&quot;"/>
+              <ResourceString bundle="proffittcenter/resource/Wastes.properties" key="Charge" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)+&quot; (&quot;+Main.shop.poundSymbol+&quot;)&quot;"/>
             </Property>
             <Property name="name" type="java.lang.String" value="jLabel3" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jDateChooser1" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jDateChooser2" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>

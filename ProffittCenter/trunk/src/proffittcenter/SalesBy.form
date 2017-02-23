@@ -68,13 +68,13 @@
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="toDateChooser" min="-2" pref="105" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
                   <Component id="okButton" min="-2" pref="22" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="closeButton2" min="-2" pref="22" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="175" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -84,12 +84,12 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
                       <Component id="jLabel1" alignment="2" min="-2" max="-2" attributes="0"/>
-                      <Component id="fromDateChooser" alignment="2" min="-2" max="-2" attributes="0"/>
-                      <Component id="toDateChooser" alignment="2" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="2" min="-2" max="-2" attributes="0"/>
                       <Component id="okButton" alignment="2" min="-2" pref="22" max="-2" attributes="1"/>
                       <Component id="closeButton2" alignment="2" min="-2" pref="22" max="-2" attributes="1"/>
                       <Component id="jLabel3" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="fromDateChooser" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="toDateChooser" alignment="2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -100,7 +100,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/SalesBy.properties" key="SalesBy.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/SalesBy.properties" key="SalesBy.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
           </Properties>
@@ -108,19 +108,9 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/SalesBy.properties" key="SalesBy.jLabel2.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/SalesBy.properties" key="SalesBy.jLabel2.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="name" type="java.lang.String" value="jLabel2" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="fromDateChooser">
-          <Properties>
-            <Property name="name" type="java.lang.String" value="fromDateChooser" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="toDateChooser">
-          <Properties>
-            <Property name="name" type="java.lang.String" value="toDateChooser" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="okButton">
@@ -150,9 +140,19 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/SalesBy.properties" key="jLabel3" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/SalesBy.properties" key="jLabel3" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="name" type="java.lang.String" value="jLabel3" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="fromDateChooser">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="fromDateChooser" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="toDateChooser">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="toDateChooser" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>

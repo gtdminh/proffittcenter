@@ -46,14 +46,19 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="supplierText" pref="191" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="weeksCreditText" min="-2" pref="61" max="-2" attributes="1"/>
+                                  <Component id="daysSpareText" alignment="0" min="-2" pref="123" max="-2" attributes="1"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="weeksCreditText" alignment="0" max="32767" attributes="1"/>
-                              <Component id="nextDeliveryDateChooser" alignment="0" max="32767" attributes="1"/>
-                              <Component id="deliveryDateChooser" alignment="0" max="32767" attributes="1"/>
-                              <Component id="daysSpareText" alignment="0" pref="123" max="32767" attributes="1"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="nextDeliveryDateChooser" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="supplierText" pref="282" max="32767" attributes="0"/>
+                                  <Component id="deliveryDateChooser" alignment="0" max="32767" attributes="1"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -72,24 +77,26 @@
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel2" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" pref="22" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" pref="22" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="daysSpareText" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="deliveryDateChooser" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="nextDeliveryDateChooser" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="weeksCreditText" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                   </Group>
+              </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel4" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="weeksCreditText" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
@@ -106,7 +113,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/OrderCreate.properties" key="OrderCreate.jLabel1.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/OrderCreate.properties" key="OrderCreate.jLabel1.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
       </Properties>
@@ -118,7 +125,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/OrderCreate.properties" key="OrderCreate.jLabel2.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/OrderCreate.properties" key="OrderCreate.jLabel2.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel2" noResource="true"/>
       </Properties>
@@ -130,7 +137,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/OrderCreate.properties" key="OrderCreate.jLabel3.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/OrderCreate.properties" key="OrderCreate.jLabel3.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel3" noResource="true"/>
       </Properties>
@@ -142,7 +149,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/OrderCreate.properties" key="OrderCreate.jLabel4.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/OrderCreate.properties" key="OrderCreate.jLabel4.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel4" noResource="true"/>
       </Properties>
@@ -240,19 +247,19 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/OrderCreate.properties" key="OrderCreate.jLabel5.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/OrderCreate.properties" key="OrderCreate.jLabel5.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel5" noResource="true"/>
-      </Properties>
-    </Component>
-    <Component class="com.toedter.calendar.JDateChooser" name="deliveryDateChooser">
-      <Properties>
-        <Property name="name" type="java.lang.String" value="deliveryDateChooser" noResource="true"/>
       </Properties>
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="nextDeliveryDateChooser">
       <Properties>
         <Property name="name" type="java.lang.String" value="nextDeliveryDateChooser" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="deliveryDateChooser">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="deliveryDateChooser" noResource="true"/>
       </Properties>
     </Component>
   </SubComponents>

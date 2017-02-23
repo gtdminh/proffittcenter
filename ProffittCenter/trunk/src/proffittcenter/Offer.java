@@ -117,6 +117,7 @@ public class Offer extends EscapeDialog {
         limitSpinner = new javax.swing.JSpinner();
         productPriceText = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        addProductButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Offer"); // NOI18N
@@ -270,6 +271,15 @@ public class Offer extends EscapeDialog {
         jLabel9.setText(bundle.getString("Offer.jLabel9.text")); // NOI18N
         jLabel9.setName("jLabel9"); // NOI18N
 
+        addProductButton1.setBorderPainted(false);
+        addProductButton1.setContentAreaFilled(false);
+        addProductButton1.setName("addProductButton1"); // NOI18N
+        addProductButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addProductButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -300,6 +310,8 @@ public class Offer extends EscapeDialog {
                                     .addComponent(kindCombo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(productText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(addProductButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(addProductButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -315,7 +327,8 @@ public class Offer extends EscapeDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(addProductButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(productText)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addComponent(addProductButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(descriptionText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -630,6 +643,21 @@ public class Offer extends EscapeDialog {
         getRootPane().setDefaultButton(okButton);
     }//GEN-LAST:event_quantitySpinnerStateChanged
 
+    private void addProductButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButton1ActionPerformed
+        //this product is being added to an offer
+        //so fill in price, limit, dates and offer id
+        limitSpinner.setValue(limit);
+        offerPriceText.setText((new Money(y).toString()));
+        kindCombo.setSelectedIndex(kindIndex);
+        quantitySpinner.setValue(quantity);
+        startChooser.setCalendar(startCal);
+        endChooser.setCalendar(endCal);
+        addPressed = true;
+        productText.setText("");
+        productText.requestFocus();
+        getRootPane().setDefaultButton(okButton);
+    }//GEN-LAST:event_addProductButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -650,6 +678,7 @@ public class Offer extends EscapeDialog {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addProductButton;
+    private javax.swing.JButton addProductButton1;
     private javax.swing.JButton closeBtn;
     private javax.swing.JTextField descriptionText;
     private javax.swing.JLabel jLabel1;

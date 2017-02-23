@@ -102,11 +102,11 @@ public class SalesBy extends EscapeDialog {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        fromDateChooser = new com.toedter.calendar.JDateChooser();
-        toDateChooser = new com.toedter.calendar.JDateChooser();
         okButton = new javax.swing.JButton();
         closeButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        fromDateChooser = new com.toedter.calendar.JDateChooser();
+        toDateChooser = new com.toedter.calendar.JDateChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -117,15 +117,12 @@ public class SalesBy extends EscapeDialog {
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        jLabel1.setText(bundle.getString("SalesBy.jLabel1.text")); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/SalesBy"); // NOI18N
+        jLabel1.setText(bundle1.getString("SalesBy.jLabel1.text")); // NOI18N
         jLabel1.setName("jLabel1"); // NOI18N
 
-        jLabel2.setText(bundle.getString("SalesBy.jLabel2.text")); // NOI18N
+        jLabel2.setText(bundle1.getString("SalesBy.jLabel2.text")); // NOI18N
         jLabel2.setName("jLabel2"); // NOI18N
-
-        fromDateChooser.setName("fromDateChooser"); // NOI18N
-
-        toDateChooser.setName("toDateChooser"); // NOI18N
 
         okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
@@ -145,8 +142,12 @@ public class SalesBy extends EscapeDialog {
             }
         });
 
-        jLabel3.setText(bundle.getString("jLabel3")); // NOI18N
+        jLabel3.setText(bundle1.getString("jLabel3")); // NOI18N
         jLabel3.setName("jLabel3"); // NOI18N
+
+        fromDateChooser.setName("fromDateChooser"); // NOI18N
+
+        toDateChooser.setName("toDateChooser"); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -167,7 +168,7 @@ public class SalesBy extends EscapeDialog {
                 .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(closeButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,12 +176,12 @@ public class SalesBy extends EscapeDialog {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel1)
-                    .addComponent(fromDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(toDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(closeButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(fromDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(toDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 

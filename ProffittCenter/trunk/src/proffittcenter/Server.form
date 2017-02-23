@@ -154,7 +154,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/CashupReconciliation.properties" key="Settings.jLabel5.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/CashupReconciliation.properties" key="Settings.jLabel5.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="name" type="java.lang.String" value="jLabel5" noResource="true"/>
@@ -169,7 +169,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/CashupReconciliation.properties" key="Settings.jLabel6.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/CashupReconciliation.properties" key="Settings.jLabel6.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="name" type="java.lang.String" value="jLabel6" noResource="true"/>
@@ -184,7 +184,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/CashupReconciliation.properties" key="Settings.jLabel7.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/CashupReconciliation.properties" key="Settings.jLabel7.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="name" type="java.lang.String" value="jLabel7" noResource="true"/>
@@ -194,7 +194,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/CashupReconciliation.properties" key="Settings.jLabel8.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/CashupReconciliation.properties" key="Settings.jLabel8.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="name" type="java.lang.String" value="jLabel8" noResource="true"/>
@@ -209,7 +209,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/CashupReconciliation.properties" key="Settings.jLabel9.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/CashupReconciliation.properties" key="Settings.jLabel9.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="name" type="java.lang.String" value="jLabel9" noResource="true"/>
@@ -223,7 +223,7 @@
     <Component class="javax.swing.JButton" name="createDatabaseButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/proffittcenterworkingcopy/resource/CreateDatabase.png"/>
+          <Image iconType="3" name="/proffittcenter/resource/CreateDatabase.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="proffittcenterworkingcopy/resource/Settings.properties" key="CreateDatabase" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
@@ -239,7 +239,7 @@
     <Component class="javax.swing.JButton" name="createTablesButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/proffittcenterworkingcopy/resource/CreateTables.png"/>
+          <Image iconType="3" name="/proffittcenter/resource/CreateTables.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="proffittcenterworkingcopy/resource/Settings.properties" key="CreateTables" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
@@ -316,7 +316,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/Settings.properties" key="Server.jTextArea1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/Settings.properties" key="Server.jTextArea1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="name" type="java.lang.String" value="jTextArea1" noResource="true"/>
           </Properties>
@@ -326,7 +326,7 @@
     <Component class="javax.swing.JButton" name="locateDropbox">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/Settings.properties" key="Server.locateDropbox.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Settings.properties" key="Server.locateDropbox.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="locateDropbox" noResource="true"/>
       </Properties>
@@ -345,7 +345,7 @@
     <Component class="javax.swing.JButton" name="connectButton">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/Settings.properties" key="Server.connectButton.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Settings.properties" key="Server.connectButton.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="connectButton" noResource="true"/>
       </Properties>
@@ -356,7 +356,7 @@
     <Component class="javax.swing.JLabel" name="connectionLabel">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/Settings.properties" key="Server.connectionLabel.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Settings.properties" key="Server.connectionLabel.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="connectionLabel" noResource="true"/>
       </Properties>
@@ -364,7 +364,7 @@
     <Component class="javax.swing.JButton" name="testConnectionButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/proffittcenterworkingcopy/resource/Test.png"/>
+          <Image iconType="3" name="/proffittcenter/resource/Test.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="proffittcenterworkingcopy/resource/Settings.properties" key="server.Test" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
@@ -379,7 +379,7 @@
     <Component class="javax.swing.JButton" name="dropboxButton">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/Settings.properties" key="Server.dropboxButton.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Settings.properties" key="Server.dropboxButton.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="dropboxButton" noResource="true"/>
       </Properties>
