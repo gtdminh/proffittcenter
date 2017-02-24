@@ -29,7 +29,7 @@ import javax.swing.table.TableColumnModel;
 public class Departments extends EscapeDialog {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Departments");
+    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Departments");
     private Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("ID"));
@@ -148,13 +148,13 @@ public class Departments extends EscapeDialog {
         closeButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Departments"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Departments"); // NOI18N
         setTitle(bundle.getString("Departments.title")); // NOI18N
         setName("Departments"); // NOI18N
 
         jPanel1.setName("Departments"); // NOI18N
 
-        newBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/plus.png"))); // NOI18N
+        newBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/plus.png"))); // NOI18N
         newBtn.setContentAreaFilled(false);
         newBtn.setName("newBtn"); // NOI18N
         newBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -163,7 +163,7 @@ public class Departments extends EscapeDialog {
             }
         });
 
-        updateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        updateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         updateBtn.setContentAreaFilled(false);
         updateBtn.setName("updateBtn"); // NOI18N
         updateBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -190,7 +190,7 @@ public class Departments extends EscapeDialog {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        deleteBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Minus.png"))); // NOI18N
+        deleteBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Minus.png"))); // NOI18N
         deleteBtn.setContentAreaFilled(false);
         deleteBtn.setName("deleteBtn"); // NOI18N
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -199,7 +199,7 @@ public class Departments extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {

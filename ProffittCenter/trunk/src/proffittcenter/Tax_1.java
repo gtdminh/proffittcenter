@@ -91,7 +91,7 @@ public class Tax_1 extends EscapeDialog {
         jId = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Tax"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Tax"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("Tax"); // NOI18N
 
@@ -111,7 +111,7 @@ public class Tax_1 extends EscapeDialog {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setName("jPanel1"); // NOI18N
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +125,7 @@ public class Tax_1 extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N

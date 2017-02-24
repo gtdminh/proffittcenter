@@ -33,7 +33,7 @@ import javax.swing.table.TableColumnModel;
 public class Customers extends EscapeDialog {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Customers");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Customers");
     private Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("ID"));
@@ -295,7 +295,7 @@ public class Customers extends EscapeDialog {
         FormListener formListener = new FormListener();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Customers"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customers"); // NOI18N
         setTitle(bundle.getString("Customers.title_1")); // NOI18N
         setLocationByPlatform(true);
         setModal(true);
@@ -318,24 +318,24 @@ public class Customers extends EscapeDialog {
         jPanel1.setFocusable(false);
         jPanel1.addFocusListener(formListener);
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setToolTipText(bundle.getString("Customers.closeButton.toolTipText")); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.addActionListener(formListener);
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setToolTipText(bundle.getString("Customers.okBtn.toolTipText")); // NOI18N
         okBtn.setContentAreaFilled(false);
         okBtn.addActionListener(formListener);
 
-        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         infoButton.setToolTipText(bundle.getString("Customers.infoButton.toolTipText")); // NOI18N
         infoButton.setBorderPainted(false);
         infoButton.setContentAreaFilled(false);
         infoButton.addActionListener(formListener);
 
-        newButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/plus.png"))); // NOI18N
+        newButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/plus.png"))); // NOI18N
         newButton.setMnemonic('+');
         newButton.setToolTipText(bundle.getString("Customers.newButton.toolTipText")); // NOI18N
         newButton.setContentAreaFilled(false);

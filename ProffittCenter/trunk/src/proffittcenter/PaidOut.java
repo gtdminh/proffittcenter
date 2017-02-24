@@ -28,7 +28,7 @@ import java.util.prefs.Preferences;
 public class PaidOut extends EscapeDialog {
 
      private static ResourceBundle bundle = ResourceBundle
-            .getBundle("proffittcenterworkingcopy/resource/PaidOut");
+            .getBundle("proffittcenter/resource/PaidOut");
     private Preferences root = Preferences.userNodeForPackage(getClass());
     private int amount;
     private boolean out;
@@ -46,11 +46,11 @@ public class PaidOut extends EscapeDialog {
         this.noSale=noSale;
         try {
             if(out&&!noSale){
-                setTitle(java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/PaidOut").getString("PaidOut.title"));
+                setTitle(java.util.ResourceBundle.getBundle("proffittcenter/resource/PaidOut").getString("PaidOut.title"));
             }else if(!noSale){
-                setTitle(java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/PaidOut").getString("PaidIn"));
+                setTitle(java.util.ResourceBundle.getBundle("proffittcenter/resource/PaidOut").getString("PaidIn"));
             } else {
-                setTitle(java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/PaidOut").getString("noSale"));
+                setTitle(java.util.ResourceBundle.getBundle("proffittcenter/resource/PaidOut").getString("noSale"));
             }
             this.out=out;
             jReason.removeAllItems();
@@ -116,7 +116,7 @@ public class PaidOut extends EscapeDialog {
         FormListener formListener = new FormListener();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/PaidOut"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/PaidOut"); // NOI18N
         setTitle(bundle.getString("PaidOut.title")); // NOI18N
         setName("PaidOut"); // NOI18N
 
@@ -126,13 +126,13 @@ public class PaidOut extends EscapeDialog {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setName("jPanel1"); // NOI18N
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setContentAreaFilled(false);
         okBtn.setName("okBtn"); // NOI18N
         okBtn.addActionListener(formListener);
         okBtn.addFocusListener(formListener);
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(formListener);

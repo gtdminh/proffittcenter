@@ -29,7 +29,7 @@ public class Sku_1 extends EscapeDialog {
     private int tax1;
     private short type;
     //private String supplier;
-    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Sku");
+    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Sku");
     private Preferences root = Preferences.userNodeForPackage(getClass());
     private boolean stopped;
     private int quantity;
@@ -86,7 +86,7 @@ public class Sku_1 extends EscapeDialog {
         tax2ComboBox = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Sku"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Sku"); // NOI18N
         setTitle(bundle.getString("Sku.title")); // NOI18N
         setName("Sku"); // NOI18N
 
@@ -102,7 +102,7 @@ public class Sku_1 extends EscapeDialog {
 
         jPanel1.setName("Sku"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N

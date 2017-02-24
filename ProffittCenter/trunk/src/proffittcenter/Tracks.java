@@ -27,7 +27,7 @@ import javax.swing.RowSorter;
  */
 public class Tracks extends javax.swing.JDialog {
 
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Tracks");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Tracks");
     private JDBCTableModel jtm;
     private String tracks="SELECT Sales.ID AS Sale,Sales.WhenCreated AS Date, "
             + "SaleLines.Price AS Price,SaleLines.Track AS Track, "
@@ -69,7 +69,7 @@ public class Tracks extends javax.swing.JDialog {
         idTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Tracks"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Tracks"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("Tracks"); // NOI18N
 
@@ -98,7 +98,7 @@ public class Tracks extends javax.swing.JDialog {
             }
         });
 
-        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         infoButton.setBorder(null);
         infoButton.setName("infoButton"); // NOI18N
         infoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class Tracks extends javax.swing.JDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

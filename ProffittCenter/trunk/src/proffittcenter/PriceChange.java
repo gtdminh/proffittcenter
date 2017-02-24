@@ -29,7 +29,7 @@ public class PriceChange extends EscapeDialog {
     private int price;
     private long barcode;
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    ResourceBundle deliveryEntryBundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/DeliveryEntry");
+    ResourceBundle deliveryEntryBundle = ResourceBundle.getBundle("proffittcenter/resource/DeliveryEntry");
 
     /** Creates new form PriceChange */
     public PriceChange(java.awt.Frame parent, boolean modal) {
@@ -86,7 +86,7 @@ public class PriceChange extends EscapeDialog {
         descriptionT = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/PriceChange"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/PriceChange"); // NOI18N
         setTitle(bundle.getString("PriceChange.title")); // NOI18N
         setName("PriceChange"); // NOI18N
 
@@ -110,7 +110,7 @@ public class PriceChange extends EscapeDialog {
             }
         });
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setContentAreaFilled(false);
         closeButton2.setName("closeButton2"); // NOI18N
         closeButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +119,7 @@ public class PriceChange extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {

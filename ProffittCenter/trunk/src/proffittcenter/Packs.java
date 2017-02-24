@@ -30,7 +30,7 @@ import javax.swing.table.TableColumnModel;
 public class Packs extends EscapeDialog {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Packs");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Packs");
     private String productSelection = "SELECT Products.Description,Products.ID,Packs.*,PackSuppliers.ID," +
             "Suppliers.Description " +
             "FROM Products,Packs,PackSuppliers,Suppliers " +
@@ -136,7 +136,7 @@ public class Packs extends EscapeDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Packs"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Packs"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("Packs"); // NOI18N
 
@@ -184,7 +184,7 @@ public class Packs extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
@@ -213,7 +213,7 @@ public class Packs extends EscapeDialog {
             }
         });
 
-        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         searchButton.setContentAreaFilled(false);
         searchButton.setName("searchButton"); // NOI18N
         searchButton.addActionListener(new java.awt.event.ActionListener() {
@@ -222,7 +222,7 @@ public class Packs extends EscapeDialog {
             }
         });
 
-        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         infoButton.setName("infoButton"); // NOI18N
         infoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -45,11 +45,11 @@ public class LowStock1 extends EscapeDialog {
         okBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/LowStock"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/LowStock"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("LowStock"); // NOI18N
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close.png"))); // NOI18N
         closeButton2.setName("closeButton2"); // NOI18N
         closeButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,7 +63,7 @@ public class LowStock1 extends EscapeDialog {
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 0, 1000, 1));
         jSpinner1.setName("jSpinner1"); // NOI18N
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setName("okBtn"); // NOI18N
         okBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

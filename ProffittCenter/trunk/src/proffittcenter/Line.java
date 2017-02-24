@@ -48,7 +48,7 @@ public class Line {
     private boolean pricedOver;
     private boolean discounted;
     private int taxID;
-    static ResourceBundle regimeBundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Regime");
+    static ResourceBundle regimeBundle = ResourceBundle.getBundle("proffittcenter/resource/Regime");
     private int wholesalePrice;
     private int packSize;
     private int tax2ID;

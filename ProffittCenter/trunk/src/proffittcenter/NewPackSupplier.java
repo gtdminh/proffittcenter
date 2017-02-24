@@ -80,7 +80,7 @@ public class NewPackSupplier extends EscapeDialog {
         jTextField3.setName("jTextField3"); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/NewPackSupplier"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/NewPackSupplier"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("NewPackSupplier"); // NOI18N
 
@@ -115,7 +115,7 @@ public class NewPackSupplier extends EscapeDialog {
         jSupplier.setText("jLabel5");
         jSupplier.setName("jSupplier"); // NOI18N
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +129,7 @@ public class NewPackSupplier extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setDefaultCapable(false);
         closeButton.setName("closeButton"); // NOI18N

@@ -30,7 +30,7 @@ import javax.swing.table.TableColumnModel;
 public class CashupReconciliation extends EscapeDialog {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation");
+    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation");
     private String findCashUp = "SELECT * FROM CashUps,Operators WHERE Cashups.ID=? AND Cashups.Operator=Operators.ID ORDER BY WhenCreated DESC ";
     private String findDebits = "SELECT * FROM Sales WHERE TillID=? AND WhenCreated>=? AND WhenCreated<=? AND Debit<>0";
     private String findCheques = "SELECT * FROM Sales WHERE TillID=? AND WhenCreated>=? AND WhenCreated<=? AND Cheque<>0";
@@ -611,7 +611,7 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel21 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("cashupReconcilliation"); // NOI18N
 
@@ -674,7 +674,7 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel17.setName("jLabel17"); // NOI18N
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation").getString("CashupReconciliation.jLabel4.text")); // NOI18N
+        jLabel4.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation").getString("CashupReconciliation.jLabel4.text")); // NOI18N
         jLabel4.setName("jLabel4"); // NOI18N
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -690,15 +690,15 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel20.setName("jLabel20"); // NOI18N
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel13.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation").getString("CashupReconciliation.jLabel13.text")); // NOI18N
+        jLabel13.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation").getString("CashupReconciliation.jLabel13.text")); // NOI18N
         jLabel13.setName("jLabel13"); // NOI18N
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation").getString("CashupReconciliation.jLabel5.text")); // NOI18N
+        jLabel5.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation").getString("CashupReconciliation.jLabel5.text")); // NOI18N
         jLabel5.setName("jLabel5"); // NOI18N
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation").getString("CashupReconciliation.jLabel11.text")); // NOI18N
+        jLabel11.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation").getString("CashupReconciliation.jLabel11.text")); // NOI18N
         jLabel11.setName("jLabel11"); // NOI18N
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -710,7 +710,7 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel6.setName("jLabel6"); // NOI18N
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation").getString("CashupReconciliation.jLabel3.text")); // NOI18N
+        jLabel3.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation").getString("CashupReconciliation.jLabel3.text")); // NOI18N
         jLabel3.setName("jLabel3"); // NOI18N
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -722,7 +722,7 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel14.setName("jLabel14"); // NOI18N
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation").getString("CashupReconciliation.jLabel2.text")); // NOI18N
+        jLabel2.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation").getString("CashupReconciliation.jLabel2.text")); // NOI18N
         jLabel2.setName("jLabel2"); // NOI18N
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -730,7 +730,7 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel12.setName("jLabel12"); // NOI18N
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel10.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation").getString("CashupReconciliation.jLabel10.text")); // NOI18N
+        jLabel10.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation").getString("CashupReconciliation.jLabel10.text")); // NOI18N
         jLabel10.setName("jLabel10"); // NOI18N
 
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -738,14 +738,14 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel19.setName("jLabel19"); // NOI18N
 
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel22.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation").getString("CashupReconciliation.jLabel22.text")); // NOI18N
+        jLabel22.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation").getString("CashupReconciliation.jLabel22.text")); // NOI18N
         jLabel22.setName("jLabel22"); // NOI18N
 
         spinNotes100.setModel(new javax.swing.SpinnerNumberModel(0, 0, 1000, 1));
         spinNotes100.setName("spinNotes100"); // NOI18N
 
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel23.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation").getString("CashupReconciliation.jLabel23.text")); // NOI18N
+        jLabel23.setText(Main.shop.poundSymbol+java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation").getString("CashupReconciliation.jLabel23.text")); // NOI18N
         jLabel23.setName("jLabel23"); // NOI18N
 
         spinNotes200.setModel(new javax.swing.SpinnerNumberModel(0, 0, 1000, 1));
@@ -959,7 +959,7 @@ public class CashupReconciliation extends EscapeDialog {
         jAgency.setFocusable(false);
         jAgency.setName("jAgency"); // NOI18N
 
-        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Save.png"))); // NOI18N
+        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Save.png"))); // NOI18N
         saveButton.setToolTipText(bundle.getString("Save")); // NOI18N
         saveButton.setContentAreaFilled(false);
         saveButton.setName("saveButton"); // NOI18N
@@ -1008,7 +1008,7 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel24.setText(bundle.getString("CashupReconciliation.jLabel24.text")); // NOI18N
         jLabel24.setName("jLabel24"); // NOI18N
 
-        jCalculate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Calculate.png"))); // NOI18N
+        jCalculate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Calculate.png"))); // NOI18N
         jCalculate.setToolTipText(bundle.getString("Calculate")); // NOI18N
         jCalculate.setContentAreaFilled(false);
         jCalculate.setName("jCalculate"); // NOI18N

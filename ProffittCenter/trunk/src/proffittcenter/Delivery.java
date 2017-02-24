@@ -28,7 +28,7 @@ import javax.swing.table.TableColumnModel;
  */
 public class Delivery extends EscapeDialog {
 
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Delivery");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Delivery");
     TableColumnModel cm;
     String deliverySQL = "SELECT DL.ID,DL.Pack AS Pack,DL.PackSupplier AS PackSupplier ,"
             + "Departments.Description AS Department,Operators.Description  AS Operator,"
@@ -207,7 +207,7 @@ public class Delivery extends EscapeDialog {
         changeCaseSize = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Delivery"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Delivery"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("delivery"); // NOI18N
 
@@ -239,7 +239,7 @@ public class Delivery extends EscapeDialog {
         totalText.setFocusable(false);
         totalText.setName("totalText"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -281,7 +281,7 @@ public class Delivery extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -307,7 +307,7 @@ public class Delivery extends EscapeDialog {
             }
         });
 
-        changeWholesalePrice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/ChangeWholesalePrice.png"))); // NOI18N
+        changeWholesalePrice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/ChangeWholesalePrice.png"))); // NOI18N
         changeWholesalePrice.setToolTipText(bundle.getString("Delivery.changeWholesalePrice.toolTipText")); // NOI18N
         changeWholesalePrice.setContentAreaFilled(false);
         changeWholesalePrice.setName("changeWholesalePrice"); // NOI18N
@@ -317,7 +317,7 @@ public class Delivery extends EscapeDialog {
             }
         });
 
-        productButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        productButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         productButton.setName("productButton"); // NOI18N
         productButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,7 +329,7 @@ public class Delivery extends EscapeDialog {
         jLabel9.setText(bundle.getString("Delivery.jLabel9.text")); // NOI18N
         jLabel9.setName("jLabel9"); // NOI18N
 
-        changeRetailPrice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/ChangePrice.png"))); // NOI18N
+        changeRetailPrice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/ChangePrice.png"))); // NOI18N
         changeRetailPrice.setToolTipText(bundle.getString("Delivery.changeRetailPrice.toolTipText")); // NOI18N
         changeRetailPrice.setContentAreaFilled(false);
         changeRetailPrice.setName("changeRetailPrice"); // NOI18N
@@ -395,7 +395,7 @@ public class Delivery extends EscapeDialog {
         jLabel11.setText(bundle.getString("Delivery.jLabel11.text")); // NOI18N
         jLabel11.setName("jLabel11"); // NOI18N
 
-        changeCaseSize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/CaseSize.png"))); // NOI18N
+        changeCaseSize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/CaseSize.png"))); // NOI18N
         changeCaseSize.setToolTipText(bundle.getString("Delivery.changeCaseSize.toolTipText")); // NOI18N
         changeCaseSize.setContentAreaFilled(false);
         changeCaseSize.setName("changeCaseSize"); // NOI18N

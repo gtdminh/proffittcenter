@@ -31,7 +31,7 @@ import javax.swing.table.TableColumnModel;
 public class Suppliers_1 extends EscapeDialog {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Suppliers");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Suppliers");
     private Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("ID"));
@@ -157,7 +157,7 @@ public class Suppliers_1 extends EscapeDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Suppliers"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Suppliers"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("Suppliers"); // NOI18N
 
@@ -170,7 +170,7 @@ public class Suppliers_1 extends EscapeDialog {
 
         jPanel2.setName("jPanel2"); // NOI18N
 
-        newBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/plus.png"))); // NOI18N
+        newBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/plus.png"))); // NOI18N
         newBtn.setContentAreaFilled(false);
         newBtn.setName("newBtn"); // NOI18N
         newBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -184,7 +184,7 @@ public class Suppliers_1 extends EscapeDialog {
             }
         });
 
-        modifyBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        modifyBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         modifyBtn.setContentAreaFilled(false);
         modifyBtn.setName("modifyBtn"); // NOI18N
         modifyBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -198,7 +198,7 @@ public class Suppliers_1 extends EscapeDialog {
             }
         });
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setContentAreaFilled(false);
         closeButton2.setName("closeButton2"); // NOI18N
         closeButton2.addActionListener(new java.awt.event.ActionListener() {

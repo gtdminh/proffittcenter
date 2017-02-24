@@ -35,7 +35,7 @@ public class NewSku extends EscapeDialog {
     private String supplier;
     private int sku;
     Preferences root = Preferences.userNodeForPackage(getClass());
-    static ResourceBundle skuTypeBundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SkuType");
+    static ResourceBundle skuTypeBundle = ResourceBundle.getBundle("proffittcenter/resource/SkuType");
     private String skuType;
 
     /** Creates new form NewSku1
@@ -78,7 +78,7 @@ public class NewSku extends EscapeDialog {
         tax2ComboBox = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/NewSku"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/NewSku"); // NOI18N
         setTitle(bundle.getString("NewSku.title")); // NOI18N
         setName("NewSku"); // NOI18N
 
@@ -120,7 +120,7 @@ public class NewSku extends EscapeDialog {
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +134,7 @@ public class NewSku extends EscapeDialog {
             }
         });
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setContentAreaFilled(false);
         okBtn.setName("okBtn"); // NOI18N
         okBtn.addActionListener(new java.awt.event.ActionListener() {

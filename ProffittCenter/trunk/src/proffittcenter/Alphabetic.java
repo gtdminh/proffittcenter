@@ -68,7 +68,7 @@ public class Alphabetic extends EscapeDialog {
         setName("alphabetic"); // NOI18N
 
         jButton18.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 24)); // NOI18N
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Alphabetic"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Alphabetic"); // NOI18N
         jButton18.setText(bundle.getString("Alphabetic.jButton18.text")); // NOI18N
         jButton18.setName("jButton18"); // NOI18N
 

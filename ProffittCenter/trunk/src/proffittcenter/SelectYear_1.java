@@ -39,7 +39,7 @@ public class SelectYear_1 extends EscapeDialog {
 
         jYear.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, null, 1));
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,7 +47,7 @@ public class SelectYear_1 extends EscapeDialog {
             }
         });
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SelectMonthYear"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/SelectMonthYear"); // NOI18N
         jLabel2.setText(bundle.getString("SelectMonthYear.jLabel2.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class DatabaseCreate {
 
     static Connection connection = null;
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/DatabaseCreate");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/DatabaseCreate");
     static String driverName = "com.mysql.jdbc.Driver";
     private static String serverName = Main.server.getServerName();
     private static String url;

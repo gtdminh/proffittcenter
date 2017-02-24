@@ -39,7 +39,7 @@ import net.sf.jasperreports.engine.JasperPrintManager;
  */
 public class Deliveries extends EscapeDialog {
 
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Deliveries");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Deliveries");
     TableColumnModel cm;
     String deliveries = " SELECT Deliveries.ID AS ID,  " +
                     "Suppliers.Description AS Supplier, " +
@@ -96,7 +96,7 @@ public class Deliveries extends EscapeDialog {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Deliveries"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Deliveries"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("deliveries"); // NOI18N
 
@@ -130,7 +130,7 @@ public class Deliveries extends EscapeDialog {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/print_edit.gif"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/print_edit.gif"))); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +146,7 @@ public class Deliveries extends EscapeDialog {
             }
         });
 
-        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         infoButton.setContentAreaFilled(false);
         infoButton.setName("infoButton"); // NOI18N
         infoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +155,7 @@ public class Deliveries extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -164,7 +164,7 @@ public class Deliveries extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

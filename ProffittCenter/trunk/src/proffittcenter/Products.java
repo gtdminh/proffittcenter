@@ -35,7 +35,7 @@ import javax.swing.table.TableColumnModel;
 public class Products extends EscapeDialog {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Products");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Products");
     Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("Barcode"));
@@ -181,7 +181,7 @@ public class Products extends EscapeDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Products"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Products"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("Products"); // NOI18N
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -192,7 +192,7 @@ public class Products extends EscapeDialog {
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         detailsButton.setContentAreaFilled(false);
         detailsButton.setName("detailsButton"); // NOI18N
         detailsButton.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +201,7 @@ public class Products extends EscapeDialog {
             }
         });
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setContentAreaFilled(false);
         closeButton2.setName("closeButton2"); // NOI18N
         closeButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +210,7 @@ public class Products extends EscapeDialog {
             }
         });
 
-        printBarcode.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Barcode.png"))); // NOI18N
+        printBarcode.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Barcode.png"))); // NOI18N
         printBarcode.setContentAreaFilled(false);
         printBarcode.setName("printBarcode"); // NOI18N
         printBarcode.addActionListener(new java.awt.event.ActionListener() {
@@ -235,7 +235,7 @@ public class Products extends EscapeDialog {
             }
         });
 
-        printBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/print_edit.gif"))); // NOI18N
+        printBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/print_edit.gif"))); // NOI18N
         printBtn.setText("null");
         printBtn.setToolTipText(bundle.getString("Products.printBtn.toolTipText")); // NOI18N
         printBtn.setContentAreaFilled(false);

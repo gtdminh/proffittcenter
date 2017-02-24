@@ -29,8 +29,8 @@ public class Shop extends javax.swing.JPanel {
     
     Preferences root = Preferences.userNodeForPackage(getClass());
 //    static Preferences systemRoot = Preferences.systemNodeForPackage(Shop.class);
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Settings");
-    static ResourceBundle regimeBundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Regime");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Settings");
+    static ResourceBundle regimeBundle = ResourceBundle.getBundle("proffittcenter/resource/Regime");
     Currency currency = Currency.getInstance(Locale.getDefault());
     public String poundSymbol = java.util.Currency.getInstance(Locale.getDefault()).getSymbol();//root.get("PoundSymbol", "�");
     private String pennySymbol = root.get("PennySymbol", "p");
@@ -93,6 +93,7 @@ public class Shop extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLocale = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -139,93 +140,95 @@ public class Shop extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         cashDrawerLimitSpinner = new javax.swing.JSpinner();
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Settings"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Settings"); // NOI18N
         setName(bundle.getString("Shop.name")); // NOI18N
 
+        jPanel1.setName("jPanel1"); // NOI18N
+
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation"); // NOI18N
-        jLabel19.setText(bundle1.getString("Settings.jLabel19.text")); // NOI18N
+        jLabel19.setText(bundle.getString("Shop.jLabel19.text")); // NOI18N
         jLabel19.setName("jLabel19"); // NOI18N
 
-        jLocale.setText(bundle1.getString("Settings.jLocale.text")); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation"); // NOI18N
+        jLocale.setText(bundle1.getString("Shop.jLocale.text")); // NOI18N
         jLocale.setName("jLocale"); // NOI18N
 
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel22.setText(bundle1.getString("Settings.jLabel22.text")); // NOI18N
+        jLabel22.setText(bundle.getString("Shop.jLabel22.text")); // NOI18N
         jLabel22.setName("jLabel22"); // NOI18N
 
         charsetCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         charsetCombo.setName("charsetCombo"); // NOI18N
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel15.setText(bundle1.getString("Settings.jLabel15.text_1")); // NOI18N
+        jLabel15.setText(bundle.getString("Shop.jLabel15.text")); // NOI18N
         jLabel15.setName("jLabel15"); // NOI18N
 
         jPoundSymbol.setName("jPoundSymbol"); // NOI18N
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel16.setText(bundle1.getString("Settings.jLabel16.text")); // NOI18N
+        jLabel16.setText(bundle.getString("Shop.jLabel16.text")); // NOI18N
         jLabel16.setName("jLabel16"); // NOI18N
 
         jPennySymbol.setName("jPennySymbol"); // NOI18N
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel17.setText(bundle1.getString("Settings.jLabel17.text_1")+" ("+pennySymbol+"):"); // NOI18N
+        jLabel17.setText(bundle.getString("Shop.jLabel17.text")+" ("+pennySymbol+"):"); // NOI18N
         jLabel17.setName("jLabel17"); // NOI18N
 
         jMinimumDebit.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 100));
         jMinimumDebit.setName("jMinimumDebit"); // NOI18N
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel18.setText(bundle1.getString("Settings.jLabel18.text_1")); // NOI18N
+        jLabel18.setText(bundle.getString("Shop.jLabel18.text")); // NOI18N
         jLabel18.setName("jLabel18"); // NOI18N
 
         jCharSet.setFocusable(false);
         jCharSet.setName("jCharSet"); // NOI18N
 
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel25.setText(bundle1.getString("Settings.jLabel25.text")); // NOI18N
+        jLabel25.setText(bundle.getString("Shop.jLabel25.text")); // NOI18N
         jLabel25.setName("jLabel25"); // NOI18N
 
         jReceiptAlways.setName("jReceiptAlways"); // NOI18N
 
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel23.setText(bundle1.getString("Settings.jLabel23.text")+" ("+pennySymbol+"):"); // NOI18N
+        jLabel23.setText(bundle.getString("Shop.jLabel23.text")+" ("+pennySymbol+"):"); // NOI18N
         jLabel23.setName("jLabel23"); // NOI18N
 
         receiptSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 100));
         receiptSpinner.setName("receiptSpinner"); // NOI18N
 
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel26.setText(bundle1.getString("Settings.jLabel26.text")); // NOI18N
+        jLabel26.setText(bundle.getString("Shop.jLabel26.text")); // NOI18N
         jLabel26.setName("jLabel26"); // NOI18N
 
         jCashBack.setSelected(true);
         jCashBack.setName("jCashBack"); // NOI18N
 
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel27.setText(bundle1.getString("Settings.jLabel27.text")+" ("+pennySymbol+"):"); // NOI18N
+        jLabel27.setText(bundle.getString("Shop.jLabel27.text")+" ("+pennySymbol+"):"); // NOI18N
         jLabel27.setName("jLabel27"); // NOI18N
 
         floatSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 100));
         floatSpinner.setName("floatSpinner"); // NOI18N
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setText(bundle1.getString("Settings.jLabel11.text_1")); // NOI18N
+        jLabel11.setText(bundle.getString("Shop.jLabel11.text")); // NOI18N
         jLabel11.setName("jLabel11"); // NOI18N
 
         jRegime.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jRegime.setName("jRegime"); // NOI18N
 
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel33.setText(bundle1.getString("Settings.jLabel33.text")); // NOI18N
+        jLabel33.setText(bundle.getString("Shop.jLabel33.text")); // NOI18N
         jLabel33.setName("jLabel33"); // NOI18N
 
-        jasperCheckBox.setText(bundle.getString("NormallyChecked")); // NOI18N
+        jasperCheckBox.setText(bundle.getString("Shop.jasperCheckBox.text")); // NOI18N
         jasperCheckBox.setName("jasperCheckBox"); // NOI18N
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText(bundle1.getString("Settings.jLabel1.text_1")); // NOI18N
+        jLabel1.setText(bundle.getString("Shop.jLabel1.text")); // NOI18N
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jLabel1.setName("jLabel1"); // NOI18N
 
@@ -237,28 +240,28 @@ public class Shop extends javax.swing.JPanel {
         });
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText(bundle1.getString("Settings.jLabel2.text_1")); // NOI18N
+        jLabel2.setText(bundle.getString("Shop.jLabel2.text")); // NOI18N
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jLabel2.setName("jLabel2"); // NOI18N
 
         jAddress.setName("jAddress"); // NOI18N
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText(bundle1.getString("Settings.jLabel3.text_1")); // NOI18N
+        jLabel3.setText(bundle.getString("Shop.jLabel3.text")); // NOI18N
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jLabel3.setName("jLabel3"); // NOI18N
 
         jPhone.setName("jPhone"); // NOI18N
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText(bundle1.getString("Settings.jLabel4.text_1")); // NOI18N
+        jLabel4.setText(bundle.getString("Shop.jLabel4.text")); // NOI18N
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jLabel4.setName("jLabel4"); // NOI18N
 
         jTaxId.setName("jTaxId"); // NOI18N
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel10.setText(bundle1.getString("Settings.jLabel10.text_1")); // NOI18N
+        jLabel10.setText(bundle.getString("Shop.jLabel10.text")); // NOI18N
         jLabel10.setName("jLabel10"); // NOI18N
 
         jTillId.setModel(new javax.swing.SpinnerNumberModel(1, 0, null, 1));
@@ -288,7 +291,7 @@ public class Shop extends javax.swing.JPanel {
         roundingSpinner.setModel(new javax.swing.SpinnerListModel(new String[] {"1", "2", "5", "10", "20"}));
         roundingSpinner.setName("roundingSpinner"); // NOI18N
 
-        newProductCheckBox.setText(bundle.getString("shop.New")); // NOI18N
+        newProductCheckBox.setText(bundle.getString("Shop.newProductCheckBox.text")); // NOI18N
         newProductCheckBox.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         newProductCheckBox.setName("newProductCheckBox"); // NOI18N
 
@@ -296,25 +299,25 @@ public class Shop extends javax.swing.JPanel {
         closeComputerCheckBox.setName("closeComputerCheckBox"); // NOI18N
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText(bundle.getString("Shop.jLabel6.text_1")+" ("+pennySymbol+"):"); // NOI18N
+        jLabel6.setText(bundle.getString("Shop.jLabel6.text")+" ("+pennySymbol+"):"); // NOI18N
         jLabel6.setName("jLabel6"); // NOI18N
 
         cashDrawerLimitSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100000, 1));
         cashDrawerLimitSpinner.setName("cashDrawerLimitSpinner"); // NOI18N
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLocale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel22)
                             .addComponent(jLabel15)
                             .addComponent(jLabel16)
@@ -326,7 +329,7 @@ public class Shop extends javax.swing.JPanel {
                             .addComponent(jLabel27)
                             .addComponent(jLabel20))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(charsetCombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPoundSymbol)
                             .addComponent(jPennySymbol)
@@ -335,30 +338,30 @@ public class Shop extends javax.swing.JPanel {
                             .addComponent(jReceiptAlways, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(receiptSpinner)
                             .addComponent(jCashBack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(floatSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                            .addComponent(floatSpinner)
                             .addComponent(newProductCheckBox)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(autoClearSpinner)
                                 .addGap(16, 16, 16)))))
                 .addGap(51, 51, 51)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                         .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                         .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(closeComputerCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(roundingSpinner)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRegime, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jCompanyName)
                             .addComponent(jAddress)
@@ -372,118 +375,127 @@ public class Shop extends javax.swing.JPanel {
                         .addGap(0, 2, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel15, jLabel16, jLabel17, jLabel18, jLabel19, jLabel22, jLabel23, jLabel25, jLabel26, jLabel27});
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {charsetCombo, floatSpinner, jCashBack, jCharSet, jLocale, jMinimumDebit, jPennySymbol, jPoundSymbol, jReceiptAlways, receiptSpinner});
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jAddress, jCompanyName, jPhone, jRegime, jTaxId, jTillId, jasperCheckBox, kgSymbolText});
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, jLabel10, jLabel11, jLabel2, jLabel21, jLabel3, jLabel4});
-
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLocale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel33)
                     .addComponent(jasperCheckBox))
                 .addGap(7, 7, 7)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRegime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jCompanyName, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTaxId, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTillId, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(kgSymbolText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel21))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(speechCheckBox)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel22)
                             .addComponent(charsetCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jPoundSymbol)
                             .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jPennySymbol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jMinimumDebit)
                             .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jCharSet)
                             .addComponent(jLabel18))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel25)
                             .addComponent(jReceiptAlways))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel23)
                             .addComponent(receiptSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel26)
                             .addComponent(jCashBack))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(floatSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel27))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(autoClearSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel20)
                             .addComponent(jLabel5)
                             .addComponent(roundingSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(cashDrawerLimitSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(closeComputerCheckBox)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(newProductCheckBox)
                         .addContainerGap())))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAddress, jCompanyName, jLabel33, jPhone, jRegime, jTaxId, jTillId, jasperCheckBox});
-
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1183, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 371, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCompanyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCompanyNameActionPerformed
-        
-}//GEN-LAST:event_jCompanyNameActionPerformed
+
+    }//GEN-LAST:event_jCompanyNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -519,6 +531,7 @@ public class Shop extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLocale;
     private javax.swing.JSpinner jMinimumDebit;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jPennySymbol;
     private javax.swing.JTextField jPhone;
     private javax.swing.JTextField jPoundSymbol;

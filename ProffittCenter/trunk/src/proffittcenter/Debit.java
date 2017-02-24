@@ -72,7 +72,7 @@ public class Debit extends EscapeDialog {
         okBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Debit"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Debit"); // NOI18N
         setTitle(bundle.getString("Debit.title")); // NOI18N
         setName("debit"); // NOI18N
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -129,7 +129,7 @@ public class Debit extends EscapeDialog {
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +137,7 @@ public class Debit extends EscapeDialog {
             }
         });
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setContentAreaFilled(false);
         okBtn.setName("okBtn"); // NOI18N
         okBtn.addActionListener(new java.awt.event.ActionListener() {

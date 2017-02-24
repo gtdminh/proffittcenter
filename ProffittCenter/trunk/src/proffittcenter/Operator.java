@@ -43,7 +43,7 @@ public class Operator extends EscapeDialog implements Printable {
     Preferences root = Preferences.userNodeForPackage(getClass());
     private String description;
     private String ids;
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Operator");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Operator");
     private int overriddenOperator;
     private boolean operatorOveride;
     private int operator;
@@ -122,7 +122,7 @@ public class Operator extends EscapeDialog implements Printable {
         priceChangeCheckBox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Operator"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Operator"); // NOI18N
         setTitle(bundle.getString("Operator.title")); // NOI18N
         setName("Operator"); // NOI18N
 
@@ -143,7 +143,7 @@ public class Operator extends EscapeDialog implements Printable {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setBorderPainted(false);
         closeButton2.setContentAreaFilled(false);
         closeButton2.setName("closeButton2"); // NOI18N
@@ -153,7 +153,7 @@ public class Operator extends EscapeDialog implements Printable {
             }
         });
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setBorderPainted(false);
         okBtn.setContentAreaFilled(false);
         okBtn.setName("okBtn"); // NOI18N
@@ -163,7 +163,7 @@ public class Operator extends EscapeDialog implements Printable {
             }
         });
 
-        jPrintButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/print_edit.gif"))); // NOI18N
+        jPrintButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/print_edit.gif"))); // NOI18N
         jPrintButton.setText("null");
         jPrintButton.setBorderPainted(false);
         jPrintButton.setContentAreaFilled(false);

@@ -29,7 +29,7 @@ import javax.swing.table.TableColumnModel;
 public class AlphaLookup extends EscapeDialog {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    private static final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/AlphaLookup");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/AlphaLookup");
     Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     boolean b0 = tableHeader.add(bundle.getString("Bar_code"));
@@ -267,7 +267,7 @@ public class AlphaLookup extends EscapeDialog {
         count = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/AlphaLookup"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/AlphaLookup"); // NOI18N
         setTitle(bundle.getString("AlphaLookup.title")); // NOI18N
         setForeground(java.awt.Color.white);
         setName("AlphaLookup"); // NOI18N

@@ -10,7 +10,7 @@ import javax.swing.table.AbstractTableModel;
  */
 public class SaleTableModel_1 extends AbstractTableModel {
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SaleTableModel");
+    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/SaleTableModel");
     private String[] columnNames = {bundle.getString("Qty"),
         " "+bundle.getString("Description"),
         bundle.getString("Price") + " (" + Main.shop.poundSymbol+")",

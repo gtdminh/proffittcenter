@@ -28,7 +28,7 @@ import javax.swing.table.TableColumnModel;
  */
 public class StockByValue_1 extends EscapeDialog {
 
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/StockByValue");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/StockByValue");
     private Vector tableHeader = new Vector();
     private String product;
     private String department;
@@ -283,11 +283,11 @@ public class StockByValue_1 extends EscapeDialog {
         jStockValue = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/StockByValue"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/StockByValue"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("StockByValue"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N

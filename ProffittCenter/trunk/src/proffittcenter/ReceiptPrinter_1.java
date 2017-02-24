@@ -25,7 +25,7 @@ import java.util.logging.Logger;
  */
 public class ReceiptPrinter_1 {
 
-    private ResourceBundle bundle = ResourceBundle.getBundle(("proffittcenterworkingcopy/resource/ReceiptPrinter"));
+    private ResourceBundle bundle = ResourceBundle.getBundle(("proffittcenter/resource/ReceiptPrinter"));
     private OutputStream fileStream;
     private final byte[] RESET = {0x1b, 0x3d, 0x01, 0x1b, 0x40};//Initialize printer
     private final byte[] START = {0x1b, '@', 0x1b, '=', 0x01, 0x1b, 'S', 0x1b, '!', 0x01, 0x1b, 'R',

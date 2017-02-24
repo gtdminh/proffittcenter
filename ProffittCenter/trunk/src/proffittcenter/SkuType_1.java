@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 public class SkuType_1 {
     // a typesafe enumerator from 'Effective Java'
     static ResourceBundle bundle = ResourceBundle
-            .getBundle("proffittcenterworkingcopy/resource/SkuType");
+            .getBundle("proffittcenter/resource/SkuType");
     private final String name;//such as "Other people's stock"
     private static short value=0;
     private short thisValue;

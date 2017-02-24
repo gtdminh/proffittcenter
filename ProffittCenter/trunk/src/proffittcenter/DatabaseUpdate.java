@@ -27,7 +27,7 @@ public class DatabaseUpdate {
     private int price;
     private int supplier;
     private int margin;
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/DatabaseCreate");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/DatabaseCreate");
     private PreparedStatement createCustomerMessages;
     private String usl = "ALTER TABLE `salelines` "
             + "ADD COLUMN `Encode`  TINYINT(1)  NOT NULL DEFAULT 0 AFTER `Track`,"

@@ -20,7 +20,7 @@ import java.util.prefs.Preferences;
 public class Sales_1 extends EscapeDialog  {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Sales");
+    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Sales");
     private int till;
     private int selection = -1;
     private Integer id;
@@ -77,7 +77,7 @@ public class Sales_1 extends EscapeDialog  {
         FormListener formListener = new FormListener();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Sales"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Sales"); // NOI18N
         setTitle(bundle.getString("Sales.title_2")); // NOI18N
         setLocationByPlatform(true);
         setName("Sales"); // NOI18N
@@ -96,17 +96,17 @@ public class Sales_1 extends EscapeDialog  {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setBorderPainted(false);
         closeButton2.setContentAreaFilled(false);
         closeButton2.addActionListener(formListener);
 
-        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         detailsButton.setBorderPainted(false);
         detailsButton.setContentAreaFilled(false);
         detailsButton.addActionListener(formListener);
 
-        printButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Receipt.png"))); // NOI18N
+        printButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Receipt.png"))); // NOI18N
         printButton.setMnemonic('P');
         printButton.setText("null");
         printButton.setToolTipText(bundle.getString("Sales.printButton.toolTipText")); // NOI18N
@@ -116,7 +116,7 @@ public class Sales_1 extends EscapeDialog  {
         jTextField1.setBorder(null);
         jTextField1.addKeyListener(formListener);
 
-        invoiceButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/print_edit.gif"))); // NOI18N
+        invoiceButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/print_edit.gif"))); // NOI18N
         invoiceButton.setToolTipText(bundle.getString("Sales.invoiceButton.toolTipText")); // NOI18N
         invoiceButton.setContentAreaFilled(false);
         invoiceButton.addActionListener(formListener);

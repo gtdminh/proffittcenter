@@ -25,7 +25,7 @@ import javax.swing.JRootPane;
 public class Department extends EscapeDialog {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Department");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Department");
     String oldDescription;
 
     /** Creates new form DepartmentEscape */
@@ -135,7 +135,7 @@ public class Department extends EscapeDialog {
         cancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Department"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Department"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("Department"); // NOI18N
 
@@ -219,7 +219,7 @@ public class Department extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -233,7 +233,7 @@ public class Department extends EscapeDialog {
             }
         });
 
-        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         cancelButton.setContentAreaFilled(false);
         cancelButton.setName("cancelButton"); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {

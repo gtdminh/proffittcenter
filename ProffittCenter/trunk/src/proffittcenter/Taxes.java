@@ -28,7 +28,7 @@ import javax.swing.table.TableColumn;
 public class Taxes extends EscapeDialog {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Taxes");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Taxes");
     Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     boolean b0 = tableHeader.add(bundle.getString("ID"));
@@ -143,14 +143,14 @@ public class Taxes extends EscapeDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Taxes"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Taxes"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("Taxes"); // NOI18N
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setName("jPanel1"); // NOI18N
 
-        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         detailsButton.setBorderPainted(false);
         detailsButton.setContentAreaFilled(false);
         detailsButton.setName("detailsButton"); // NOI18N
@@ -160,7 +160,7 @@ public class Taxes extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N

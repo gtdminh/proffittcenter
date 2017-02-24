@@ -55,7 +55,7 @@ public class SelectMonthYear_1 extends EscapeDialog {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SelectMonthYear"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/SelectMonthYear"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("SelectMonthYear"); // NOI18N
 
@@ -65,7 +65,7 @@ public class SelectMonthYear_1 extends EscapeDialog {
         jYear.setModel(new javax.swing.SpinnerNumberModel(2000, 2000, null, 1));
         jYear.setName("jYear"); // NOI18N
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {

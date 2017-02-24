@@ -76,7 +76,7 @@ public class SettingsTabbed extends EscapeDialog {
     private int shelfEdgeLabelHeight;
     private byte code;
     public String myLanguage;
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Settings");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Settings");
     public boolean internetEnabled = root.getBoolean("InternetEnabled", false);
     public String backupUser = root.get("backupUser", "");
     public String backupPassword = root.get("backupPassword", "");
@@ -119,7 +119,7 @@ public class SettingsTabbed extends EscapeDialog {
         jHelpButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Settings"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Settings"); // NOI18N
         setTitle(bundle.getString("Settings.title")); // NOI18N
         setName(bundle.getString("Settings.title")); // NOI18N
 
@@ -130,7 +130,7 @@ public class SettingsTabbed extends EscapeDialog {
             }
         });
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setToolTipText(bundle.getString("OK")); // NOI18N
         okBtn.setContentAreaFilled(false);
         okBtn.setName("okBtn"); // NOI18N
@@ -140,7 +140,7 @@ public class SettingsTabbed extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setToolTipText(bundle.getString("CloseButton")); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
@@ -150,7 +150,7 @@ public class SettingsTabbed extends EscapeDialog {
             }
         });
 
-        jHelpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Help.png"))); // NOI18N
+        jHelpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Help.png"))); // NOI18N
         jHelpButton.setToolTipText(bundle.getString("Help")); // NOI18N
         jHelpButton.setContentAreaFilled(false);
         jHelpButton.setName("jHelpButton"); // NOI18N

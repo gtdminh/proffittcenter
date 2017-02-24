@@ -28,7 +28,7 @@ import javax.swing.JOptionPane;
  */
 public class Parser {
 
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Parser");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Parser");
     private static long cus;
     private static Integer operator;
     private static Integer lastOperator = 0;

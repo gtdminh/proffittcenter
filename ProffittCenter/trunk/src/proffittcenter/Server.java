@@ -39,7 +39,7 @@ public class Server extends javax.swing.JPanel {
     public String serverName = root.get("ServerName", "localhost");//www.proffittcenter.org;
     public String database = root.get("Database", "till");//till proff2_till;
     public String userName = root.get("UserName", "root");//root proff2_test;
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Settings");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Settings");
     public boolean internetEnabled = root.getBoolean("InternetEnabled", true);
     public String backupUser = root.get("backupUser", "");
     private char[] input3;
@@ -89,7 +89,7 @@ public class Server extends javax.swing.JPanel {
         testConnectionButton = new javax.swing.JButton();
         dropboxButton = new javax.swing.JButton();
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Settings"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Settings"); // NOI18N
         setName(bundle.getString("Server.name")); // NOI18N
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);

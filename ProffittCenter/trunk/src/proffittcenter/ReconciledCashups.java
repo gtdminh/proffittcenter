@@ -30,7 +30,7 @@ import javax.swing.table.TableColumnModel;
  */
 public class ReconciledCashups extends EscapeDialog {
 private Preferences root = Preferences.userNodeForPackage(getClass());
-    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/ReconciledCashups");
+    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/ReconciledCashups");
     private Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("ID"));
@@ -178,7 +178,7 @@ private Preferences root = Preferences.userNodeForPackage(getClass());
         closeButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/ReconciledCashups"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/ReconciledCashups"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("reconciledCashups"); // NOI18N
 
@@ -203,7 +203,7 @@ private Preferences root = Preferences.userNodeForPackage(getClass());
             }
         });
 
-        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         infoButton.setToolTipText(bundle.getString("ReconciledCashups.infoButton.toolTipText")); // NOI18N
         infoButton.setContentAreaFilled(false);
         infoButton.setName("infoButton"); // NOI18N
@@ -213,7 +213,7 @@ private Preferences root = Preferences.userNodeForPackage(getClass());
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {

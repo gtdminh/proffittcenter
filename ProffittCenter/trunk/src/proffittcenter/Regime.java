@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 //Ordinal-based tysafe enum
 public class Regime {
 
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Regime");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Regime");
     private final String name;
     private static int nextOrdinal = 0;
     private int ordinal;

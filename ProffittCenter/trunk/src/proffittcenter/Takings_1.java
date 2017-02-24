@@ -34,7 +34,7 @@ import javax.swing.table.TableColumnModel;
 public class Takings_1 extends EscapeDialog {
 
     public Integer excluded = 0, takings = 0, charged = 0;//needed by cashup
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Takings");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Takings");
     Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     boolean b = tableHeader.add(bundle.getString("Date"));
@@ -289,7 +289,7 @@ public class Takings_1 extends EscapeDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Takings"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Takings"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("Takings"); // NOI18N
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -300,7 +300,7 @@ public class Takings_1 extends EscapeDialog {
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setToolTipText(bundle.getString("Close")); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
@@ -311,7 +311,7 @@ public class Takings_1 extends EscapeDialog {
             }
         });
 
-        printButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/print_edit.gif"))); // NOI18N
+        printButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/print_edit.gif"))); // NOI18N
         printButton.setToolTipText(bundle.getString("Print")); // NOI18N
         printButton.setBorderPainted(false);
         printButton.setContentAreaFilled(false);
@@ -328,7 +328,7 @@ public class Takings_1 extends EscapeDialog {
             }
         });
 
-        calculateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Calculate.png"))); // NOI18N
+        calculateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Calculate.png"))); // NOI18N
         calculateButton.setToolTipText(bundle.getString("TakingsOld.calculateButton.tooltip.text")); // NOI18N
         calculateButton.setContentAreaFilled(false);
         calculateButton.setName("calculateButton"); // NOI18N

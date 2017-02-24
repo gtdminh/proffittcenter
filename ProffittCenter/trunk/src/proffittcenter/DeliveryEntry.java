@@ -62,7 +62,7 @@ public class DeliveryEntry extends EscapeDialog {
             + "ORDER BY WhenCreated";
     private int retailPrice;
     private String createPackSupplier = "INSERT INTO PackSuppliers (ID,Pack,Price,Supplier) VALUES (?,?,?,?)";
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/DeliveryEntry");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/DeliveryEntry");
     private String createPack = "INSERT INTO Packs (ID,Product,Size,Code,Encoded) VALUES(?,?,1,?,?)";
     private String productDescription;
     private String getPackId = "SELECT LAST_INSERT_ID() FROM Packs";
@@ -389,7 +389,7 @@ public class DeliveryEntry extends EscapeDialog {
         barcodeCheckBox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/DeliveryEntry"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/DeliveryEntry"); // NOI18N
         setTitle(bundle.getString("DeliveryEntry.title")); // NOI18N
         setName("DeliveryEntry"); // NOI18N
 
@@ -559,7 +559,7 @@ public class DeliveryEntry extends EscapeDialog {
         dateText.setFocusable(false);
         dateText.setName("dateText"); // NOI18N
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setToolTipText(bundle.getString("DeliveryEntry.okButton.toolTipText")); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
@@ -569,7 +569,7 @@ public class DeliveryEntry extends EscapeDialog {
             }
         });
 
-        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Minus.png"))); // NOI18N
+        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Minus.png"))); // NOI18N
         cancelButton.setToolTipText(bundle.getString("DeliveryEntry.cancelButton.toolTipText")); // NOI18N
         cancelButton.setContentAreaFilled(false);
         cancelButton.setName("cancelButton"); // NOI18N
@@ -579,7 +579,7 @@ public class DeliveryEntry extends EscapeDialog {
             }
         });
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setToolTipText(bundle.getString("DeliveryEntry.closeButton2.toolTipText")); // NOI18N
         closeButton2.setContentAreaFilled(false);
         closeButton2.setName("closeButton2"); // NOI18N

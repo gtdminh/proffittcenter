@@ -33,7 +33,7 @@ import javax.swing.table.TableColumn;
 public class Wastes extends EscapeDialog {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Wastes");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Wastes");
     private Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("Operator"));

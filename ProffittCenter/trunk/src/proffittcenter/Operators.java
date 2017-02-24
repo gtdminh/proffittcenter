@@ -47,7 +47,7 @@ import javax.swing.table.JTableHeader;
 public class Operators extends EscapeDialog {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Operators");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Operators");
     private Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("ID"));
@@ -195,14 +195,14 @@ public class Operators extends EscapeDialog {
         jTable1 = new JTable();
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Operators"); // NOI18N
+        ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Operators"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("Operators"); // NOI18N
 
         jPanel1.setBorder(new SoftBevelBorder(BevelBorder.RAISED));
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeButton2.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setBorderPainted(false);
         closeButton2.setContentAreaFilled(false);
         closeButton2.setName("closeButton2"); // NOI18N
@@ -212,7 +212,7 @@ public class Operators extends EscapeDialog {
             }
         });
 
-        detailsButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        detailsButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         detailsButton.setBorderPainted(false);
         detailsButton.setContentAreaFilled(false);
         detailsButton.setName("detailsButton"); // NOI18N
@@ -222,7 +222,7 @@ public class Operators extends EscapeDialog {
             }
         });
 
-        newBtn.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/add_obj.gif"))); // NOI18N
+        newBtn.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/add_obj.gif"))); // NOI18N
         newBtn.setBorderPainted(false);
         newBtn.setContentAreaFilled(false);
         newBtn.setName("newBtn"); // NOI18N

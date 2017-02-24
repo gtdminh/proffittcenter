@@ -29,7 +29,7 @@ import javax.swing.table.TableColumn;
  */
 public class SelectDelivery_1 extends EscapeDialog {
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SelectDelivery");
+    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/SelectDelivery");
     private String deliveries = "SELECT ID,WhenCreated,Reference FROM Deliveries "
             + "WHERE Supplier=? AND Completed=false ORDER BY WhenCreated DESC";
     private String delivery = "INSERT INTO Deliveries (ID,WhenCreated,Reference,Supplier,Total,Tax) "
@@ -115,7 +115,7 @@ public class SelectDelivery_1 extends EscapeDialog {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SelectDelivery"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/SelectDelivery"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("SelectDelivery"); // NOI18N
 
@@ -142,7 +142,7 @@ public class SelectDelivery_1 extends EscapeDialog {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -151,7 +151,7 @@ public class SelectDelivery_1 extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {

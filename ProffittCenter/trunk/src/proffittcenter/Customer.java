@@ -26,7 +26,7 @@ import javax.swing.JRootPane;
 public class Customer extends EscapeDialog {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Customer");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Customer");
     private boolean isNew = false;
     private boolean printrequired = false;
     private Long customer = 0l;
@@ -91,7 +91,7 @@ public class Customer extends EscapeDialog {
         jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Customer"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customer"); // NOI18N
         setTitle(bundle.getString("Customer.title")); // NOI18N
         setName("Customer"); // NOI18N
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -268,7 +268,7 @@ public class Customer extends EscapeDialog {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,7 +276,7 @@ public class Customer extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -285,7 +285,7 @@ public class Customer extends EscapeDialog {
             }
         });
 
-        printButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Barcode.png"))); // NOI18N
+        printButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Barcode.png"))); // NOI18N
         printButton.setContentAreaFilled(false);
         printButton.setName("printButton"); // NOI18N
         printButton.addActionListener(new java.awt.event.ActionListener() {

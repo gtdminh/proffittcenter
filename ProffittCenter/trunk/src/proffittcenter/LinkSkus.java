@@ -69,7 +69,7 @@ public class LinkSkus extends EscapeDialog {
         barcodeText1 = new javax.swing.JTextField();
         barcodeText2 = new javax.swing.JTextField();
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/LinkSkus"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/LinkSkus"); // NOI18N
         jTextField1.setText(bundle.getString("LinkSkus.jTextField1.text")); // NOI18N
         jTextField1.setName(bundle.getString("LinkSkus.jTextField1.name")); // NOI18N
 

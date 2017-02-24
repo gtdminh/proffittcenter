@@ -26,7 +26,7 @@ import java.util.prefs.Preferences;
 public class Offer extends EscapeDialog {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Offer");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Offer");
     public static final int PACK = 1;
     public static final int QUANTITY = 2;
     public static final int BIN = 2;
@@ -97,36 +97,133 @@ public class Offer extends EscapeDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel8 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        startChooser = new com.toedter.calendar.JDateChooser();
+        jLabel2 = new javax.swing.JLabel();
+        endChooser = new com.toedter.calendar.JDateChooser();
+        productText = new javax.swing.JTextField();
+        offerPriceText = new javax.swing.JTextField();
+        addProductButton = new javax.swing.JButton();
+        kindCombo = new javax.swing.JComboBox();
+        jLabel3 = new javax.swing.JLabel();
+        quantitySpinner = new javax.swing.JSpinner();
+        descriptionText = new javax.swing.JTextField();
+        limitSpinner = new javax.swing.JSpinner();
+        jLabel4 = new javax.swing.JLabel();
+        productPriceText = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         closeBtn = new javax.swing.JButton();
         okButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        productText = new javax.swing.JTextField();
-        addProductButton = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        descriptionText = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        offerPriceText = new javax.swing.JTextField();
-        kindCombo = new javax.swing.JComboBox();
-        quantitySpinner = new javax.swing.JSpinner();
-        limitSpinner = new javax.swing.JSpinner();
-        productPriceText = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        addProductButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Offer"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Offer"); // NOI18N
         setTitle(bundle.getString("Offer.title")); // NOI18N
         setName("Offer"); // NOI18N
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel8.setText(bundle.getString("Offer.jLabel8.text")); // NOI18N
+        jLabel8.setName("jLabel8"); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText(bundle.getString("Offer.jLabel1.text")); // NOI18N
+        jLabel1.setName("jLabel1"); // NOI18N
+
+        startChooser.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        startChooser.setName("startChooser"); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel2.setText(bundle.getString("Offer.jLabel2.text")); // NOI18N
+        jLabel2.setName("jLabel2"); // NOI18N
+
+        endChooser.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        endChooser.setName("endChooser"); // NOI18N
+
+        productText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        productText.setName("productText"); // NOI18N
+        productText.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                productTextFocusLost(evt);
+            }
+        });
+        productText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                productTextKeyReleased(evt);
+            }
+        });
+
+        offerPriceText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        offerPriceText.setName("offerPriceText"); // NOI18N
+        offerPriceText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                offerPriceTextKeyReleased(evt);
+            }
+        });
+
+        addProductButton.setBorderPainted(false);
+        addProductButton.setContentAreaFilled(false);
+        addProductButton.setName("addProductButton"); // NOI18N
+        addProductButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addProductButtonActionPerformed(evt);
+            }
+        });
+
+        kindCombo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        kindCombo.setName("kindCombo"); // NOI18N
+        kindCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kindComboActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setText(bundle.getString("Offer.jLabel3.text")); // NOI18N
+        jLabel3.setName("jLabel3"); // NOI18N
+
+        quantitySpinner.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        quantitySpinner.setName("quantitySpinner"); // NOI18N
+        quantitySpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                quantitySpinnerStateChanged(evt);
+            }
+        });
+
+        descriptionText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        descriptionText.setName("descriptionText"); // NOI18N
+
+        limitSpinner.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        limitSpinner.setName("limitSpinner"); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText(bundle.getString("Offer.jLabel4.text")); // NOI18N
+        jLabel4.setName("jLabel4"); // NOI18N
+
+        productPriceText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        productPriceText.setFocusable(false);
+        productPriceText.setName("productPriceText"); // NOI18N
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText(bundle.getString("Offer.jLabel5.text")); // NOI18N
+        jLabel5.setName("jLabel5"); // NOI18N
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel9.setText(bundle.getString("Offer.jLabel9.text")); // NOI18N
+        jLabel9.setName("jLabel9"); // NOI18N
+
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
         closeBtn.setBorderPainted(false);
         closeBtn.setContentAreaFilled(false);
         closeBtn.setName("closeBtn"); // NOI18N
@@ -136,7 +233,6 @@ public class Offer extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.setSelected(true);
@@ -167,59 +263,6 @@ public class Offer extends EscapeDialog {
                 .addContainerGap())
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {closeBtn, okButton});
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText(bundle.getString("Offer.jLabel1.text")); // NOI18N
-        jLabel1.setName("jLabel1"); // NOI18N
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText(bundle.getString("Offer.jLabel2.text")); // NOI18N
-        jLabel2.setName("jLabel2"); // NOI18N
-
-        productText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        productText.setName("productText"); // NOI18N
-        productText.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                productTextFocusLost(evt);
-            }
-        });
-        productText.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                productTextKeyReleased(evt);
-            }
-        });
-
-        addProductButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/add_obj.gif"))); // NOI18N
-        addProductButton.setBorderPainted(false);
-        addProductButton.setContentAreaFilled(false);
-        addProductButton.setName("addProductButton"); // NOI18N
-        addProductButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addProductButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText(bundle.getString("Offer.jLabel3.text")); // NOI18N
-        jLabel3.setName("jLabel3"); // NOI18N
-
-        descriptionText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        descriptionText.setName("descriptionText"); // NOI18N
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText(bundle.getString("Offer.jLabel4.text")); // NOI18N
-        jLabel4.setName("jLabel4"); // NOI18N
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText(bundle.getString("Offer.jLabel5.text")); // NOI18N
-        jLabel5.setName("jLabel5"); // NOI18N
-
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText(bundle.getString("Offer.jLabel6.text")); // NOI18N
@@ -229,56 +272,6 @@ public class Offer extends EscapeDialog {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText(bundle.getString("Offer.jLabel7.text")); // NOI18N
         jLabel7.setName("jLabel7"); // NOI18N
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText(bundle.getString("Offer.jLabel8.text")); // NOI18N
-        jLabel8.setName("jLabel8"); // NOI18N
-
-        offerPriceText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        offerPriceText.setName("offerPriceText"); // NOI18N
-        offerPriceText.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                offerPriceTextKeyReleased(evt);
-            }
-        });
-
-        kindCombo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        kindCombo.setName("kindCombo"); // NOI18N
-        kindCombo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kindComboActionPerformed(evt);
-            }
-        });
-
-        quantitySpinner.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        quantitySpinner.setName("quantitySpinner"); // NOI18N
-        quantitySpinner.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                quantitySpinnerStateChanged(evt);
-            }
-        });
-
-        limitSpinner.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        limitSpinner.setName("limitSpinner"); // NOI18N
-
-        productPriceText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        productPriceText.setFocusable(false);
-        productPriceText.setName("productPriceText"); // NOI18N
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel9.setText(bundle.getString("Offer.jLabel9.text")); // NOI18N
-        jLabel9.setName("jLabel9"); // NOI18N
-
-        addProductButton1.setBorderPainted(false);
-        addProductButton1.setContentAreaFilled(false);
-        addProductButton1.setName("addProductButton1"); // NOI18N
-        addProductButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addProductButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -305,12 +298,12 @@ public class Offer extends EscapeDialog {
                             .addComponent(limitSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
                             .addComponent(offerPriceText, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
                             .addComponent(productPriceText, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
+                            .addComponent(endChooser, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
+                            .addComponent(startChooser, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(kindCombo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(productText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(addProductButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(addProductButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -327,8 +320,7 @@ public class Offer extends EscapeDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(addProductButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(productText)
-                    .addComponent(jLabel2)
-                    .addComponent(addProductButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(descriptionText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -350,18 +342,236 @@ public class Offer extends EscapeDialog {
                     .addComponent(productPriceText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addGap(10, 10, 10)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(jLabel8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(startChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(endChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel8)))
                 .addGap(8, 8, 8)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {offerPriceText, productPriceText});
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void productTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_productTextFocusLost
+        String data = productText.getText();
+        if (data.length() == 1 && (data.charAt(0) >= 'a' && data.charAt(0) <= 'z' || data.charAt(0) >= 'A' && data.charAt(0) <= 'Z')) {
+            //data is a hot key
+            int n = 1; //n is the multiplyer, default to 1
+            data = data.toUpperCase();
+            char c = data.charAt(0);
+            barCode = c - 65L + 1000001L;
+            if (data.length() > 1) {
+                try {
+                    n = Integer.parseInt(data.substring(1));
+                } catch (NumberFormatException ex) {
+                    productText.setText("");
+                    productText.requestFocus();
+                    return;
+                }
+            }
+            data = "" + barCode;
+            productText.setText(data);
+        }
+        if (data.length() == 0 || data.length() < 7) {
+            return; //8 or more digits
+        } //8 or more digits
+        try {
+            barCode = Long.parseLong(data);
+        } catch (NumberFormatException ex) {
+            return;
+        }
+        if (barCode < 100000) {
+            barCode = 0L; //do not leave with a value
+            return; //not big enough to be a bar code
+        }
+        try {
+            if (!checkProduct()) {
+                productText.setText("");
+                productText.requestFocus();
+                Audio.play("Ring");
+            }
+        } catch (SQLException ex) {
+            Audio.play("Ring");
+            Logger.getLogger(Offer.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Audio.play("Beep");
+        getRootPane().setDefaultButton(okButton);
+    }//GEN-LAST:event_productTextFocusLost
+
+    private void productTextKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_productTextKeyReleased
+        String data = productText.getText();
+        productText.setBackground(Color.lightGray);
+        productText.setBackground(Color.WHITE);
+        if (data.length() == 3) {
+            if (Main.alphaLookup.isBarcode(data)) {
+                return;
+            }
+            if (Main.alphaLookup.isFound(data)) {
+                productText.setText(Main.alphaLookup.returnDataIs());
+                descriptionText.requestFocus();
+            } else {
+                productText.setText("");
+                descriptionText.setText("");
+                productPriceText.setText("");
+            }
+        }
+        int jj=evt.getKeyCode();
+        int jjj=data.length() ;
+        if (data.length() == 1 && evt.getKeyCode() == KeyEvent.VK_ADD) {
+            //this product is being added to an offer
+            //so fill in price, limit, dates and offer id
+            limitSpinner.setValue(limit);
+            offerPriceText.setText((new Money(y).toString()));
+            kindCombo.setSelectedIndex(kindIndex);
+            quantitySpinner.setValue(quantity);
+            startChooser.setCalendar(startCal);
+            endChooser.setCalendar(endCal);
+            addPressed = true;
+            productText.setText("");
+            productText.requestFocus();
+        }
+        getRootPane().setDefaultButton(okButton);
+    }//GEN-LAST:event_productTextKeyReleased
+
+    private void offerPriceTextKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_offerPriceTextKeyReleased
+        kind = kindCombo.getSelectedIndex();
+        if (kind == 2) {//discount
+        } else {
+            Money.asMoney(offerPriceText);
+        }
+        getRootPane().setDefaultButton(okButton);
+    }//GEN-LAST:event_offerPriceTextKeyReleased
+
+    private void addProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButtonActionPerformed
+        //this product is being added to an offer
+        //so fill in price, limit, dates and offer id
+        limitSpinner.setValue(limit);
+        offerPriceText.setText((new Money(y).toString()));
+        kindCombo.setSelectedIndex(kindIndex);
+        quantitySpinner.setValue(quantity);
+        startChooser.setCalendar(startCal);
+        endChooser.setCalendar(endCal);
+        addPressed = true;
+        productText.setText("");
+        productText.requestFocus();
+        getRootPane().setDefaultButton(okButton);
+    }//GEN-LAST:event_addProductButtonActionPerformed
+
+    private void kindComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kindComboActionPerformed
+        kind = kindCombo.getSelectedIndex();
+        switch (kind) {
+            case 0:
+            Main.mainHelpBroker.enableHelpKey(getRootPane(), "Offer", Main.mainHelpSet);
+            this.setTitle(bundle.getString("Offer.title"));
+            jLabel6.setText(bundle.getString("Offer.jLabel6.text"));
+            break;
+            case Offer.QUANTITY:
+            Main.mainHelpBroker.enableHelpKey(getRootPane(), "Quantitydiscounts", Main.mainHelpSet);
+            this.setTitle(bundle.getString("QuantityDiscount"));
+            jLabel6.setText(bundle.getString("Discount") + " " + (Integer) quantitySpinner.getValue() + ": (%)");
+            break;
+            case Offer.PACK:
+            Main.mainHelpBroker.enableHelpKey(getRootPane(), "Packoffers", Main.mainHelpSet);
+            this.setTitle(bundle.getString("Pack"));
+            jLabel6.setText(bundle.getString("Offer.jLabel6.text"));
+            jLabel6.setText(bundle.getString("Offer.jLabel6.text") + ": " + (Integer) quantitySpinner.getValue() + " ");
+            break;
+            default:
+            Main.mainHelpBroker.enableHelpKey(getRootPane(), "Offer", Main.mainHelpSet);
+            this.setTitle(bundle.getString("Offer.title"));
+            jLabel6.setText(bundle.getString("Offer.jLabel6.text"));
+            break;
+        }
+        getRootPane().setDefaultButton(okButton);
+    }//GEN-LAST:event_kindComboActionPerformed
+
+    private void quantitySpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_quantitySpinnerStateChanged
+        if (kind == PACK) {
+            jLabel6.setText(bundle.getString("Offer.jLabel6.text") + ": " + (Integer) quantitySpinner.getValue() + " ");
+        } else if (kind == QUANTITY) {
+            jLabel6.setText(bundle.getString("Discount") + " " + (Integer) quantitySpinner.getValue() + ": (%)");
+        }
+        getRootPane().setDefaultButton(okButton);
+    }//GEN-LAST:event_quantitySpinnerStateChanged
+
+    private void closeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeBtnActionPerformed
+        setVisible(false);
+    }//GEN-LAST:event_closeBtnActionPerformed
+
+    private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
+        // check for filled in data
+        if (productText.getText().isEmpty() || descriptionText.getText().isEmpty()) {
+            productText.requestFocus();
+            return;
+        } else if (kindCombo.getSelectedIndex() == 0) {
+            kindCombo.requestFocus();
+            return;
+        } else if (offerPriceText.getText().isEmpty()) {
+            offerPriceText.requestFocus();
+            return;
+        }
+        startCal = startChooser.getCalendar();
+        endCal = endChooser.getCalendar();
+        startDate = new java.sql.Date(startCal.getTimeInMillis());
+        endDate = new java.sql.Date(endCal.getTimeInMillis());
+        //insert offer
+        try {
+            if (!addPressed) {
+                PreparedStatement nf = Main.getConnection().prepareStatement(
+                    "SELECT IX,MAX(IX) FROM OFFERS " + "GROUP BY IX " + "ORDER BY IX DESC");
+                ResultSet rs = nf.executeQuery();
+                if (!rs.first()) {
+                    ix = 1;
+                } else {
+                    ix = rs.getInt("IX") + 1;
+                }
+                rs.close();
+            }
+            addPressed = false;
+            PreparedStatement np = Main.getConnection().prepareStatement(
+                "INSERT INTO Offers(ID,IX,Product,X,Y,OfferType,StartDate,EndDate," + "Discounted,Included,Z,Normal,LimitValue) VALUES(?,?,?,?,?,?,?,?,0,0,0,0,?)");
+            np.setNull(1, java.sql.Types.NULL); //id
+            np.setInt(2, ix); //ix is the index for the offer
+            np.setLong(3, barCode); //product
+            quantity = (Integer) quantitySpinner.getValue();
+            np.setInt(4, quantity); //X
+            y = Integer.parseInt(StringOps.numericOnly(offerPriceText.getText())); //price=y
+            np.setInt(5, y);
+            kindIndex = kindCombo.getSelectedIndex();
+            np.setInt(6, kindCombo.getSelectedIndex()); //kind
+            np.setDate(7, startDate);
+            np.setDate(8, endDate);
+            limit = (Integer) limitSpinner.getValue();
+            np.setInt(9, (Integer) limitSpinner.getValue());
+            np.executeUpdate();
+            quantitySpinner.setValue(2);
+            limitSpinner.setValue(0);
+            offerPriceText.setText("");
+            productPriceText.setText("");
+            kindCombo.setSelectedIndex(0);
+            Calendar c = Calendar.getInstance();
+            startChooser.setCalendar(c);
+            c.add(Calendar.WEEK_OF_YEAR, 1);
+            endChooser.setCalendar(c);
+        } catch (SQLException ex) {
+            Logger.getLogger(Offer.class.getName()).log(Level.SEVERE, null, ex);
+            Audio.play("Ring");
+        }
+        Audio.play("Beep");
+        addProductButton.setVisible(true);
+        productText.setText("");
+        productText.requestFocus();
+        descriptionText.setText("");
+        offerPriceText.setText("");
+        productPriceText.setText("");
+    }//GEN-LAST:event_okButtonActionPerformed
 
     public boolean execute() {
         addPressed = false;
@@ -429,235 +639,6 @@ public class Offer extends EscapeDialog {
         return true;
     }
 
-    private void closeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeBtnActionPerformed
-        setVisible(false);
-}//GEN-LAST:event_closeBtnActionPerformed
-
-    private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
-        // check for filled in data
-        if (productText.getText().isEmpty() || descriptionText.getText().isEmpty()) {
-            productText.requestFocus();
-            return;
-        } else if (kindCombo.getSelectedIndex() == 0) {
-            kindCombo.requestFocus();
-            return;
-        } else if (offerPriceText.getText().isEmpty()) {
-            offerPriceText.requestFocus();
-            return;
-        }
-        startCal = startChooser.getCalendar();
-        endCal = endChooser.getCalendar();
-        startDate = new java.sql.Date(startCal.getTimeInMillis());
-        endDate = new java.sql.Date(endCal.getTimeInMillis());
-        //insert offer
-        try {
-            if (!addPressed) {
-                PreparedStatement nf = Main.getConnection().prepareStatement(
-                        "SELECT IX,MAX(IX) FROM OFFERS " + "GROUP BY IX " + "ORDER BY IX DESC");
-                ResultSet rs = nf.executeQuery();
-                if (!rs.first()) {
-                    ix = 1;
-                } else {
-                    ix = rs.getInt("IX") + 1;
-                }
-                rs.close();
-            }
-            addPressed = false;
-            PreparedStatement np = Main.getConnection().prepareStatement(
-                    "INSERT INTO Offers(ID,IX,Product,X,Y,OfferType,StartDate,EndDate," + "Discounted,Included,Z,Normal,LimitValue) VALUES(?,?,?,?,?,?,?,?,0,0,0,0,?)");
-            np.setNull(1, java.sql.Types.NULL); //id
-            np.setInt(2, ix); //ix is the index for the offer
-            np.setLong(3, barCode); //product
-            quantity = (Integer) quantitySpinner.getValue();
-            np.setInt(4, quantity); //X
-            y = Integer.parseInt(StringOps.numericOnly(offerPriceText.getText())); //price=y
-            np.setInt(5, y);
-            kindIndex = kindCombo.getSelectedIndex();
-            np.setInt(6, kindCombo.getSelectedIndex()); //kind
-            np.setDate(7, startDate);
-            np.setDate(8, endDate);
-            limit = (Integer) limitSpinner.getValue();
-            np.setInt(9, (Integer) limitSpinner.getValue());
-            np.executeUpdate();
-            quantitySpinner.setValue(2);
-            limitSpinner.setValue(0);
-            offerPriceText.setText("");
-            productPriceText.setText("");
-            kindCombo.setSelectedIndex(0);
-            Calendar c = Calendar.getInstance();
-            startChooser.setCalendar(c);
-            c.add(Calendar.WEEK_OF_YEAR, 1);
-            endChooser.setCalendar(c);
-        } catch (SQLException ex) {
-            Logger.getLogger(Offer.class.getName()).log(Level.SEVERE, null, ex);
-            Audio.play("Ring");
-        }
-        Audio.play("Beep");
-        addProductButton.setVisible(true);
-        productText.setText("");
-        productText.requestFocus();
-        descriptionText.setText("");
-        offerPriceText.setText("");
-        productPriceText.setText("");
-}//GEN-LAST:event_okButtonActionPerformed
-
-    private void productTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_productTextFocusLost
-        String data = productText.getText();
-        if (data.length() == 1 && (data.charAt(0) >= 'a' && data.charAt(0) <= 'z' || data.charAt(0) >= 'A' && data.charAt(0) <= 'Z')) {
-            //data is a hot key
-            int n = 1; //n is the multiplyer, default to 1
-            data = data.toUpperCase();
-            char c = data.charAt(0);
-            barCode = c - 65L + 1000001L;
-            if (data.length() > 1) {
-                try {
-                    n = Integer.parseInt(data.substring(1));
-                } catch (NumberFormatException ex) {
-                    productText.setText("");
-                    productText.requestFocus();
-                    return;
-                }
-            }
-            data = "" + barCode;
-            productText.setText(data);
-        }
-        if (data.length() == 0 || data.length() < 7) {
-            return; //8 or more digits
-        } //8 or more digits
-        try {
-            barCode = Long.parseLong(data);
-        } catch (NumberFormatException ex) {
-            return;
-        }
-        if (barCode < 100000) {
-            barCode = 0L; //do not leave with a value
-            return; //not big enough to be a bar code
-        }
-        try {
-            if (!checkProduct()) {
-                productText.setText("");
-                productText.requestFocus();
-                Audio.play("Ring");
-            }
-        } catch (SQLException ex) {
-            Audio.play("Ring");
-            Logger.getLogger(Offer.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        Audio.play("Beep");
-        getRootPane().setDefaultButton(okButton);
-    }//GEN-LAST:event_productTextFocusLost
-
-    private void productTextKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_productTextKeyReleased
-        String data = productText.getText();
-        productText.setBackground(Color.lightGray);
-        productText.setBackground(Color.WHITE);
-        if (data.length() == 3) {
-            if (Main.alphaLookup.isBarcode(data)) {
-                return;
-            }
-            if (Main.alphaLookup.isFound(data)) {
-                productText.setText(Main.alphaLookup.returnDataIs());
-                descriptionText.requestFocus();
-            } else {
-                productText.setText("");
-                descriptionText.setText("");
-                productPriceText.setText("");
-            }
-        }
-        int jj=evt.getKeyCode();
-        int jjj=data.length() ;
-            if (data.length() == 1 && evt.getKeyCode() == KeyEvent.VK_ADD) {
-            //this product is being added to an offer
-            //so fill in price, limit, dates and offer id
-            limitSpinner.setValue(limit);
-            offerPriceText.setText((new Money(y).toString()));
-            kindCombo.setSelectedIndex(kindIndex);
-            quantitySpinner.setValue(quantity);
-            startChooser.setCalendar(startCal);
-            endChooser.setCalendar(endCal);
-            addPressed = true;
-            productText.setText("");
-            productText.requestFocus();
-        }
-        getRootPane().setDefaultButton(okButton);
-}//GEN-LAST:event_productTextKeyReleased
-
-    private void offerPriceTextKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_offerPriceTextKeyReleased
-        kind = kindCombo.getSelectedIndex();
-        if (kind == 2) {//discount
-        } else {
-            Money.asMoney(offerPriceText);
-        }
-        getRootPane().setDefaultButton(okButton);
-}//GEN-LAST:event_offerPriceTextKeyReleased
-
-    private void addProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButtonActionPerformed
-        //this product is being added to an offer
-        //so fill in price, limit, dates and offer id
-        limitSpinner.setValue(limit);
-        offerPriceText.setText((new Money(y).toString()));
-        kindCombo.setSelectedIndex(kindIndex);
-        quantitySpinner.setValue(quantity);
-        startChooser.setCalendar(startCal);
-        endChooser.setCalendar(endCal);
-        addPressed = true;
-        productText.setText("");
-        productText.requestFocus();
-        getRootPane().setDefaultButton(okButton);
-    }//GEN-LAST:event_addProductButtonActionPerformed
-
-    private void kindComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kindComboActionPerformed
-        kind = kindCombo.getSelectedIndex();
-        switch (kind) {
-            case 0:
-                Main.mainHelpBroker.enableHelpKey(getRootPane(), "Offer", Main.mainHelpSet);
-                this.setTitle(bundle.getString("Offer.title"));
-                jLabel6.setText(bundle.getString("Offer.jLabel6.text"));
-                break;
-            case Offer.QUANTITY:
-                Main.mainHelpBroker.enableHelpKey(getRootPane(), "Quantitydiscounts", Main.mainHelpSet);
-                this.setTitle(bundle.getString("QuantityDiscount"));
-                jLabel6.setText(bundle.getString("Discount") + " " + (Integer) quantitySpinner.getValue() + ": (%)");
-                break;
-            case Offer.PACK:
-                Main.mainHelpBroker.enableHelpKey(getRootPane(), "Packoffers", Main.mainHelpSet);
-                this.setTitle(bundle.getString("Pack"));
-                jLabel6.setText(bundle.getString("Offer.jLabel6.text"));
-                jLabel6.setText(bundle.getString("Offer.jLabel6.text") + ": " + (Integer) quantitySpinner.getValue() + " ");
-                break;
-            default:
-                Main.mainHelpBroker.enableHelpKey(getRootPane(), "Offer", Main.mainHelpSet);
-                this.setTitle(bundle.getString("Offer.title"));
-                jLabel6.setText(bundle.getString("Offer.jLabel6.text"));
-                break;
-        }
-        getRootPane().setDefaultButton(okButton);
-    }//GEN-LAST:event_kindComboActionPerformed
-
-    private void quantitySpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_quantitySpinnerStateChanged
-        if (kind == PACK) {
-            jLabel6.setText(bundle.getString("Offer.jLabel6.text") + ": " + (Integer) quantitySpinner.getValue() + " ");
-        } else if (kind == QUANTITY) {
-            jLabel6.setText(bundle.getString("Discount") + " " + (Integer) quantitySpinner.getValue() + ": (%)");
-        }
-        getRootPane().setDefaultButton(okButton);
-    }//GEN-LAST:event_quantitySpinnerStateChanged
-
-    private void addProductButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButton1ActionPerformed
-        //this product is being added to an offer
-        //so fill in price, limit, dates and offer id
-        limitSpinner.setValue(limit);
-        offerPriceText.setText((new Money(y).toString()));
-        kindCombo.setSelectedIndex(kindIndex);
-        quantitySpinner.setValue(quantity);
-        startChooser.setCalendar(startCal);
-        endChooser.setCalendar(endCal);
-        addPressed = true;
-        productText.setText("");
-        productText.requestFocus();
-        getRootPane().setDefaultButton(okButton);
-    }//GEN-LAST:event_addProductButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -678,9 +659,9 @@ public class Offer extends EscapeDialog {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addProductButton;
-    private javax.swing.JButton addProductButton1;
     private javax.swing.JButton closeBtn;
     private javax.swing.JTextField descriptionText;
+    private com.toedter.calendar.JDateChooser endChooser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -698,5 +679,6 @@ public class Offer extends EscapeDialog {
     private javax.swing.JTextField productPriceText;
     private javax.swing.JTextField productText;
     private javax.swing.JSpinner quantitySpinner;
+    private com.toedter.calendar.JDateChooser startChooser;
     // End of variables declaration//GEN-END:variables
 }

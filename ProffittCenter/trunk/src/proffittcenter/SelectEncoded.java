@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
  */
 public class SelectEncoded extends EscapeDialog {
 
-    private static final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SelectEncoded");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/SelectEncoded");
     private int returnValue;
     
     /** Creates new form SelectEncoded
@@ -52,11 +52,11 @@ public class SelectEncoded extends EscapeDialog {
         jComboBox1 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SelectEncoded"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/SelectEncoded"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("selectencoded\n"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +64,7 @@ public class SelectEncoded extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

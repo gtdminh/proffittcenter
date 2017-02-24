@@ -30,7 +30,7 @@ import net.sf.jasperreports.engine.JasperPrintManager;
  */
 public class CashUp {
 
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashUp");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/CashUp");
     private String cashupSales = SQL.cashupSales;
     private String saveCashupSQL = SQL.saveCashupSQL;
     private String paidOutTransactions = SQL.paidOutTransactions;

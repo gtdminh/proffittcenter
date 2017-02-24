@@ -33,7 +33,7 @@ import javax.swing.table.TableColumnModel;
 public class PaidOuts extends EscapeDialog {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/PaidOuts");
+    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/PaidOuts");
     private Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("ID"));
@@ -246,7 +246,7 @@ public class PaidOuts extends EscapeDialog {
         closeButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/PaidOuts"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/PaidOuts"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("PaidOuts"); // NOI18N
 
@@ -271,7 +271,7 @@ public class PaidOuts extends EscapeDialog {
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesBy"); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/SalesBy"); // NOI18N
         jLabel1.setText(bundle1.getString("SalesBy.jLabel1.text")); // NOI18N
         jLabel1.setName("jLabel1"); // NOI18N
 

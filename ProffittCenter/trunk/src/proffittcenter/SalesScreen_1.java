@@ -52,8 +52,8 @@ import org.apache.log4j.PropertyConfigurator;
 public class SalesScreen_1 extends javax.swing.JFrame {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesScreen");
-    ResourceBundle bundle1 = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesScreen1");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/SalesScreen");
+    ResourceBundle bundle1 = ResourceBundle.getBundle("proffittcenter/resource/SalesScreen1");
     private int qty = 1; //the quantity
     public LineList aSale;//aSale holds the information of the current sale
     private final SaleTableModel model;
@@ -1115,7 +1115,7 @@ void execute() {
         dropboxMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesScreen"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/SalesScreen"); // NOI18N
         setTitle(bundle.getString("SalesScreen.title")); // NOI18N
         setFont(new java.awt.Font("Andale Mono IPA", 0, 8)); // NOI18N
         setName(bundle.getString("SalesScreen.name")); // NOI18N
@@ -1228,7 +1228,7 @@ void execute() {
         jScrollPane2.setViewportView(resultsTable);
 
         jButtonEnter.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonEnter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Enter.png"))); // NOI18N
+        jButtonEnter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Enter.png"))); // NOI18N
         jButtonEnter.setToolTipText(bundle.getString("enter")); // NOI18N
         jButtonEnter.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonEnter.setName("jButtonEnter"); // NOI18N
@@ -1239,7 +1239,7 @@ void execute() {
         });
 
         jButtonTimes.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButtonTimes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Asterix.png"))); // NOI18N
+        jButtonTimes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Asterix.png"))); // NOI18N
         jButtonTimes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonTimes.setName("jButtonTimes"); // NOI18N
         jButtonTimes.addActionListener(new java.awt.event.ActionListener() {
@@ -1249,7 +1249,7 @@ void execute() {
         });
 
         jButtonMinus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButtonMinus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Minus.png"))); // NOI18N
+        jButtonMinus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Minus.png"))); // NOI18N
         jButtonMinus.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonMinus.setName("jButtonMinus"); // NOI18N
         jButtonMinus.addActionListener(new java.awt.event.ActionListener() {

@@ -39,14 +39,14 @@ public class SelectFloat extends EscapeDialog {
         floatText = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SelectFloat"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/SelectFloat"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("SelectFloat"); // NOI18N
 
         jLabel1.setText(bundle.getString("SelectFloat.jLabel1.text")+" ("+Main.shop.getPennySymbol()+")"); // NOI18N
         jLabel1.setName("jLabel1"); // NOI18N
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {

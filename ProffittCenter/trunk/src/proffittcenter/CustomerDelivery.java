@@ -80,7 +80,7 @@ public class CustomerDelivery extends EscapeDialog {
         jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CustomerDelivery"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/CustomerDelivery"); // NOI18N
         setTitle(bundle.getString("CustomerDelivery.title")); // NOI18N
         setAlwaysOnTop(true);
         setName("customerDelivery"); // NOI18N
@@ -159,7 +159,7 @@ public class CustomerDelivery extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setBorderPainted(false);
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N

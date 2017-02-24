@@ -48,7 +48,7 @@ import javax.swing.table.TableColumn;
 public class Sale extends EscapeDialog {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Sale");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Sale");
     Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     boolean b0 = tableHeader.add("ID");
@@ -263,13 +263,13 @@ public class Sale extends EscapeDialog {
         jLabel15 = new JLabel();
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Sale"); // NOI18N
+        ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Sale"); // NOI18N
         setTitle(bundle.getString("sale.title")); // NOI18N
         setName("Sale"); // NOI18N
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new ActionListener() {
@@ -283,7 +283,7 @@ public class Sale extends EscapeDialog {
             }
         });
 
-        upButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/forward_nav.gif"))); // NOI18N
+        upButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/forward_nav.gif"))); // NOI18N
         upButton.setContentAreaFilled(false);
         upButton.setName("upButton"); // NOI18N
         upButton.addActionListener(new ActionListener() {
@@ -292,7 +292,7 @@ public class Sale extends EscapeDialog {
             }
         });
 
-        downButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/backward_nav.gif"))); // NOI18N
+        downButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/backward_nav.gif"))); // NOI18N
         downButton.setContentAreaFilled(false);
         downButton.setName("downButton"); // NOI18N
         downButton.addActionListener(new ActionListener() {
@@ -301,7 +301,7 @@ public class Sale extends EscapeDialog {
             }
         });
 
-        printButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Receipt.png"))); // NOI18N
+        printButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/Receipt.png"))); // NOI18N
         printButton.setMnemonic('P');
         printButton.setText("null");
         printButton.setToolTipText(bundle.getString("Receipt")); // NOI18N
@@ -313,7 +313,7 @@ public class Sale extends EscapeDialog {
             }
         });
 
-        invoiceButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/print_edit.gif"))); // NOI18N
+        invoiceButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/print_edit.gif"))); // NOI18N
         invoiceButton.setToolTipText(bundle.getString("Invoice")); // NOI18N
         invoiceButton.setContentAreaFilled(false);
         invoiceButton.setName("invoiceButton"); // NOI18N

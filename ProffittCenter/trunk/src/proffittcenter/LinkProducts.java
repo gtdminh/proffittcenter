@@ -41,7 +41,7 @@ public class LinkProducts extends javax.swing.JDialog {
             + "OR ((P.Description) LIKE ?)) "
             + "ORDER BY P.Sku,P.Description ";
     private JDBCTableModel jtm;
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/LinkProducts");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/LinkProducts");
 
     ;
     private int firstSelection;
@@ -82,7 +82,7 @@ public class LinkProducts extends javax.swing.JDialog {
         alphaTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/LinkProducts"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/LinkProducts"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("linkProducts"); // NOI18N
 

@@ -15,7 +15,7 @@ import javax.swing.table.AbstractTableModel;
 public class ResultsModel extends AbstractTableModel {
     Vector tableHeader = new Vector();
     
-       ResourceBundle bundle1 = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/ResultsModel");
+       ResourceBundle bundle1 = ResourceBundle.getBundle("proffittcenter/resource/ResultsModel");
     @Override
         public String getColumnName(int col) {
             return "";

@@ -41,7 +41,7 @@ import javax.swing.table.TableColumnModel;
  */
 public class StockTake extends EscapeDialog {
 
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/StockTake");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/StockTake");
     Vector tableHeader = new Vector();
     boolean b0 = tableHeader.add(bundle.getString("Sku__"));
     boolean b1 = tableHeader.add(bundle.getString("Product"));
@@ -266,7 +266,7 @@ public class StockTake extends EscapeDialog {
         includeBarcodeCheckBox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/StockTake"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/StockTake"); // NOI18N
         setTitle(bundle.getString("StockTake.title")); // NOI18N
         setName("StockTake"); // NOI18N
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -301,7 +301,7 @@ public class StockTake extends EscapeDialog {
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setBorderPainted(false);
         closeButton2.setContentAreaFilled(false);
         closeButton2.setName("closeButton2"); // NOI18N
@@ -316,7 +316,7 @@ public class StockTake extends EscapeDialog {
             }
         });
 
-        printButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/print_edit.gif"))); // NOI18N
+        printButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/print_edit.gif"))); // NOI18N
         printButton.setToolTipText(bundle.getString("printButtonToolTip")); // NOI18N
         printButton.setName("printButton"); // NOI18N
         printButton.addActionListener(new java.awt.event.ActionListener() {
@@ -325,7 +325,7 @@ public class StockTake extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

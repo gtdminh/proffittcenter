@@ -37,7 +37,7 @@ public class NewProduct extends EscapeDialog {
     public static int ENCODEBYPRICE5 = 5;
     public static int ENCODEBYWEIGHT5 = 6;
     private final Preferences root = Preferences.userNodeForPackage(getClass());
-    private final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/NewProduct");
+    private final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/NewProduct");
     private String department;
     private String product;
     private int sku;
@@ -227,7 +227,7 @@ public class NewProduct extends EscapeDialog {
         multiPackSpinner = new javax.swing.JSpinner();
         barcodeCheckBox = new javax.swing.JCheckBox();
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/NewProduct"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/NewProduct"); // NOI18N
         jTextField1.setText(bundle.getString("NewProduct.jTextField1.text")); // NOI18N
         jTextField1.setName("jTextField1"); // NOI18N
 
@@ -298,7 +298,7 @@ public class NewProduct extends EscapeDialog {
         perText.setName("perText"); // NOI18N
         perText.setNextFocusableComponent(okBtn);
 
-        printBarcode.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Barcode.png"))); // NOI18N
+        printBarcode.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Barcode.png"))); // NOI18N
         printBarcode.setContentAreaFilled(false);
         printBarcode.setName("printBarcode"); // NOI18N
         printBarcode.addActionListener(new java.awt.event.ActionListener() {
@@ -307,7 +307,7 @@ public class NewProduct extends EscapeDialog {
             }
         });
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setContentAreaFilled(false);
         okBtn.setName("okBtn"); // NOI18N
         okBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -316,7 +316,7 @@ public class NewProduct extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {

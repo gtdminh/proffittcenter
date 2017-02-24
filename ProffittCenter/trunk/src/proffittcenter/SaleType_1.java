@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 public class SaleType_1 {
     // a typesafe enumerator from 'Effective Java'
     private static ResourceBundle bundle = ResourceBundle
-            .getBundle("proffittcenterworkingcopy/resource/SaleType");
+            .getBundle("proffittcenter/resource/SaleType");
     private final String name;//such as "Charged"
     //1000030;//such as 1000033
     private static long code=Long.parseLong(bundle.getString("SaleTypeBase"));

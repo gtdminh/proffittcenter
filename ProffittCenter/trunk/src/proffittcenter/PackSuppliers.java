@@ -35,7 +35,7 @@ import javax.swing.table.TableColumnModel;
 public class PackSuppliers extends EscapeDialog implements MouseListener {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/PackSuppliers");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/PackSuppliers");
     private Vector tableHeader = new Vector();
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("ID"));
@@ -158,7 +158,7 @@ public class PackSuppliers extends EscapeDialog implements MouseListener {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/PackSuppliers"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/PackSuppliers"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("PackSuppliers"); // NOI18N
 

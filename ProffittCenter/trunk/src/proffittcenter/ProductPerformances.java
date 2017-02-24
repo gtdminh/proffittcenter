@@ -41,7 +41,7 @@ public class ProductPerformances extends EscapeDialog {
             + "AND Skus.Tax=Taxes.ID "
             + "ORDER BY PackSuppliers.WhenCreated DESC,Description ";
     private JDBCTableModel jtm;
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/ProductPerformances");;
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/ProductPerformances");;
     private final MyTableCellRenderer mtcr;
     private int value;
     
@@ -69,7 +69,7 @@ public class ProductPerformances extends EscapeDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/ProductPerformances"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/ProductPerformances"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("productPerformances"); // NOI18N
 

@@ -46,11 +46,11 @@ public class Coupon extends EscapeDialog {
         couponText = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Coupon"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Coupon"); // NOI18N
         setTitle(bundle.getString("Coupon.title")); // NOI18N
         setName("Coupon"); // NOI18N
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setBorderPainted(false);
         okBtn.setContentAreaFilled(false);
         okBtn.setIconTextGap(0);

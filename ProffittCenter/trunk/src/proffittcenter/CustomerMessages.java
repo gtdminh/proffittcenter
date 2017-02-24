@@ -27,7 +27,7 @@ public class CustomerMessages extends EscapeDialog {
 
     private JDBCTableModel jtm;
     String customerMessagesSQL = "SELECT Message,MessageShown FROM CustomerMessages ORDER BY Message";
-    private ResourceBundle bundle= ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CustomerMessages");
+    private ResourceBundle bundle= ResourceBundle.getBundle("proffittcenter/resource/CustomerMessages");
     private ResultSet rs;
     private String messageShown;
 
@@ -57,7 +57,7 @@ public class CustomerMessages extends EscapeDialog {
         okButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CustomerMessages"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/CustomerMessages"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("customerMessages"); // NOI18N
 
@@ -74,7 +74,7 @@ public class CustomerMessages extends EscapeDialog {
         jTable1.setName("jTable1"); // NOI18N
         jScrollPane1.setViewportView(jTable1);
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +82,7 @@ public class CustomerMessages extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

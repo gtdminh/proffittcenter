@@ -87,7 +87,7 @@ public class SelectTill extends EscapeDialog {
         jLabel1 = new javax.swing.JLabel();
         okBtn = new javax.swing.JButton();
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SelectTill"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/SelectTill"); // NOI18N
         setTitle(bundle.getString("Select Till")); // NOI18N
         setName("SelectTill"); // NOI18N
 
@@ -96,7 +96,7 @@ public class SelectTill extends EscapeDialog {
         jLabel1.setText(bundle.getString("SelectTill.jLabel1.text")); // NOI18N
         jLabel1.setName("jLabel1"); // NOI18N
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okBtn.setContentAreaFilled(false);
         okBtn.setName("okBtn"); // NOI18N
         okBtn.addActionListener(new java.awt.event.ActionListener() {

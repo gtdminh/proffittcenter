@@ -24,7 +24,7 @@ public class OrderGenerate implements Runnable {
     static PreparedStatement np;
     static PreparedStatement addToQs;
     static ResultSet rs;
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/OrderGenerate");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/OrderGenerate");
     private static boolean aSale;
     private static int rate;
     private static int tax;

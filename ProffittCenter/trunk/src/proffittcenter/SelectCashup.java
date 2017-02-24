@@ -49,7 +49,7 @@ public class SelectCashup extends EscapeDialog {
     DefaultListModel listModel;
     String findCashUps = "SELECT ID,DATE(WhenCreated)AS WhenCreated,TillID FROM CashUps WHERE (TillID=? OR 0=?) AND Reconciled =0 ORDER BY WhenCreated DESC  ";
     String findFloats = "SELECT ID FROM CashUps WHERE (TillID=? OR 0=?) AND Reconciled =1 ORDER BY WhenCreated DESC  ";
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupSelect");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/CashupSelect");
     Preferences root = Preferences.userNodeForPackage(getClass());
     private int returnValue;
 
@@ -78,7 +78,7 @@ public class SelectCashup extends EscapeDialog {
         closeButton = new JButton();
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupSelect"); // NOI18N
+        ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/CashupSelect"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("SelectCashup"); // NOI18N
 
@@ -96,7 +96,7 @@ public class SelectCashup extends EscapeDialog {
         jLabel1.setText(bundle.getString("SelectCashup.jLabel1.text")); // NOI18N
         jLabel1.setName("jLabel1"); // NOI18N
 
-        okButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new ActionListener() {
@@ -105,7 +105,7 @@ public class SelectCashup extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new ActionListener() {

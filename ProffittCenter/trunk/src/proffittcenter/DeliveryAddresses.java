@@ -49,7 +49,7 @@ public class DeliveryAddresses extends EscapeDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/DeliveryAddresses"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/DeliveryAddresses"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("DeliveryAddresses"); // NOI18N
 

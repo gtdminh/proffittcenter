@@ -52,8 +52,8 @@ import org.apache.log4j.PropertyConfigurator;
 public class SalesScreen extends javax.swing.JFrame {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesScreen");
-    ResourceBundle bundle1 = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesScreen1");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/SalesScreen");
+    ResourceBundle bundle1 = ResourceBundle.getBundle("proffittcenter/resource/SalesScreen1");
     private int qty = 1; //the quantity
     public LineList aSale;//aSale holds the information of the current sale
     private final SaleTableModel model;
@@ -1115,7 +1115,7 @@ void execute() {
         dropboxMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesScreen"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/SalesScreen"); // NOI18N
         setTitle(bundle.getString("SalesScreen.title")); // NOI18N
         setFont(new java.awt.Font("Andale Mono IPA", 0, 8)); // NOI18N
         setName(bundle.getString("SalesScreen.name")); // NOI18N
@@ -1128,7 +1128,8 @@ void execute() {
         jPanel1.setName("jPanel1"); // NOI18N
 
         jButtonPerCent.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButtonPerCent.setText(bundle.getString("SalesScreen.jButtonPerCent.text")); // NOI18N
+        java.util.ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("proffittcenter/resource/SalesScreen"); // NOI18N
+        jButtonPerCent.setText(bundle2.getString("SalesScreen.jButtonPerCent.text")); // NOI18N
         jButtonPerCent.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonPerCent.setName("jButtonPerCent"); // NOI18N
         jButtonPerCent.addActionListener(new java.awt.event.ActionListener() {
@@ -1138,7 +1139,7 @@ void execute() {
         });
 
         jButton1.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton1.setText(bundle.getString("SalesScreen.jButton1.text")); // NOI18N
+        jButton1.setText(bundle2.getString("SalesScreen.jButton1.text")); // NOI18N
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setName("jButton1"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1148,7 +1149,7 @@ void execute() {
         });
 
         jButton0.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton0.setText(bundle.getString("SalesScreen.jButton0.text")); // NOI18N
+        jButton0.setText(bundle2.getString("SalesScreen.jButton0.text")); // NOI18N
         jButton0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton0.setName("jButton0"); // NOI18N
         jButton0.addActionListener(new java.awt.event.ActionListener() {
@@ -1158,7 +1159,7 @@ void execute() {
         });
 
         jButton5.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton5.setText(bundle.getString("SalesScreen.jButton5.text")); // NOI18N
+        jButton5.setText(bundle2.getString("SalesScreen.jButton5.text")); // NOI18N
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton5.setName("jButton5"); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -1168,7 +1169,7 @@ void execute() {
         });
 
         jButton6.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton6.setText(bundle.getString("SalesScreen.jButton6.text")); // NOI18N
+        jButton6.setText(bundle2.getString("SalesScreen.jButton6.text")); // NOI18N
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton6.setName("jButton6"); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -1178,7 +1179,7 @@ void execute() {
         });
 
         jButtonAt.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButtonAt.setText(bundle.getString("SalesScreen.jButtonAt.text")); // NOI18N
+        jButtonAt.setText(bundle2.getString("SalesScreen.jButtonAt.text")); // NOI18N
         jButtonAt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonAt.setName("jButtonAt"); // NOI18N
         jButtonAt.addActionListener(new java.awt.event.ActionListener() {
@@ -1188,7 +1189,7 @@ void execute() {
         });
 
         jButton7.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton7.setText(bundle.getString("SalesScreen.jButton7.text")); // NOI18N
+        jButton7.setText(bundle2.getString("SalesScreen.jButton7.text")); // NOI18N
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton7.setName("jButton7"); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -1228,7 +1229,7 @@ void execute() {
         jScrollPane2.setViewportView(resultsTable);
 
         jButtonEnter.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonEnter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Enter.png"))); // NOI18N
+        jButtonEnter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Enter.png"))); // NOI18N
         jButtonEnter.setToolTipText(bundle.getString("enter")); // NOI18N
         jButtonEnter.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonEnter.setName("jButtonEnter"); // NOI18N
@@ -1239,7 +1240,7 @@ void execute() {
         });
 
         jButtonTimes.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButtonTimes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Asterix.png"))); // NOI18N
+        jButtonTimes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Asterix.png"))); // NOI18N
         jButtonTimes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonTimes.setName("jButtonTimes"); // NOI18N
         jButtonTimes.addActionListener(new java.awt.event.ActionListener() {
@@ -1249,7 +1250,7 @@ void execute() {
         });
 
         jButtonMinus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButtonMinus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Minus.png"))); // NOI18N
+        jButtonMinus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Minus.png"))); // NOI18N
         jButtonMinus.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonMinus.setName("jButtonMinus"); // NOI18N
         jButtonMinus.addActionListener(new java.awt.event.ActionListener() {
@@ -1259,7 +1260,7 @@ void execute() {
         });
 
         jButtonDelete.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
-        jButtonDelete.setText(bundle.getString("SalesScreen.jButtonDelete.text")); // NOI18N
+        jButtonDelete.setText(bundle2.getString("SalesScreen.jButtonDelete.text")); // NOI18N
         jButtonDelete.setToolTipText(bundle.getString("tab")); // NOI18N
         jButtonDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonDelete.setName("jButtonDelete"); // NOI18N
@@ -1270,7 +1271,7 @@ void execute() {
         });
 
         jButton9.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton9.setText(bundle.getString("SalesScreen.jButton9.text")); // NOI18N
+        jButton9.setText(bundle2.getString("SalesScreen.jButton9.text")); // NOI18N
         jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton9.setName("jButton9"); // NOI18N
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -1280,7 +1281,7 @@ void execute() {
         });
 
         jButton4.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton4.setText(bundle.getString("SalesScreen.jButton4.text")); // NOI18N
+        jButton4.setText(bundle2.getString("SalesScreen.jButton4.text")); // NOI18N
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton4.setName("jButton4"); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -1290,7 +1291,7 @@ void execute() {
         });
 
         jButton2.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton2.setText(bundle.getString("SalesScreen.jButton2.text")); // NOI18N
+        jButton2.setText(bundle2.getString("SalesScreen.jButton2.text")); // NOI18N
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setName("jButton2"); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -1300,7 +1301,7 @@ void execute() {
         });
 
         jButton3.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton3.setText(bundle.getString("SalesScreen.jButton3.text")); // NOI18N
+        jButton3.setText(bundle2.getString("SalesScreen.jButton3.text")); // NOI18N
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setName("jButton3"); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -1310,7 +1311,7 @@ void execute() {
         });
 
         jButton8.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 18)); // NOI18N
-        jButton8.setText(bundle.getString("SalesScreen.jButton8.text")); // NOI18N
+        jButton8.setText(bundle2.getString("SalesScreen.jButton8.text")); // NOI18N
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton8.setName("jButton8"); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -1326,7 +1327,7 @@ void execute() {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1566, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1359,7 +1360,7 @@ void execute() {
                             .addComponent(jButtonAt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonPerCent, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonTimes, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addContainerGap(59, Short.MAX_VALUE))))
+                        .addContainerGap(1319, Short.MAX_VALUE))))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton0, jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jButtonAt, jButtonDelete, jButtonEnter, jButtonMinus, jButtonPerCent, jButtonTimes});
@@ -1419,7 +1420,7 @@ void execute() {
 
         dataLabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         dataLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        dataLabel.setText(bundle.getString("SalesScreen.dataLabel.text")); // NOI18N
+        dataLabel.setText(bundle2.getString("SalesScreen.dataLabel.text")); // NOI18N
         dataLabel.setFocusable(false);
         dataLabel.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         dataLabel.setName("dataLabel"); // NOI18N
@@ -1513,9 +1514,9 @@ void execute() {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 632, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE)
                     .addGroup(panelLayout.createSequentialGroup()
-                        .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                        .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(dataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1546,7 +1547,7 @@ void execute() {
 
         jMenuBar1.setName("jMenuBar1"); // NOI18N
 
-        jFileMenu.setText(bundle.getString("SalesScreen.jFileMenu.text")); // NOI18N
+        jFileMenu.setText(bundle2.getString("SalesScreen.jFileMenu.text")); // NOI18N
         jFileMenu.setName("jFileMenu"); // NOI18N
 
         newSaleMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
@@ -1631,7 +1632,7 @@ void execute() {
 
         jMenuBar1.add(jFileMenu);
 
-        jPaymentMenu.setText(bundle.getString("SalesScreen.jPaymentMenu.text")); // NOI18N
+        jPaymentMenu.setText(bundle2.getString("SalesScreen.jPaymentMenu.text")); // NOI18N
         jPaymentMenu.setName("jPaymentMenu"); // NOI18N
 
         jCash.setText(bundle.getString("SalesScreen.jCash.text")); // NOI18N
@@ -1808,7 +1809,7 @@ void execute() {
 
         jMenuBar1.add(jPaymentMenu);
 
-        jTablesMenu.setText(bundle.getString("SalesScreen.jTablesMenu.text")); // NOI18N
+        jTablesMenu.setText(bundle2.getString("SalesScreen.jTablesMenu.text")); // NOI18N
         jTablesMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTablesMenuActionPerformed(evt);
@@ -2004,7 +2005,7 @@ void execute() {
 
         jMenuBar1.add(jTablesMenu);
 
-        jOffersMenu.setText(bundle.getString("SalesScreen.jOffersMenu.text")); // NOI18N
+        jOffersMenu.setText(bundle2.getString("SalesScreen.jOffersMenu.text")); // NOI18N
         jOffersMenu.setName("jOffersMenu"); // NOI18N
 
         createMenuItem2.setText(bundle.getString("SalesScreen.createMenuItem2.text")); // NOI18N
@@ -2027,7 +2028,7 @@ void execute() {
 
         jMenuBar1.add(jOffersMenu);
 
-        ordersMenu.setText(bundle.getString("SalesScreen.ordersMenu.text")); // NOI18N
+        ordersMenu.setText(bundle2.getString("SalesScreen.ordersMenu.text")); // NOI18N
         ordersMenu.setName("ordersMenu"); // NOI18N
 
         ordersCreateMenuItem.setText(bundle.getString("SalesScreen.ordersCreateMenuItem.text")); // NOI18N
@@ -2050,7 +2051,7 @@ void execute() {
 
         jMenuBar1.add(ordersMenu);
 
-        jCustomersMenu.setText(bundle.getString("SalesScreen.jCustomersMenu.text")); // NOI18N
+        jCustomersMenu.setText(bundle2.getString("SalesScreen.jCustomersMenu.text")); // NOI18N
         jCustomersMenu.setName("jCustomersMenu"); // NOI18N
 
         jByName.setText(bundle.getString("SalesScreen.jByName.text")); // NOI18N
@@ -2148,7 +2149,7 @@ void execute() {
 
         jMenuBar1.add(jCustomersMenu);
 
-        jStockMenu.setText(bundle.getString("SalesScreen.jStockMenu.text")); // NOI18N
+        jStockMenu.setText(bundle2.getString("SalesScreen.jStockMenu.text")); // NOI18N
         jStockMenu.setName("jStockMenu"); // NOI18N
 
         jDelivery.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F11, 0));
@@ -2392,7 +2393,7 @@ void execute() {
 
         jMenuBar1.add(jStockMenu);
 
-        jCharts.setText(bundle.getString("SalesScreen.jCharts.text")); // NOI18N
+        jCharts.setText(bundle2.getString("SalesScreen.jCharts.text")); // NOI18N
 
         jSalesByDepartment.setText(bundle.getString("SalesScreen.jSalesByDepartment.text")); // NOI18N
         jSalesByDepartment.setName("jSalesByDepartment"); // NOI18N
@@ -2430,7 +2431,7 @@ void execute() {
 
         jMenuBar1.add(jCharts);
 
-        reportMenuItem.setText(bundle.getString("SalesScreen.reportMenuItem.text")); // NOI18N
+        reportMenuItem.setText(bundle2.getString("SalesScreen.reportMenuItem.text")); // NOI18N
         reportMenuItem.setName("reportMenuItem"); // NOI18N
         reportMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2438,7 +2439,7 @@ void execute() {
             }
         });
 
-        takings.setText(bundle.getString("SalesScreen.takings.text")); // NOI18N
+        takings.setText(bundle2.getString("SalesScreen.takings.text")); // NOI18N
         takings.setName("takings"); // NOI18N
         takings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2447,7 +2448,7 @@ void execute() {
         });
         reportMenuItem.add(takings);
 
-        cashUp.setText(bundle.getString("CashUp")); // NOI18N
+        cashUp.setText(bundle2.getString("CashUp")); // NOI18N
         cashUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cashUpActionPerformed1(evt);
@@ -2455,7 +2456,7 @@ void execute() {
         });
         reportMenuItem.add(cashUp);
 
-        jReconcile.setText(bundle.getString("SalesScreen.jReconcile.actionCommand")); // NOI18N
+        jReconcile.setText(bundle2.getString("SalesScreen.jReconcile.actionCommand")); // NOI18N
         jReconcile.setActionCommand(bundle.getString("SalesScreen.jReconcile.actionCommand")); // NOI18N
         jReconcile.setName("jReconcile"); // NOI18N
         jReconcile.addActionListener(new java.awt.event.ActionListener() {
@@ -2465,7 +2466,7 @@ void execute() {
         });
         reportMenuItem.add(jReconcile);
 
-        agencyReconcilliationMenuItem.setText(bundle.getString("SalesScreen.agencyReconcilliationMenuItem.text_1")); // NOI18N
+        agencyReconcilliationMenuItem.setText(bundle2.getString("SalesScreen.agencyReconcilliationMenuItem.text_1")); // NOI18N
         agencyReconcilliationMenuItem.setName(bundle.getString("SalesScreen.agencyReconcilliationMenuItem.name")); // NOI18N
         agencyReconcilliationMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2474,7 +2475,7 @@ void execute() {
         });
         reportMenuItem.add(agencyReconcilliationMenuItem);
 
-        salesByMenu.setText(bundle.getString("SalesScreen.salesByMenu.text")); // NOI18N
+        salesByMenu.setText(bundle2.getString("SalesScreen.salesByMenu.text")); // NOI18N
 
         jAgency.setText(bundle.getString("SalesScreen.jAgency.text")); // NOI18N
         jAgency.setName("jAgency"); // NOI18N
@@ -2608,7 +2609,7 @@ void execute() {
 
         reportMenuItem.add(salesByMenu);
 
-        jDepartmentMenu.setText(bundle.getString("SalesScreen.jDepartment.text")); // NOI18N
+        jDepartmentMenu.setText(bundle2.getString("SalesScreen.jDepartment.text")); // NOI18N
         jDepartmentMenu.setName("jDepartmentMenu"); // NOI18N
 
         jDLosses.setText(bundle.getString("SalesScreen.jLosses.text")); // NOI18N
@@ -2640,7 +2641,7 @@ void execute() {
 
         reportMenuItem.add(jDepartmentMenu);
 
-        jLosses2.setText(bundle.getString("SalesScreen.jLosses2.text")); // NOI18N
+        jLosses2.setText(bundle2.getString("SalesScreen.jLosses2.text")); // NOI18N
         jLosses2.setName("jLosses2"); // NOI18N
         jLosses2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2649,7 +2650,7 @@ void execute() {
         });
         reportMenuItem.add(jLosses2);
 
-        jReturns1.setText(bundle.getString("SalesScreen.jReturns1.text")); // NOI18N
+        jReturns1.setText(bundle2.getString("SalesScreen.jReturns1.text")); // NOI18N
         jReturns1.setName("jReturns1"); // NOI18N
         jReturns1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2658,7 +2659,7 @@ void execute() {
         });
         reportMenuItem.add(jReturns1);
 
-        jWastes1.setText(bundle.getString("SalesScreen.jWastes.text")); // NOI18N
+        jWastes1.setText(bundle2.getString("SalesScreen.jWastes.text")); // NOI18N
         jWastes1.setName("jWastes1"); // NOI18N
         jWastes1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2670,7 +2671,7 @@ void execute() {
         jSeparator2.setName("jSeparator2"); // NOI18N
         reportMenuItem.add(jSeparator2);
 
-        agencyReport.setText(bundle.getString("SalesScreen.agencyReport.text_1")); // NOI18N
+        agencyReport.setText(bundle2.getString("SalesScreen.agencyReport.text_1")); // NOI18N
         agencyReport.setName("agencyReport"); // NOI18N
         agencyReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2679,7 +2680,7 @@ void execute() {
         });
         reportMenuItem.add(agencyReport);
 
-        jMenuItem1.setText(bundle.getString("SalesScreen.jMenuItem1.text_1")); // NOI18N
+        jMenuItem1.setText(bundle2.getString("SalesScreen.jMenuItem1.text_1")); // NOI18N
         jMenuItem1.setName("jMenuItem1"); // NOI18N
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2688,7 +2689,7 @@ void execute() {
         });
         reportMenuItem.add(jMenuItem1);
 
-        catalogueItem.setText(bundle.getString("SalesScreen.catalogueItem.text_1")); // NOI18N
+        catalogueItem.setText(bundle2.getString("SalesScreen.catalogueItem.text_1")); // NOI18N
         catalogueItem.setName("catalogueItem"); // NOI18N
         catalogueItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2697,7 +2698,7 @@ void execute() {
         });
         reportMenuItem.add(catalogueItem);
 
-        dailyDepartmentProductSales.setText(bundle.getString("SalesScreen.dailyDepartmentProductSales.text_1")); // NOI18N
+        dailyDepartmentProductSales.setText(bundle2.getString("SalesScreen.dailyDepartmentProductSales.text_1")); // NOI18N
         dailyDepartmentProductSales.setName("dailyDepartmentProductSales"); // NOI18N
         dailyDepartmentProductSales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2706,7 +2707,7 @@ void execute() {
         });
         reportMenuItem.add(dailyDepartmentProductSales);
 
-        dailyDepartmentSales.setText(bundle.getString("SalesScreen.dailyDepartmentSales.text_1")); // NOI18N
+        dailyDepartmentSales.setText(bundle2.getString("SalesScreen.dailyDepartmentSales.text_1")); // NOI18N
         dailyDepartmentSales.setName(bundle.getString("SalesScreen.dailyDepartmentSales.name")); // NOI18N
         dailyDepartmentSales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2878,7 +2879,7 @@ void execute() {
 
         jMenuBar1.add(reportMenuItem);
 
-        jHelpMenu.setText(bundle.getString("SalesScreen.jHelpMenu.text")); // NOI18N
+        jHelpMenu.setText(bundle2.getString("SalesScreen.jHelpMenu.text")); // NOI18N
         jHelpMenu.setName("jHelpMenu"); // NOI18N
         jHelpMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2886,7 +2887,7 @@ void execute() {
             }
         });
 
-        contentsMenuItem.setText(bundle.getString("SalesScreen.contentsMenuItem.text")); // NOI18N
+        contentsMenuItem.setText(bundle2.getString("SalesScreen.contentsMenuItem.text")); // NOI18N
         contentsMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contentsMenuItemActionPerformed(evt);
@@ -2894,7 +2895,7 @@ void execute() {
         });
         jHelpMenu.add(contentsMenuItem);
 
-        jMenuItem9.setText(bundle.getString("SalesScreen.jMenuItem9.text")); // NOI18N
+        jMenuItem9.setText(bundle2.getString("SalesScreen.jMenuItem9.text")); // NOI18N
         jMenuItem9.setName("jMenuItem9"); // NOI18N
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2903,7 +2904,7 @@ void execute() {
         });
         jHelpMenu.add(jMenuItem9);
 
-        dropboxMenuItem.setText(bundle.getString("SalesScreen.dropboxMenuItem.text_1")); // NOI18N
+        dropboxMenuItem.setText(bundle2.getString("SalesScreen.dropboxMenuItem.text_1")); // NOI18N
         dropboxMenuItem.setName("dropboxMenuItem"); // NOI18N
         dropboxMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

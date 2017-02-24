@@ -34,7 +34,7 @@ public class Offers extends EscapeDialog implements MouseListener {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
     private Vector tableHeader = new Vector();
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Offers");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Offers");
     @SuppressWarnings("unchecked")
     private boolean b0 = tableHeader.add(bundle.getString("IX"));
     @SuppressWarnings("unchecked")
@@ -265,13 +265,13 @@ public class Offers extends EscapeDialog implements MouseListener {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Offers"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Offers"); // NOI18N
         setTitle(bundle.getString("Offers.title")); // NOI18N
         setName("Offers"); // NOI18N
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/add_obj.gif"))); // NOI18N
+        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/add_obj.gif"))); // NOI18N
         addButton.setText(bundle.getString("Offers.addButton.text")); // NOI18N
         addButton.setBorderPainted(false);
         addButton.setContentAreaFilled(false);
@@ -283,7 +283,7 @@ public class Offers extends EscapeDialog implements MouseListener {
             }
         });
 
-        deleteProductButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/delete_obj.gif"))); // NOI18N
+        deleteProductButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/delete_obj.gif"))); // NOI18N
         deleteProductButton.setBorderPainted(false);
         deleteProductButton.setContentAreaFilled(false);
         deleteProductButton.setLabel(bundle.getString("deleteProductButton")); // NOI18N
@@ -294,7 +294,7 @@ public class Offers extends EscapeDialog implements MouseListener {
             }
         });
 
-        deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/delete_obj.gif"))); // NOI18N
+        deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/delete_obj.gif"))); // NOI18N
         deleteButton.setToolTipText(bundle.getString("deleteButton")); // NOI18N
         deleteButton.setContentAreaFilled(false);
         deleteButton.setName("deleteButton"); // NOI18N
@@ -313,7 +313,7 @@ public class Offers extends EscapeDialog implements MouseListener {
             }
         });
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setBorderPainted(false);
         closeButton2.setContentAreaFilled(false);
         closeButton2.setIconTextGap(0);

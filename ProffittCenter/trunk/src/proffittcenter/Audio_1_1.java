@@ -52,7 +52,7 @@ public class Audio_1_1 extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setName("audioPlayer"); // NOI18N
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/AudioPlayer"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/AudioPlayer"); // NOI18N
         playBtn.setText(bundle.getString("Audio.playBtn.text")); // NOI18N
         playBtn.addActionListener(formListener);
 

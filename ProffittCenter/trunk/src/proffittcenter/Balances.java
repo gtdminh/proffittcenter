@@ -32,7 +32,7 @@ import javax.swing.table.TableColumnModel;
  */
 public class Balances extends EscapeDialog {
 
-    private static final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Balances");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Balances");
     private MyHeaderRenderer mhr = null;
     private int align[] = {SwingConstants.RIGHT, SwingConstants.LEFT,
             SwingConstants.RIGHT, SwingConstants.RIGHT, SwingConstants.RIGHT};
@@ -198,7 +198,7 @@ public class Balances extends EscapeDialog {
         detailsButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Balances"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Balances"); // NOI18N
         setTitle(bundle.getString("Balances")); // NOI18N
         setName("Balances"); // NOI18N
 
@@ -221,7 +221,7 @@ public class Balances extends EscapeDialog {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setName("jPanel1"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setName("closeButton"); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,7 +229,7 @@ public class Balances extends EscapeDialog {
             }
         });
 
-        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         detailsButton.setBorderPainted(false);
         detailsButton.setName("detailsButton"); // NOI18N
         detailsButton.addActionListener(new java.awt.event.ActionListener() {

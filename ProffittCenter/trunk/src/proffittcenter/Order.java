@@ -44,7 +44,7 @@ import net.sf.jasperreports.view.JasperViewer;
 public class Order extends EscapeDialog {
 
     private Preferences root = Preferences.userNodeForPackage(getClass());
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Order");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Order");
     private int pack;
     private String productDescription;
     private Long productID;
@@ -292,13 +292,13 @@ public class Order extends EscapeDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Order"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Order"); // NOI18N
         setTitle(bundle.getString("Title")); // NOI18N
         setName("order"); // NOI18N
 
         jPanel1.setName("jPanel1"); // NOI18N
 
-        invoicePrintButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Receipt.png"))); // NOI18N
+        invoicePrintButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Receipt.png"))); // NOI18N
         invoicePrintButton.setToolTipText(bundle.getString("invoicePrint")); // NOI18N
         invoicePrintButton.setName("invoicePrintButton"); // NOI18N
         invoicePrintButton.addActionListener(new java.awt.event.ActionListener() {
@@ -307,7 +307,7 @@ public class Order extends EscapeDialog {
             }
         });
 
-        receiptPrintButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/print_edit.gif"))); // NOI18N
+        receiptPrintButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/print_edit.gif"))); // NOI18N
         receiptPrintButton.setToolTipText(bundle.getString("receiptPrint")); // NOI18N
         receiptPrintButton.setName("receiptPrintButton"); // NOI18N
         receiptPrintButton.addActionListener(new java.awt.event.ActionListener() {
@@ -351,7 +351,7 @@ public class Order extends EscapeDialog {
         dateText.setFocusable(false);
         dateText.setName("dateText"); // NOI18N
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setContentAreaFilled(false);
         closeButton2.setName("closeButton2"); // NOI18N
         closeButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -360,7 +360,7 @@ public class Order extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setToolTipText(bundle.getString("OK")); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
@@ -377,7 +377,7 @@ public class Order extends EscapeDialog {
             }
         });
 
-        addProductButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/add_obj.gif"))); // NOI18N
+        addProductButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/add_obj.gif"))); // NOI18N
         addProductButton.setToolTipText(bundle.getString("addTip")); // NOI18N
         addProductButton.setName("addProductButton"); // NOI18N
         addProductButton.addActionListener(new java.awt.event.ActionListener() {
@@ -394,7 +394,7 @@ public class Order extends EscapeDialog {
         taxTotalText.setFocusable(false);
         taxTotalText.setName("taxTotalText"); // NOI18N
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

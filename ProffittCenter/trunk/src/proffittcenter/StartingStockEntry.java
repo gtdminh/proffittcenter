@@ -1,4 +1,4 @@
-/*
+working/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -23,7 +23,7 @@ import java.util.logging.Logger;
  */
 public class StartingStockEntry extends EscapeDialog {
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/StartingStockEntry");
+    private static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/StartingStockEntry");
     private Long product;
     private String shortenedProduct;
     private String productExistsString = "SELECT ID FROM Products WHERE ID=? AND Encoded=0 "
@@ -69,20 +69,20 @@ public class StartingStockEntry extends EscapeDialog {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Starting stock");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/StartingStockEntry"); // NOI18N
+        setTitle(bundle.getString("title")); // NOI18N
         setName("StartingStockEntry"); // NOI18N
 
         jPanel1.setName("jPanel1"); // NOI18N
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/StartingStockEntry"); // NOI18N
         jLabel1.setText(bundle.getString("jLabel1")); // NOI18N
         jLabel1.setName("jLabel1"); // NOI18N
 
         jTextField1.setName("jTextField1"); // NOI18N
         jTextField1.setNextFocusableComponent(okButton);
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setToolTipText(bundle.getString("okButton")); // NOI18N
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +105,7 @@ public class StartingStockEntry extends EscapeDialog {
             }
         });
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.setName("closeButton"); // NOI18N

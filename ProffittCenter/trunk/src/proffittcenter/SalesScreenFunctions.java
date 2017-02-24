@@ -49,8 +49,8 @@ public class SalesScreenFunctions {
     private boolean priceEntry;
     private int selection;
     private LineList aSale;
-    private ResourceBundle bundle1 = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesScreen1");
-    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesScreen");
+    private ResourceBundle bundle1 = ResourceBundle.getBundle("proffittcenter/resource/SalesScreen1");
+    private ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/SalesScreen");
     private javax.swing.JLabel dataLabel;
     private javax.swing.JLabel dateLabel;
     private javax.swing.JTextField hidden;

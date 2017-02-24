@@ -52,9 +52,9 @@ public class About extends EscapeDialog {
 
         setName(""); // NOI18N
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/ProffittCenterLogo.GIF"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/ProffittCenterLogo.GIF"))); // NOI18N
 
-        closeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeBtn.setText("Close");
         closeBtn.setName("CloseButton"); // NOI18N
         closeBtn.addActionListener(new java.awt.event.ActionListener() {

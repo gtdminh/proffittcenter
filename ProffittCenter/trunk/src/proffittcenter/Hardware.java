@@ -32,7 +32,7 @@ import javax.swing.JOptionPane;
 public final class Hardware extends javax.swing.JPanel {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Settings");
+    static ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Settings");
     private final Integer baudRrate = root.getInt("baudRrate", 9600);
     private String receiptPort = root.get("ReceiptPort", "");
     private String polePort = root.get("PolePort", "");
@@ -242,7 +242,7 @@ public final class Hardware extends javax.swing.JPanel {
         baudRateLabel = new javax.swing.JLabel();
         baudRateCombo = new javax.swing.JComboBox();
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Settings"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Settings"); // NOI18N
         setName(bundle.getString("Hardware.name")); // NOI18N
 
         jExtraLines.setName("jExtraLines"); // NOI18N
@@ -270,7 +270,7 @@ public final class Hardware extends javax.swing.JPanel {
 
         jShelfEdgeLabelHeight.setName("jShelfEdgeLabelHeight"); // NOI18N
 
-        receiptTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Test.png"))); // NOI18N
+        receiptTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Test.png"))); // NOI18N
         receiptTest.setToolTipText(bundle.getString("Test")); // NOI18N
         receiptTest.setContentAreaFilled(false);
         receiptTest.setName("receiptTest"); // NOI18N
@@ -280,7 +280,7 @@ public final class Hardware extends javax.swing.JPanel {
             }
         });
 
-        poleTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Test.png"))); // NOI18N
+        poleTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Test.png"))); // NOI18N
         poleTest.setToolTipText(bundle.getString("TestPole")); // NOI18N
         poleTest.setContentAreaFilled(false);
         poleTest.setName("poleTest"); // NOI18N
@@ -294,7 +294,7 @@ public final class Hardware extends javax.swing.JPanel {
         jLabel34.setText(bundle.getString("Settings.Server.jLabel34.text")); // NOI18N
         jLabel34.setName("jLabel34"); // NOI18N
 
-        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation"); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation"); // NOI18N
         touchCheckBox.setText(bundle1.getString("Settings.touchCheckBox.text")); // NOI18N
         touchCheckBox.setName("touchCheckBox"); // NOI18N
 

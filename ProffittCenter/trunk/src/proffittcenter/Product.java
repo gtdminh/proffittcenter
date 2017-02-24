@@ -28,7 +28,7 @@ import javax.swing.JOptionPane;
 public class Product extends EscapeDialog {
 
     Preferences root = Preferences.userNodeForPackage(getClass());
-    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Product");
+    ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Product");
     private int encode;
     private String shortenedData7;
     private ResultSet rs;
@@ -336,9 +336,9 @@ public class Product extends EscapeDialog {
         barcodeCheckBox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Product"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Product"); // NOI18N
         setTitle(bundle.getString("Product.title")); // NOI18N
-        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesBy"); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/SalesBy"); // NOI18N
         setName(bundle1.getString("SalesBy.title")); // NOI18N
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -492,7 +492,7 @@ public class Product extends EscapeDialog {
             }
         });
 
-        updateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        updateBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         updateBtn.setContentAreaFilled(false);
         updateBtn.setName("updateBtn"); // NOI18N
         updateBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -518,7 +518,7 @@ public class Product extends EscapeDialog {
             }
         });
 
-        printBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/print_edit.gif"))); // NOI18N
+        printBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/print_edit.gif"))); // NOI18N
         printBtn.setText("null");
         printBtn.setToolTipText(bundle.getString("ShelfEdgeLabel")); // NOI18N
         printBtn.setContentAreaFilled(false);
@@ -529,7 +529,7 @@ public class Product extends EscapeDialog {
             }
         });
 
-        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton2.setContentAreaFilled(false);
         closeButton2.setName("closeButton2"); // NOI18N
         closeButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -538,7 +538,7 @@ public class Product extends EscapeDialog {
             }
         });
 
-        priceChangeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/ChangePrice.png"))); // NOI18N
+        priceChangeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/ChangePrice.png"))); // NOI18N
         priceChangeButton.setToolTipText(bundle.getString("priceChange")); // NOI18N
         priceChangeButton.setContentAreaFilled(false);
         priceChangeButton.setName("priceChangeButton"); // NOI18N
@@ -556,8 +556,8 @@ public class Product extends EscapeDialog {
             }
         });
 
-        printBarcode.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Barcode.png"))); // NOI18N
-        java.util.ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/SalesScreen"); // NOI18N
+        printBarcode.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Barcode.png"))); // NOI18N
+        java.util.ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("proffittcenter/resource/SalesScreen"); // NOI18N
         printBarcode.setToolTipText(bundle2.getString("SalesScreen.printBarcode.toolTipText")); // NOI18N
         printBarcode.setContentAreaFilled(false);
         printBarcode.setName("printBarcode"); // NOI18N
