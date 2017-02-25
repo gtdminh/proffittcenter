@@ -37,7 +37,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jScrollPane1" alignment="0" pref="461" max="32767" attributes="1"/>
+                  <Component id="jScrollPane1" alignment="0" pref="563" max="32767" attributes="1"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -102,11 +102,11 @@
                   <Component id="jCustomerCode" min="-2" pref="137" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="stoppedCheckBox" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="67" max="32767" attributes="0"/>
-                  <Component id="okBtn" linkSize="2" min="-2" pref="22" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="newButton" min="-2" pref="22" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                  <Component id="okBtn" linkSize="2" min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="infoButton" linkSize="2" min="-2" pref="22" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="closeButton" linkSize="2" min="-2" pref="22" max="-2" attributes="0"/>
@@ -123,11 +123,11 @@
                           <Component id="jCustomerCode" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="stoppedCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="okBtn" linkSize="3" alignment="0" min="0" pref="22" max="32767" attributes="1"/>
                       <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                           <Component id="closeButton" linkSize="3" alignment="1" pref="22" max="32767" attributes="1"/>
                           <Component id="infoButton" linkSize="3" alignment="1" pref="22" max="32767" attributes="1"/>
                           <Component id="newButton" linkSize="1" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="okBtn" linkSize="3" alignment="0" min="0" pref="22" max="32767" attributes="1"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -139,10 +139,10 @@
         <Component class="javax.swing.JButton" name="closeButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Close24.png"/>
+              <Image iconType="3" name="/proffittcenter/resource/Close24.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/Customers.properties" key="Customers.closeButton.toolTipText" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/Customers.properties" key="Customers.closeButton.toolTipText" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -154,7 +154,7 @@
         <Component class="javax.swing.JButton" name="okBtn">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/OK.png"/>
+              <Image iconType="3" name="/proffittcenter/resource/OK.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="proffittcenterworkingcopy/resource/Customers.properties" key="Customers.okBtn.toolTipText" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
@@ -168,10 +168,10 @@
         <Component class="javax.swing.JButton" name="infoButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Info.png"/>
+              <Image iconType="3" name="/proffittcenter/resource/Info.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/Customers.properties" key="Customers.infoButton.toolTipText" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/Customers.properties" key="Customers.infoButton.toolTipText" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -209,7 +209,7 @@
         <Component class="javax.swing.JCheckBox" name="stoppedCheckBox">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/Customers.properties" key="Customers.stoppedCheckBox.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/Customers.properties" key="Customers.stoppedCheckBox.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <Events>

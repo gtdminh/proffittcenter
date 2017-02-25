@@ -295,7 +295,7 @@ public class Customers extends EscapeDialog {
         FormListener formListener = new FormListener();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customers"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Customers"); // NOI18N
         setTitle(bundle.getString("Customers.title_1")); // NOI18N
         setLocationByPlatform(true);
         setModal(true);
@@ -319,7 +319,8 @@ public class Customers extends EscapeDialog {
         jPanel1.addFocusListener(formListener);
 
         closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
-        closeButton.setToolTipText(bundle.getString("Customers.closeButton.toolTipText")); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customers"); // NOI18N
+        closeButton.setToolTipText(bundle1.getString("Customers.closeButton.toolTipText")); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.addActionListener(formListener);
@@ -330,12 +331,12 @@ public class Customers extends EscapeDialog {
         okBtn.addActionListener(formListener);
 
         infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
-        infoButton.setToolTipText(bundle.getString("Customers.infoButton.toolTipText")); // NOI18N
+        infoButton.setToolTipText(bundle1.getString("Customers.infoButton.toolTipText")); // NOI18N
         infoButton.setBorderPainted(false);
         infoButton.setContentAreaFilled(false);
         infoButton.addActionListener(formListener);
 
-        newButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/plus.png"))); // NOI18N
+        newButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/plus.png"))); // NOI18N
         newButton.setMnemonic('+');
         newButton.setToolTipText(bundle.getString("Customers.newButton.toolTipText")); // NOI18N
         newButton.setContentAreaFilled(false);
@@ -345,7 +346,7 @@ public class Customers extends EscapeDialog {
         jCustomerCode.addFocusListener(formListener);
         jCustomerCode.addKeyListener(formListener);
 
-        stoppedCheckBox.setText(bundle.getString("Customers.stoppedCheckBox.text")); // NOI18N
+        stoppedCheckBox.setText(bundle1.getString("Customers.stoppedCheckBox.text")); // NOI18N
         stoppedCheckBox.addActionListener(formListener);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -357,11 +358,11 @@ public class Customers extends EscapeDialog {
                 .addComponent(jCustomerCode, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(stoppedCheckBox)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
-                .addComponent(okBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(newButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(2, 2, 2)
+                .addComponent(okBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(infoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -378,11 +379,11 @@ public class Customers extends EscapeDialog {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jCustomerCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(stoppedCheckBox))
-                    .addComponent(okBtn, 0, 22, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(closeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
-                        .addComponent(infoButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
-                        .addComponent(newButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(closeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE)
+                        .addComponent(infoButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE)
+                        .addComponent(newButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(okBtn, 0, 22, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -398,7 +399,7 @@ public class Customers extends EscapeDialog {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
