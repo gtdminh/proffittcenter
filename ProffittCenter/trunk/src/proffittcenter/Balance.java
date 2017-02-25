@@ -256,31 +256,32 @@ public class Balance extends EscapeDialog {
         detailsButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Balance"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Balance"); // NOI18N
         setTitle(bundle.getString("Balance.title")); // NOI18N
         setModal(true);
         setName("Balance"); // NOI18N
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText(bundle.getString("Balance.jLabel2.text")); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/Balance"); // NOI18N
+        jLabel2.setText(bundle1.getString("Balance.jLabel2.text")); // NOI18N
         jLabel2.setName("jLabel2"); // NOI18N
 
         jReceived.setName("jReceived"); // NOI18N
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText(bundle.getString("Balance.jLabel3.text")); // NOI18N
+        jLabel3.setText(bundle1.getString("Balance.jLabel3.text")); // NOI18N
         jLabel3.setName("jLabel3"); // NOI18N
 
         jBalance.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jBalance.setName("jBalance"); // NOI18N
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText(bundle.getString("Balance.jLabel1.text")); // NOI18N
+        jLabel1.setText(bundle1.getString("Balance.jLabel1.text")); // NOI18N
         jLabel1.setName("jLabel1"); // NOI18N
 
         jCharged.setName("jCharged"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.setIconTextGap(0);
@@ -309,7 +310,7 @@ public class Balance extends EscapeDialog {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
+        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
         detailsButton.setContentAreaFilled(false);
         detailsButton.setName("detailsButton"); // NOI18N
         detailsButton.addActionListener(new java.awt.event.ActionListener() {
@@ -326,12 +327,12 @@ public class Balance extends EscapeDialog {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jReceived, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCharged, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
