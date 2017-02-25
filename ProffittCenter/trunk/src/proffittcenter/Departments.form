@@ -71,27 +71,12 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" pref="412" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="newBtn" min="-2" pref="22" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" alignment="1" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="deleteBtn" min="-2" pref="22" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Component id="updateBtn" linkSize="1" pref="22" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="closeButton" linkSize="1" min="-2" pref="22" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
+                      <Component id="newBtn" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="deleteBtn" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="updateBtn" linkSize="1" alignment="1" pref="22" max="32767" attributes="0"/>
+                      <Component id="closeButton" linkSize="1" alignment="1" min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -101,8 +86,8 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="newBtn">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/plus.png"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proffittcenter/resource/plus.png"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="newBtn" noResource="true"/>
@@ -113,8 +98,8 @@
         </Component>
         <Component class="javax.swing.JButton" name="updateBtn">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Info.png"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proffittcenter/resource/Info.png"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="updateBtn" noResource="true"/>
@@ -152,8 +137,8 @@
         </Container>
         <Component class="javax.swing.JButton" name="deleteBtn">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Minus.png"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proffittcenter/resource/Minus.png"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="deleteBtn" noResource="true"/>
@@ -164,8 +149,8 @@
         </Component>
         <Component class="javax.swing.JButton" name="closeButton">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Close24.png"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proffittcenter/resource/Close24.png"/>
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="closeButton" noResource="true"/>
