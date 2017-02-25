@@ -315,11 +315,12 @@ public class Customers extends EscapeDialog {
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customers"); // NOI18N
+        jPanel1.setToolTipText(bundle1.getString("Customers.newButton.toolTipText")); // NOI18N
         jPanel1.setFocusable(false);
         jPanel1.addFocusListener(formListener);
 
         closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
-        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customers"); // NOI18N
         closeButton.setToolTipText(bundle1.getString("Customers.closeButton.toolTipText")); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
@@ -336,13 +337,13 @@ public class Customers extends EscapeDialog {
         infoButton.setContentAreaFilled(false);
         infoButton.addActionListener(formListener);
 
-        newButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/plus.png"))); // NOI18N
+        newButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/plus.png"))); // NOI18N
         newButton.setMnemonic('+');
         newButton.setToolTipText(bundle.getString("Customers.newButton.toolTipText")); // NOI18N
         newButton.setContentAreaFilled(false);
         newButton.addActionListener(formListener);
 
-        jCustomerCode.setToolTipText(bundle.getString("jCustomerCode.tooltip")); // NOI18N
+        jCustomerCode.setToolTipText(bundle1.getString("jCustomerCode.tooltip")); // NOI18N
         jCustomerCode.addFocusListener(formListener);
         jCustomerCode.addKeyListener(formListener);
 

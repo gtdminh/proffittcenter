@@ -569,7 +569,6 @@ public class CashupReconciliation extends EscapeDialog {
         jTakings = new javax.swing.JTextField();
         jYesterday = new javax.swing.JTextField();
         jError = new javax.swing.JTextField();
-        jOperator = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
@@ -590,8 +589,6 @@ public class CashupReconciliation extends EscapeDialog {
         jDebitError = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         jCoupons = new javax.swing.JTable();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jPaidOuts = new javax.swing.JTable();
         jReceivedTotal = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jCheques = new javax.swing.JTable();
@@ -609,10 +606,12 @@ public class CashupReconciliation extends EscapeDialog {
         jCouponsTotal = new javax.swing.JTextField();
         totalLabel = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jPaidOuts = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/CashupReconciliation"); // NOI18N
-        setTitle(bundle.getString("title")); // NOI18N
+        setTitle(bundle.getString("CashupReconciliation.title")); // NOI18N
         setName("cashupReconcilliation"); // NOI18N
 
         jPanel1.setName("jPanel1"); // NOI18N
@@ -939,10 +938,6 @@ public class CashupReconciliation extends EscapeDialog {
 
         jError.setName("jError"); // NOI18N
 
-        jOperator.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jOperator.setFocusable(false);
-        jOperator.setName("jOperator"); // NOI18N
-
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel44.setText(bundle.getString("CashupReconciliation.jLabel44.text")); // NOI18N
         jLabel44.setName("jLabel44"); // NOI18N
@@ -959,9 +954,8 @@ public class CashupReconciliation extends EscapeDialog {
         jAgency.setFocusable(false);
         jAgency.setName("jAgency"); // NOI18N
 
-        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Save.png"))); // NOI18N
-        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation"); // NOI18N
-        saveButton.setToolTipText(bundle1.getString("Save")); // NOI18N
+        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Save.png"))); // NOI18N
+        saveButton.setToolTipText(bundle.getString("Save")); // NOI18N
         saveButton.setContentAreaFilled(false);
         saveButton.setName("saveButton"); // NOI18N
         saveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -979,7 +973,6 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel41.setName("jLabel41"); // NOI18N
 
         jTillID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTillID.setText(bundle1.getString("CashupReconciliation.jTillID.text")); // NOI18N
         jTillID.setFocusable(false);
         jTillID.setName("jTillID"); // NOI18N
 
@@ -1009,8 +1002,8 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel24.setText(bundle.getString("CashupReconciliation.jLabel24.text")); // NOI18N
         jLabel24.setName("jLabel24"); // NOI18N
 
-        jCalculate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Calculate.png"))); // NOI18N
-        jCalculate.setToolTipText(bundle1.getString("Calculate")); // NOI18N
+        jCalculate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Calculate.png"))); // NOI18N
+        jCalculate.setToolTipText(bundle.getString("Calculate")); // NOI18N
         jCalculate.setContentAreaFilled(false);
         jCalculate.setName("jCalculate"); // NOI18N
         jCalculate.addActionListener(new java.awt.event.ActionListener() {
@@ -1026,21 +1019,20 @@ public class CashupReconciliation extends EscapeDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(jCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(85, 85, 85))
+                            .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jEnd)
+                            .addComponent(jStart, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jEnd))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jStart, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(inError, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(inError, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1051,7 +1043,6 @@ public class CashupReconciliation extends EscapeDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jID, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                     .addComponent(jTillID, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
-                    .addComponent(jOperator, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                     .addComponent(jTakings, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -1072,7 +1063,7 @@ public class CashupReconciliation extends EscapeDialog {
                         .addGap(50, 50, 50))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel47, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jYesterday, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -1080,7 +1071,7 @@ public class CashupReconciliation extends EscapeDialog {
                         .addContainerGap())))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jAgency, jCashInDrawer, jCharged, jID, jOperator, jTakings, jTillID});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jAgency, jCashInDrawer, jCharged, jID, jTakings, jTillID});
 
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1100,14 +1091,12 @@ public class CashupReconciliation extends EscapeDialog {
                                         .addComponent(jLabel39)
                                         .addComponent(jTillID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jOperator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel40)))
+                                    .addComponent(jLabel40))
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel36)
                                         .addComponent(jStart, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGap(17, 17, 17)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel37)
                                         .addComponent(jEnd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -1137,7 +1126,7 @@ public class CashupReconciliation extends EscapeDialog {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jError, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel24))))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         jPanel3.setName("jPanel3"); // NOI18N
@@ -1173,28 +1162,6 @@ public class CashupReconciliation extends EscapeDialog {
         jCoupons.setFocusable(false);
         jCoupons.setName("jCoupons"); // NOI18N
         jScrollPane3.setViewportView(jCoupons);
-
-        jScrollPane2.setName("jScrollPane2"); // NOI18N
-
-        jPaidOuts.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "", ""
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jPaidOuts.setFocusable(false);
-        jPaidOuts.setName("jPaidOuts"); // NOI18N
-        jScrollPane2.setViewportView(jPaidOuts);
 
         jReceivedTotal.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jReceivedTotal.setName("jReceivedTotal"); // NOI18N
@@ -1313,7 +1280,7 @@ public class CashupReconciliation extends EscapeDialog {
         jDebits.setName("jDebits"); // NOI18N
         jDebitsScrollPane.setViewportView(jDebits);
         if (jDebits.getColumnModel().getColumnCount() > 0) {
-            jDebits.getColumnModel().getColumn(0).setHeaderValue(bundle1.getString("CashupReconciliation.jDebits.columnModel.title0")); // NOI18N
+            jDebits.getColumnModel().getColumn(0).setHeaderValue(null);
         }
 
         jPaidOutError.setEditable(false);
@@ -1353,7 +1320,7 @@ public class CashupReconciliation extends EscapeDialog {
         });
 
         totalLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        totalLabel.setText(bundle1.getString("Totals")); // NOI18N
+        totalLabel.setText(bundle.getString("Totals")); // NOI18N
         totalLabel.setName("totalLabel"); // NOI18N
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -1368,7 +1335,7 @@ public class CashupReconciliation extends EscapeDialog {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jDebitError))
+                        .addComponent(jDebitError, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(13, 13, 13)
                         .addComponent(jDebitsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1378,12 +1345,12 @@ public class CashupReconciliation extends EscapeDialog {
                         .addComponent(jDebitsTotal)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jChequeError)
+                    .addComponent(jChequeError, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
                     .addComponent(jChequesTotal)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCouponError)
+                    .addComponent(jCouponError, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
                     .addComponent(jCouponsTotal, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1396,16 +1363,11 @@ public class CashupReconciliation extends EscapeDialog {
                         .addComponent(jLabel21)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jReceivedError, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPaidOutError, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPaidOutTotal))))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE))
+                .addGap(93, 93, 93)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPaidOutError, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                    .addComponent(jPaidOutTotal))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -1413,7 +1375,6 @@ public class CashupReconciliation extends EscapeDialog {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2)
                     .addComponent(jScrollPane3)
                     .addComponent(jScrollPane1)
                     .addComponent(jDebitsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
@@ -1449,6 +1410,28 @@ public class CashupReconciliation extends EscapeDialog {
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jChequeError, jChequesTotal, jCouponError, jCouponsTotal, jDebitError, jDebitsTotal, jPaidOutError, jPaidOutTotal, jReceivedError, jReceivedTotal});
 
+        jScrollPane2.setName("jScrollPane2"); // NOI18N
+
+        jPaidOuts.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "", ""
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jPaidOuts.setFocusable(false);
+        jPaidOuts.setName("jPaidOuts"); // NOI18N
+        jScrollPane2.setViewportView(jPaidOuts);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1461,7 +1444,9 @@ public class CashupReconciliation extends EscapeDialog {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(108, 108, 108))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(50, 50, 50))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1469,7 +1454,8 @@ public class CashupReconciliation extends EscapeDialog {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(34, 34, 34))
@@ -1627,7 +1613,6 @@ public class CashupReconciliation extends EscapeDialog {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jOperator;
     private javax.swing.JTextField jPaidOutError;
     private javax.swing.JTextField jPaidOutTotal;
     private javax.swing.JTable jPaidOuts;

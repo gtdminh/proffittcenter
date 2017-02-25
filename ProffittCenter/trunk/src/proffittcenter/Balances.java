@@ -198,11 +198,11 @@ public class Balances extends EscapeDialog {
         detailsButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Balances"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Balances"); // NOI18N
         setTitle(bundle.getString("Balances")); // NOI18N
-        setName("Balances"); // NOI18N
+        setName(bundle.getString("Title")); // NOI18N
 
-        jScrollPane1.setName("jScrollPane1"); // NOI18N
+        jScrollPane1.setName(bundle.getString("Balances")); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

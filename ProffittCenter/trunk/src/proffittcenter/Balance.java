@@ -256,7 +256,7 @@ public class Balance extends EscapeDialog {
         detailsButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Balance"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Balances"); // NOI18N
         setTitle(bundle.getString("Balance.title")); // NOI18N
         setModal(true);
         setName("Balance"); // NOI18N
@@ -281,7 +281,7 @@ public class Balance extends EscapeDialog {
 
         jCharged.setName("jCharged"); // NOI18N
 
-        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.setIconTextGap(0);
@@ -310,7 +310,7 @@ public class Balance extends EscapeDialog {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Info.png"))); // NOI18N
+        detailsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/info_tsk.gif"))); // NOI18N
         detailsButton.setContentAreaFilled(false);
         detailsButton.setName("detailsButton"); // NOI18N
         detailsButton.addActionListener(new java.awt.event.ActionListener() {
