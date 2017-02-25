@@ -91,7 +91,7 @@ public class Customer extends EscapeDialog {
         jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customer"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Customer"); // NOI18N
         setTitle(bundle.getString("Customer.title")); // NOI18N
         setName("Customer"); // NOI18N
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -102,62 +102,63 @@ public class Customer extends EscapeDialog {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setText(bundle.getString("Customer.jLabel1.text")); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customer"); // NOI18N
+        jLabel1.setText(bundle1.getString("Customer.jLabel1.text")); // NOI18N
         jLabel1.setName("jLabel1"); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel2.setText(bundle.getString("Customer.jLabel2.text")); // NOI18N
+        jLabel2.setText(bundle1.getString("Customer.jLabel2.text")); // NOI18N
         jLabel2.setName("jLabel2"); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel3.setText(bundle.getString("Customer.jLabel3.text")); // NOI18N
+        jLabel3.setText(bundle1.getString("Customer.jLabel3.text")); // NOI18N
         jLabel3.setName("jLabel3"); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setText(bundle.getString("Customer.jLabel4.text")); // NOI18N
+        jLabel4.setText(bundle1.getString("Customer.jLabel4.text")); // NOI18N
         jLabel4.setName("jLabel4"); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel5.setText(bundle.getString("Customer.jLabel5.text")); // NOI18N
+        jLabel5.setText(bundle1.getString("Customer.jLabel5.text")); // NOI18N
         jLabel5.setName("jLabel5"); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel6.setText(bundle.getString("Customer.jLabel6.text")); // NOI18N
+        jLabel6.setText(bundle1.getString("Customer.jLabel6.text")); // NOI18N
         jLabel6.setName("jLabel6"); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel7.setText(bundle.getString("Customer.jLabel7.text")); // NOI18N
+        jLabel7.setText(bundle1.getString("Customer.jLabel7.text")); // NOI18N
         jLabel7.setName("jLabel7"); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel8.setText(bundle.getString("Customer.jLabel8.text")); // NOI18N
+        jLabel8.setText(bundle1.getString("Customer.jLabel8.text")); // NOI18N
         jLabel8.setName("jLabel8"); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel9.setText(bundle.getString("Customer.jLabel9.text")); // NOI18N
+        jLabel9.setText(bundle1.getString("Customer.jLabel9.text")); // NOI18N
         jLabel9.setName("jLabel9"); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel10.setText(bundle.getString("Customer.jLabel10.text")); // NOI18N
+        jLabel10.setText(bundle1.getString("Customer.jLabel10.text")); // NOI18N
         jLabel10.setName("jLabel10"); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel11.setText(bundle.getString("Customer.jLabel11.text")); // NOI18N
+        jLabel11.setText(bundle1.getString("Customer.jLabel11.text")); // NOI18N
         jLabel11.setName("jLabel11"); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel13.setText(bundle.getString("Customer.jLabel13.text")); // NOI18N
+        jLabel13.setText(bundle1.getString("Customer.jLabel13.text")); // NOI18N
         jLabel13.setName("jLabel13"); // NOI18N
 
         jSurname.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -239,12 +240,12 @@ public class Customer extends EscapeDialog {
         jTel2.setName("jTel2"); // NOI18N
 
         jCode.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jCode.setText(bundle.getString("Customer.jCode.text")); // NOI18N
+        jCode.setText(bundle1.getString("Customer.jCode.text")); // NOI18N
         jCode.setName("jCode"); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel14.setText(bundle.getString("Customer.jLabel14.text")); // NOI18N
+        jLabel14.setText(bundle1.getString("Customer.jLabel14.text")); // NOI18N
         jLabel14.setName("jLabel14"); // NOI18N
 
         jAccount.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -255,14 +256,14 @@ public class Customer extends EscapeDialog {
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel15.setText(bundle.getString("Customer.jLabel15.text")); // NOI18N
+        jLabel15.setText(bundle1.getString("Customer.jLabel15.text")); // NOI18N
         jLabel15.setName("jLabel15"); // NOI18N
 
         jCheckBox1.setName("jCheckBox1"); // NOI18N
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel16.setText(bundle.getString("Customer.jLabel16.text")); // NOI18N
+        jLabel16.setText(bundle1.getString("Customer.jLabel16.text")); // NOI18N
         jLabel16.setName("jLabel16"); // NOI18N
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -276,7 +277,7 @@ public class Customer extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -321,7 +322,7 @@ public class Customer extends EscapeDialog {
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {closeButton, okButton});
 
-        jLabel12.setText(bundle.getString("Customer.jLabel12.text")); // NOI18N
+        jLabel12.setText(bundle1.getString("Customer.jLabel12.text")); // NOI18N
         jLabel12.setName("jLabel12"); // NOI18N
 
         creditLimitSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100000, 10));
@@ -329,7 +330,7 @@ public class Customer extends EscapeDialog {
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel17.setText(bundle.getString("Customer.jLabel17.text")+" ("+Main.shop.poundSymbol+"):"); // NOI18N
+        jLabel17.setText(bundle1.getString("Customer.jLabel17.text")+" ("+Main.shop.poundSymbol+"):"); // NOI18N
         jLabel17.setName("jLabel17"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -358,18 +359,18 @@ public class Customer extends EscapeDialog {
                             .addComponent(jLabel17))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSurname, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jForename, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jAlternative, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jRoad, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jSpare, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jTown, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jCounty, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jPostcode, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jTel1, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jTel2, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
-                            .addComponent(jAccount, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
+                            .addComponent(jSurname, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jForename, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jAlternative, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jRoad, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jSpare, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jTown, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jCounty, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jPostcode, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jTel1, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jTel2, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                            .addComponent(jAccount, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jCheckBox1)
@@ -384,7 +385,7 @@ public class Customer extends EscapeDialog {
                         .addContainerGap()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCode, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE))
+                        .addComponent(jCode, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))

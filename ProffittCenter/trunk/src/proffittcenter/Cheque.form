@@ -68,7 +68,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/Cheque.properties" key="Coupon.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Cheque.properties" key="Coupon.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
       </Properties>
@@ -76,7 +76,7 @@
     <Component class="javax.swing.JTextField" name="chequeText">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/Cheque.properties" key="Cheque.chequeText.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Cheque.properties" key="Cheque.chequeText.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="chequeText" noResource="true"/>
       </Properties>

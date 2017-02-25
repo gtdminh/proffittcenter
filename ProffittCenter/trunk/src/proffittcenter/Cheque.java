@@ -44,7 +44,7 @@ public class Cheque extends EscapeDialog {
         okBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Cheque"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Cheque"); // NOI18N
         setTitle(bundle.getString("title")); // NOI18N
         setName("Cheque"); // NOI18N
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -54,10 +54,11 @@ public class Cheque extends EscapeDialog {
         });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText(bundle.getString("Coupon.jLabel1.text")); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/Cheque"); // NOI18N
+        jLabel1.setText(bundle1.getString("Coupon.jLabel1.text")); // NOI18N
         jLabel1.setName("jLabel1"); // NOI18N
 
-        chequeText.setText(bundle.getString("Cheque.chequeText.text")); // NOI18N
+        chequeText.setText(bundle1.getString("Cheque.chequeText.text")); // NOI18N
         chequeText.setName("chequeText"); // NOI18N
         chequeText.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -70,7 +71,7 @@ public class Cheque extends EscapeDialog {
             }
         });
 
-        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
+        okBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
         okBtn.setContentAreaFilled(false);
         okBtn.setName("okBtn"); // NOI18N
         okBtn.addActionListener(new java.awt.event.ActionListener() {

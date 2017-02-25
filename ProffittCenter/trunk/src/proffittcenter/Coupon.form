@@ -76,7 +76,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/Coupon.properties" key="Coupon.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Coupon.properties" key="Coupon.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
       </Properties>
@@ -84,7 +84,7 @@
     <Component class="javax.swing.JTextField" name="couponText">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/Coupon.properties" key="Coupon.couponText.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Coupon.properties" key="Coupon.couponText.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="couponText" noResource="true"/>
       </Properties>

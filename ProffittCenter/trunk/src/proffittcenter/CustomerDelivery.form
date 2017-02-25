@@ -118,7 +118,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/CustomerDelivery.properties" key="CustomerDelivery.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/CustomerDelivery.properties" key="CustomerDelivery.jLabel1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
@@ -142,7 +142,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/CustomerDelivery.properties" key="CustomerDelivery.jLabel15.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Customer.properties" key="CustomerDelivery.jLabel15.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel15" noResource="true"/>
       </Properties>
@@ -165,7 +165,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/CustomerDelivery.properties" key="CustomerDelivery.jLabel14.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Customer.properties" key="CustomerDelivery.jLabel14.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel14" noResource="true"/>
       </Properties>
@@ -258,7 +258,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="proffittcenterworkingcopy/resource/CustomerDelivery.properties" key="CustomerDelivery.jLabel16.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+          <ResourceString bundle="proffittcenter/resource/Customer.properties" key="CustomerDelivery.jLabel16.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
         </Property>
         <Property name="name" type="java.lang.String" value="jLabel16" noResource="true"/>
       </Properties>
