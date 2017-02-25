@@ -115,7 +115,7 @@
         <Component class="javax.swing.JButton" name="closeButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Close24.png"/>
+              <Image iconType="3" name="/proffittcenter/resource/Close24.png"/>
             </Property>
             <Property name="name" type="java.lang.String" value="closeButton" noResource="true"/>
           </Properties>
@@ -126,7 +126,7 @@
         <Component class="javax.swing.JButton" name="detailsButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Info.png"/>
+              <Image iconType="3" name="/proffittcenter/resource/OK.png"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="detailsButton" noResource="true"/>
