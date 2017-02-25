@@ -761,7 +761,7 @@ public class CashupReconciliation extends EscapeDialog {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, Short.MAX_VALUE))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(spinNotes200, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -959,8 +959,9 @@ public class CashupReconciliation extends EscapeDialog {
         jAgency.setFocusable(false);
         jAgency.setName("jAgency"); // NOI18N
 
-        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Save.png"))); // NOI18N
-        saveButton.setToolTipText(bundle.getString("Save")); // NOI18N
+        saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Save.png"))); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/CashupReconciliation"); // NOI18N
+        saveButton.setToolTipText(bundle1.getString("Save")); // NOI18N
         saveButton.setContentAreaFilled(false);
         saveButton.setName("saveButton"); // NOI18N
         saveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -978,7 +979,7 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel41.setName("jLabel41"); // NOI18N
 
         jTillID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTillID.setText(bundle.getString("CashupReconciliation.jTillID.text")); // NOI18N
+        jTillID.setText(bundle1.getString("CashupReconciliation.jTillID.text")); // NOI18N
         jTillID.setFocusable(false);
         jTillID.setName("jTillID"); // NOI18N
 
@@ -1008,8 +1009,8 @@ public class CashupReconciliation extends EscapeDialog {
         jLabel24.setText(bundle.getString("CashupReconciliation.jLabel24.text")); // NOI18N
         jLabel24.setName("jLabel24"); // NOI18N
 
-        jCalculate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Calculate.png"))); // NOI18N
-        jCalculate.setToolTipText(bundle.getString("Calculate")); // NOI18N
+        jCalculate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Calculate.png"))); // NOI18N
+        jCalculate.setToolTipText(bundle1.getString("Calculate")); // NOI18N
         jCalculate.setContentAreaFilled(false);
         jCalculate.setName("jCalculate"); // NOI18N
         jCalculate.addActionListener(new java.awt.event.ActionListener() {
@@ -1312,7 +1313,7 @@ public class CashupReconciliation extends EscapeDialog {
         jDebits.setName("jDebits"); // NOI18N
         jDebitsScrollPane.setViewportView(jDebits);
         if (jDebits.getColumnModel().getColumnCount() > 0) {
-            jDebits.getColumnModel().getColumn(0).setHeaderValue(bundle.getString("CashupReconciliation.jDebits.columnModel.title0")); // NOI18N
+            jDebits.getColumnModel().getColumn(0).setHeaderValue(bundle1.getString("CashupReconciliation.jDebits.columnModel.title0")); // NOI18N
         }
 
         jPaidOutError.setEditable(false);
@@ -1352,7 +1353,7 @@ public class CashupReconciliation extends EscapeDialog {
         });
 
         totalLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        totalLabel.setText(bundle.getString("Totals")); // NOI18N
+        totalLabel.setText(bundle1.getString("Totals")); // NOI18N
         totalLabel.setName("totalLabel"); // NOI18N
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
