@@ -21,7 +21,7 @@
                   <KeyStroke key="F2"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.newSaleMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.newSaleMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="newSaleMenuItem" noResource="true"/>
               </Properties>
@@ -32,7 +32,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="importMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.importMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.importMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -42,7 +42,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="testMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.testMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.testMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="testMenuItem" noResource="true"/>
               </Properties>
@@ -53,7 +53,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="settingsMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jSettings.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jSettings.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -63,7 +63,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="messagesMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.messagesMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.messagesMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="messagesMenuItem" noResource="true"/>
               </Properties>
@@ -74,7 +74,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="printCodesMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.printCodesMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.printCodesMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -84,10 +84,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="resetWindowsItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.resetWindowsItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.resetWindowsItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="resetTooltip" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="resetTooltip" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="resetWindowsItem" noResource="true"/>
               </Properties>
@@ -98,7 +98,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="RunSqlMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.RunSqlMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.RunSqlMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="RunSqlMenuItem" noResource="true"/>
               </Properties>
@@ -109,7 +109,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mirrorMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.mirrorMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.mirrorMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="mirrorMenuItem" noResource="true"/>
               </Properties>
@@ -130,7 +130,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jCash">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jCash.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jCash.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jCash" noResource="true"/>
               </Properties>
@@ -144,7 +144,7 @@
                   <KeyStroke key="F7"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jCheque.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jCheque.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -157,7 +157,7 @@
                   <KeyStroke key="F6"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jCoupon.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jCoupon.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jCoupon" noResource="true"/>
               </Properties>
@@ -171,7 +171,7 @@
                   <KeyStroke key="F5"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jDebit.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jDebit.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -184,7 +184,7 @@
                   <KeyStroke key="Shift+F9"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jPaidIn.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jPaidIn.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jPaidIn" noResource="true"/>
               </Properties>
@@ -198,7 +198,7 @@
                   <KeyStroke key="F9"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jPaidOut.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jPaidOut.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jPaidOut" noResource="true"/>
               </Properties>
@@ -212,7 +212,7 @@
                   <KeyStroke key="PRINTSCREEN"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jReceipt.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jReceipt.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jReceipt" noResource="true"/>
               </Properties>
@@ -223,7 +223,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jCashInDrawer">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jCashInDrawer.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jCashInDrawer.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jCashInDrawer" noResource="true"/>
               </Properties>
@@ -237,7 +237,7 @@
                   <KeyStroke key="F8"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.noSaleMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.noSaleMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="noSaleMenuItem" noResource="true"/>
               </Properties>
@@ -251,7 +251,7 @@
                   <KeyStroke key="Shift+PERIOD"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jCharge.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jCharge.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jCharge" noResource="true"/>
               </Properties>
@@ -262,7 +262,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="ownUseMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.ownUseMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.ownUseMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="ownUseMenuItem" noResource="true"/>
               </Properties>
@@ -276,7 +276,7 @@
                   <KeyStroke key="Shift+COMMA"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jReceivedOnAccount.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jReceivedOnAccount.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jReceivedOnAccount" noResource="true"/>
               </Properties>
@@ -287,10 +287,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="creditCustomerMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.creditCustomerMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.creditCustomerMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="actionCommand" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.creditCustomerMenuItem.actionCommand" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.creditCustomerMenuItem.actionCommand" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="creditCustomerMenuItem" noResource="true"/>
               </Properties>
@@ -301,7 +301,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jRefund">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jRefund.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jRefund.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jRefund" noResource="true"/>
               </Properties>
@@ -312,7 +312,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jReturnableWaste">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jReturnableWaste.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jReturnableWaste.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jReturnableWaste" noResource="true"/>
               </Properties>
@@ -323,7 +323,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jWaste">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jWaste.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jWaste.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jWaste" noResource="true"/>
               </Properties>
@@ -337,7 +337,7 @@
                   <KeyStroke key="SCROLL_LOCK"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.lockMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.lockMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="lockMenuItem" noResource="true"/>
               </Properties>
@@ -351,7 +351,7 @@
                   <KeyStroke key="F12"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.layawayMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.layawayMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="layawayMenuItem" noResource="true"/>
               </Properties>
@@ -375,7 +375,7 @@
               <Properties>
                 <Property name="mnemonic" type="int" value="68"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.deliveriesMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.deliveriesMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -385,7 +385,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="deliveryAddressesItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.deliveryAddressesItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.deliveryAddressesItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="deliveryAddressesItem" noResource="true"/>
               </Properties>
@@ -396,7 +396,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jDepartments">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jDepartment.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jDepartment.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jDepartments" noResource="true"/>
               </Properties>
@@ -407,7 +407,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jEncodedProducts">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jEncodedProducts.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jEncodedProducts.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jEncodedProducts" noResource="true"/>
               </Properties>
@@ -418,7 +418,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jHotkeys">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.hotkeys.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.hotkeys.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jHotkeys" noResource="true"/>
               </Properties>
@@ -429,7 +429,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jOffers">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jOffers.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jOffers.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jOffers" noResource="true"/>
               </Properties>
@@ -440,7 +440,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="operators1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.operators1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.operators1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="operators1" noResource="true"/>
               </Properties>
@@ -451,7 +451,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="orderMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.orderMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.orderMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="orderMenuItem" noResource="true"/>
               </Properties>
@@ -462,7 +462,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="packSuppliers1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.packSuppliers1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.packSuppliers1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="packSuppliers1" noResource="true"/>
               </Properties>
@@ -473,7 +473,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="packs1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.packs1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.packs1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="packs1" noResource="true"/>
               </Properties>
@@ -484,7 +484,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="paidOuts1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.paidOuts.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.paidOuts.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -494,7 +494,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="product1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.product1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.product1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="product1" noResource="true"/>
               </Properties>
@@ -505,7 +505,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="productPerformancesMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.productPerformancesMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.productPerformancesMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="productPerformancesMenuItem" noResource="true"/>
               </Properties>
@@ -516,7 +516,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="products1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.products1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.products1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -526,7 +526,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="reconciledCashups">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.reconciledCashups.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.reconciledCashups.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="reconciledCashups" noResource="true"/>
               </Properties>
@@ -537,7 +537,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="sale1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.sale1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.sale1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="sale1" noResource="true"/>
               </Properties>
@@ -548,7 +548,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="sales">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.sales.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.sales.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="sales" noResource="true"/>
               </Properties>
@@ -559,7 +559,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="skus1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.skus1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.skus1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="skus1" noResource="true"/>
               </Properties>
@@ -570,7 +570,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="suppliers1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.suppliers1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.suppliers1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="suppliers1" noResource="true"/>
               </Properties>
@@ -581,7 +581,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jTaxes">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jTaxes.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jTaxes.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jTaxes" noResource="true"/>
               </Properties>
@@ -592,7 +592,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="tracksMenu">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.tracksMenu.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.tracksMenu.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="tracksMenu" noResource="true"/>
               </Properties>
@@ -613,7 +613,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="createMenuItem2">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.createMenuItem2.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.createMenuItem2.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="createMenuItem2" noResource="true"/>
               </Properties>
@@ -624,7 +624,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="showMenuItem1">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.ShowMenuItem1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.ShowMenuItem1.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="showMenuItem1" noResource="true"/>
               </Properties>
@@ -645,7 +645,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="ordersCreateMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.ordersCreateMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.ordersCreateMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="ordersCreateMenuItem" noResource="true"/>
               </Properties>
@@ -656,7 +656,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="ordersViewMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.ordersViewMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.ordersViewMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="ordersViewMenuItem" noResource="true"/>
               </Properties>
@@ -677,7 +677,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jByName">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jByName.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jByName.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jByName" noResource="true"/>
               </Properties>
@@ -688,7 +688,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jByNumber">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jByNumber.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jByNumber.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jByNumber" noResource="true"/>
               </Properties>
@@ -699,7 +699,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jBalance">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jBalance.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jBalance.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jBalance" noResource="true"/>
               </Properties>
@@ -710,7 +710,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jBalances">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jBalances.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jBalances.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jBalances" noResource="true"/>
               </Properties>
@@ -721,7 +721,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jNewCustomer">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jNewCustomer.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jNewCustomer.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jNewCustomer" noResource="true"/>
               </Properties>
@@ -737,7 +737,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="ownUseByName">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.ownUseByName.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.ownUseByName.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="ownUseByName" noResource="true"/>
               </Properties>
@@ -748,7 +748,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="ownUseByNumber">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.ownUseByNumber.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.ownUseByNumber.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="ownUseByNumber" noResource="true"/>
               </Properties>
@@ -759,7 +759,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="ownUseBalance">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.ownUseBalance.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.ownUseBalance.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="ownUseBalance" noResource="true"/>
               </Properties>
@@ -770,7 +770,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="ownUseBalances">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.ownUseBalances.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.ownUseBalances.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="ownUseBalances" noResource="true"/>
               </Properties>
@@ -781,7 +781,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="ownUseNew">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.ownUseNew.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.ownUseNew.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="ownUseNew" noResource="true"/>
               </Properties>
@@ -806,7 +806,7 @@
                 </Property>
                 <Property name="mnemonic" type="int" value="68"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jDelivery.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jDelivery.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jDelivery" noResource="true"/>
               </Properties>
@@ -817,7 +817,7 @@
             <Menu class="javax.swing.JMenu" name="jStocktake">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jStocktake.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jStocktake.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jStocktake" noResource="true"/>
               </Properties>
@@ -825,7 +825,7 @@
                 <Menu class="javax.swing.JMenu" name="jAll">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jAll" noResource="true"/>
                   </Properties>
@@ -833,7 +833,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jAllDefault">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jAllDefault" noResource="true"/>
                       </Properties>
@@ -844,7 +844,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jAllAll">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jAllAll" noResource="true"/>
                       </Properties>
@@ -857,7 +857,7 @@
                 <Menu class="javax.swing.JMenu" name="jAllLessThan10">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllLessThan10.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllLessThan10.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jAllLessThan10" noResource="true"/>
                   </Properties>
@@ -865,7 +865,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jDefault10">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jDefault10" noResource="true"/>
                       </Properties>
@@ -876,7 +876,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jAll10">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jAll10" noResource="true"/>
                       </Properties>
@@ -889,7 +889,7 @@
                 <Menu class="javax.swing.JMenu" name="jNegatives">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jNegatives.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jNegatives.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jNegatives" noResource="true"/>
                   </Properties>
@@ -897,7 +897,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jNegativeDefault">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jNegativeDefault" noResource="true"/>
                       </Properties>
@@ -908,7 +908,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jNegativeAll">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jNegativeAll" noResource="true"/>
                       </Properties>
@@ -921,7 +921,7 @@
                 <Menu class="javax.swing.JMenu" name="jStop">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jStop.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jStop.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jStop" noResource="true"/>
                   </Properties>
@@ -929,7 +929,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jStopDefault">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jStopDefault" noResource="true"/>
                       </Properties>
@@ -940,7 +940,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jStopAll">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jStopAll" noResource="true"/>
                       </Properties>
@@ -950,7 +950,7 @@
                 <Menu class="javax.swing.JMenu" name="jDepartment">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jDepartment.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jDepartment.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jDepartment" noResource="true"/>
                   </Properties>
@@ -958,7 +958,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jDepartmentDefault">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jDepartmentDefault" noResource="true"/>
                       </Properties>
@@ -972,7 +972,7 @@
                           <KeyStroke key="Alt+S"/>
                         </Property>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jDepartmentAll" noResource="true"/>
                       </Properties>
@@ -985,7 +985,7 @@
                 <Menu class="javax.swing.JMenu" name="jSupplier">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jSupplier.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jSupplier.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jSupplier" noResource="true"/>
                   </Properties>
@@ -993,7 +993,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jSupplierDefault">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllDefault.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jSupplierDefault" noResource="true"/>
                       </Properties>
@@ -1004,7 +1004,7 @@
                     <MenuItem class="javax.swing.JMenuItem" name="jSupplierAll">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAllAll.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jSupplierAll" noResource="true"/>
                       </Properties>
@@ -1017,7 +1017,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jProduct">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jProduct.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jProduct.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jProduct" noResource="true"/>
                   </Properties>
@@ -1030,7 +1030,7 @@
             <Menu class="javax.swing.JMenu" name="jStockByValue">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jStockByValue.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jStockByValue.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jStockByValue" noResource="true"/>
               </Properties>
@@ -1038,7 +1038,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jMenuItem11.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jMenuItem11.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jMenuItem11" noResource="true"/>
                   </Properties>
@@ -1049,7 +1049,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jMenuItem13.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jMenuItem13.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jMenuItem13" noResource="true"/>
                   </Properties>
@@ -1060,7 +1060,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jMenuItem12.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jMenuItem12.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jMenuItem12" noResource="true"/>
                   </Properties>
@@ -1071,7 +1071,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jMenuItem14.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jMenuItem14.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jMenuItem14" noResource="true"/>
                   </Properties>
@@ -1084,10 +1084,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="jStartingStock">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jStartingStock.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jStartingStock.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="StartingStockTip" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="StartingStockTip" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jStartingStock" noResource="true"/>
               </Properties>
@@ -1098,10 +1098,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="addToStockMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.addToStockMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.addToStockMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.addToStockMenuItem.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.addToStockMenuItem.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -1111,10 +1111,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="jTempStock">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jTempStock.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jTempStock.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="jTempStockToolTip" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="jTempStockToolTip" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jTempStock" noResource="true"/>
               </Properties>
@@ -1125,10 +1125,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="linkMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.linkMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.linkMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="Link.Tip" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="Link.Tip" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="linkMenuItem" noResource="true"/>
               </Properties>
@@ -1148,7 +1148,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jSalesByDepartment">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jSalesByDepartment.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jSalesByDepartment.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jSalesByDepartment" noResource="true"/>
               </Properties>
@@ -1159,7 +1159,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jSales">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jSales.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jSales.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jSales" noResource="true"/>
               </Properties>
@@ -1170,7 +1170,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="salesTargetMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.salesTargetMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.salesTargetMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -1180,7 +1180,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="workloadMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.workloadMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.workloadMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -1227,7 +1227,7 @@
                   <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jReconcile.actionCommand" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="actionCommand" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jReconcile.actionCommand" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jReconcile.actionCommand" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jReconcile" noResource="true"/>
               </Properties>
@@ -1241,7 +1241,7 @@
                   <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.agencyReconcilliationMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.agencyReconcilliationMenuItem.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.agencyReconcilliationMenuItem.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -1258,7 +1258,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jAgency">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jAgency.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jAgency.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jAgency" noResource="true"/>
                   </Properties>
@@ -1269,7 +1269,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jDepartment1">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jDepartment.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jDepartment.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jDepartment1" noResource="true"/>
                   </Properties>
@@ -1280,7 +1280,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="discounted">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.discounted.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.discounted.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="discounted" noResource="true"/>
                   </Properties>
@@ -1291,7 +1291,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jOperator">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jOperator.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jOperator.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jOperator" noResource="true"/>
                   </Properties>
@@ -1302,7 +1302,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="pricedOver">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.pricedOver.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.pricedOver.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="pricedOver" noResource="true"/>
                   </Properties>
@@ -1313,7 +1313,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jQuantity">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jQuantity.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jQuantity.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jQuantity" noResource="true"/>
                   </Properties>
@@ -1324,7 +1324,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jTax">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jTax.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jTax.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jTax" noResource="true"/>
                   </Properties>
@@ -1335,7 +1335,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jValue">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jValue.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jValue.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jValue" noResource="true"/>
                   </Properties>
@@ -1351,7 +1351,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jWastes">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jWastes.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jWastes.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jWastes" noResource="true"/>
                   </Properties>
@@ -1362,10 +1362,10 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jReturns">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jReturns.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jReturns.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="actionCommand" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jRefunds.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jRefunds.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jReturns" noResource="true"/>
                   </Properties>
@@ -1376,7 +1376,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jLosses">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jLosses.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jLosses.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jLosses" noResource="true"/>
                   </Properties>
@@ -1387,7 +1387,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jCharges">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jCharges.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jCharges.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jCharges" noResource="true"/>
                   </Properties>
@@ -1398,7 +1398,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jReceived">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jReceived.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jReceived.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jReceived" noResource="true"/>
                   </Properties>
@@ -1409,7 +1409,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jOwnUse">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jOwnUse.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jOwnUse.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jOwnUse" noResource="true"/>
                   </Properties>
@@ -1430,7 +1430,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jDLosses">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jLosses.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jLosses.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jDLosses" noResource="true"/>
                   </Properties>
@@ -1441,7 +1441,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jReturnsByDepartment">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jReturns.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jReturns.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jReturnsByDepartment" noResource="true"/>
                   </Properties>
@@ -1452,7 +1452,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jDWastes">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jWastes.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jWastes.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                     <Property name="name" type="java.lang.String" value="jDWastes" noResource="true"/>
                   </Properties>
@@ -1550,7 +1550,7 @@
                   <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.dailyDepartmentSales.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.dailyDepartmentSales.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.dailyDepartmentSales.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -1560,7 +1560,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMinimumStock">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jMinimumStock.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jMinimumStock.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="jMinimumStock" noResource="true"/>
               </Properties>
@@ -1571,7 +1571,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="customerSalesReportMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.customerSalesReportMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.customerSalesReportMenuItem.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -1581,10 +1581,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="lastSaleReport">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.lastSaleReport.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.lastSaleReport.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.lastSaleReport.toolTipText" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.lastSaleReport.toolTipText" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="lastSaleReport" noResource="true"/>
               </Properties>
@@ -1595,7 +1595,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="marginsByDepartmentMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.marginsByDepartmentMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.marginsByDepartmentMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -1605,7 +1605,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="paidOutsMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.paidOutsMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.paidOutsMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="paidOutsMenuItem" noResource="true"/>
               </Properties>
@@ -1616,10 +1616,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="purchaseHistory">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.purchaseHistory.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.purchaseHistory.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.purchaseHistory.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.purchaseHistory.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -1629,7 +1629,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="monthlySalesByDepartmentMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.monthlySalesByDepartmentMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.monthlySalesByDepartmentMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="monthlySalesByDepartmentMenuItem" noResource="true"/>
               </Properties>
@@ -1640,7 +1640,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="monthlySalesByProduct">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.monthlySalesByProduct.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.monthlySalesByProduct.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="monthlySalesByProduct" noResource="true"/>
               </Properties>
@@ -1651,7 +1651,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="refundsMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.refundsMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.refundsMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="refundsMenuItem" noResource="true"/>
               </Properties>
@@ -1662,7 +1662,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="salesByDepartments">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.salesByDepartments.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.salesByDepartments.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="salesByDepartments" noResource="true"/>
               </Properties>
@@ -1673,7 +1673,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="stoppedProductsMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.stoppedProductsMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.stoppedProductsMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="stoppedProductsMenuItem" noResource="true"/>
               </Properties>
@@ -1684,7 +1684,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="supplierStockListMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.supplierStockListMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.supplierStockListMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="supplierStockListMenuItem" noResource="true"/>
               </Properties>
@@ -1695,7 +1695,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="top100MenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.top100MenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.top100MenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="top100MenuItem" noResource="true"/>
               </Properties>
@@ -1706,7 +1706,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="top100ByDepartmentMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.top100ByDepartmentMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.top100ByDepartmentMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="top100ByDepartmentMenuItem" noResource="true"/>
               </Properties>
@@ -1717,10 +1717,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="top100BySupplier">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.top100BySupplier.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.top100BySupplier.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.top100BySupplier.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.top100BySupplier.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -1730,7 +1730,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="weeklySalesByDepartmentMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.weeklySalesByDepartmentMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.weeklySalesByDepartmentMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="weeklySalesByDepartmentMenuItem" noResource="true"/>
               </Properties>
@@ -1741,7 +1741,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="weeklySalesByProduct">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.weeklySalesByProduct.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.weeklySalesByProduct.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="weeklySalesByProduct" noResource="true"/>
               </Properties>
@@ -1752,7 +1752,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="zeroPricedSalesMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.zeroPricedSalesMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                  <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.zeroPricedSalesMenuItem.text_1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="zeroPricedSalesMenuItem" noResource="true"/>
               </Properties>
@@ -1813,13 +1813,13 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.title" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
     </Property>
     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
       <Font name="Andale Mono IPA" size="8" style="0"/>
     </Property>
     <Property name="name" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.name" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -1833,7 +1833,7 @@
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="1"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
-    <AuxValue name="FormSettings_formBundle" type="java.lang.String" value="proffittcenterworkingcopy/resource/SalesScreen"/>
+    <AuxValue name="FormSettings_formBundle" type="java.lang.String" value="proffittcenter/resource/SalesScreen"/>
     <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
     <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="true"/>
@@ -2121,10 +2121,10 @@
               <Font name="Tahoma" size="24" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Enter.png"/>
+              <Image iconType="3" name="/proffittcenter/resource/Enter.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="enter" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="enter" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="name" type="java.lang.String" value="jButtonEnter" noResource="true"/>
@@ -2139,7 +2139,7 @@
               <Font name="DejaVu Sans Mono" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Asterix.png"/>
+              <Image iconType="3" name="/proffittcenter/resource/Asterix.png"/>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="name" type="java.lang.String" value="jButtonTimes" noResource="true"/>
@@ -2154,7 +2154,7 @@
               <Font name="Tahoma" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proffittcenterworkingcopy/resource/Minus.png"/>
+              <Image iconType="3" name="/proffittcenter/resource/Minus.png"/>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="name" type="java.lang.String" value="jButtonMinus" noResource="true"/>
@@ -2172,7 +2172,7 @@
               <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jButtonDelete.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="tab" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+              <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="tab" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="name" type="java.lang.String" value="jButtonDelete" noResource="true"/>
@@ -2401,7 +2401,7 @@
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="&lt;SalesScreen.jScrollPane1.TabConstraints.tabTitle&gt;">
                     <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.jScrollPane1.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                      <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.jScrollPane1.TabConstraints.tabTitle" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                     </Property>
                   </JTabbedPaneConstraints>
                 </Constraint>
@@ -2423,28 +2423,28 @@
                       <TableColumnModel selectionModel="0">
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                            <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.saleTable.columnModel.title0" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                            <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.saleTable.columnModel.title0" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                           </Title>
                           <Editor/>
                           <Renderer/>
                         </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                            <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.saleTable.columnModel.title1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                            <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.saleTable.columnModel.title1" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                           </Title>
                           <Editor/>
                           <Renderer/>
                         </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                            <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.saleTable.columnModel.title2" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                            <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.saleTable.columnModel.title2" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                           </Title>
                           <Editor/>
                           <Renderer/>
                         </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                            <ResourceString bundle="proffittcenterworkingcopy/resource/SalesScreen.properties" key="SalesScreen.saleTable.columnModel.title3" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                            <ResourceString bundle="proffittcenter/resource/SalesScreen.properties" key="SalesScreen.saleTable.columnModel.title3" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                           </Title>
                           <Editor/>
                           <Renderer/>
