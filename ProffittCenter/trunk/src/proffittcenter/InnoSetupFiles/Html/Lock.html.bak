@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>No sales</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo" title="ProffittCenter logo"
+        style="width: 124px; height: 124px;" checked="true">Lock out<br>
+    </div>
+    <p class="rvps3"><span class="rvts9">The sales screen can be locked out at
+        any time between sales by clicking Payments|Lock! or more quickly using
+        the Scroll Lock button on the keyboard.</span><span class="rvts9"></span></p>
+  </body>
+</html>

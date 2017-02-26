@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WorkLoad" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="448e4921-adcd-4845-a031-65898b96c0a9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#C3CFD9">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#E6F3FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFD700">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFF5BF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="1c747a7a-931e-41c6-b89b-b46ee057de24"/>
+	<subDataset name="dataset1" uuid="d0bf691d-37d4-4802-81e3-4c7942e28a01"/>
+	<subDataset name="Table Dataset 2" uuid="238fbe5c-92d7-4c90-82ef-6e06abff21a9"/>
+	<parameter name="Date" class="java.util.Date"/>
+	<parameter name="department" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,1 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+#below select populates variables a(converts date to datetime),b(adds starting datetime range) and
+# c (ending datetime range which is hour+59 minutes and 59 seconds)which are used in where clause
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'1:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,2 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'2:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,3 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'3:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,4 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'4:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,5 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'5:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,6 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'6:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,7 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'7:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,8 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'8:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,9 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'9:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,10 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'10:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,11 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'11:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,12 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'12:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,13 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'13:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,14 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'14:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,15 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'15:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,16 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'16:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,17 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'17:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,18 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'18:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,19 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'19:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,20 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'20:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,21 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'21:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,22 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'22:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,23 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'23:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+union all
+
+(SELECT count(sales.id)as NumberOfTransactions, format(sum(sales.total)/100,2) as Amount,24 as hour,
+(Date_format($P{Date},'%W %D %M %Y'))as date
+FROM `sales`,
+(select @a:=cast(concat($P{Date},' 00:00:00') as datetime) as a, @b:=addtime(@a,'00:00:00')as b,
+@c:=addtime(@b,'00:59:59')as c) b
+Where
+sales.whencreated between b and c and sales.waste=0 or
+sales.whencreated between b and c  and sales.waste=5 or
+sales.whencreated between b and c  and sales.waste=4)
+
+;]]>
+	</queryString>
+	<field name="NumberOfTransactions" class="java.lang.Integer"/>
+	<field name="Amount" class="java.math.BigDecimal"/>
+	<field name="hour" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<variable name="TotalAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Amount}]]></variableExpression>
+	</variable>
+	<variable name="TotalTransactions" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{NumberOfTransactions}]]></variableExpression>
+	</variable>
+	<background>
+		<band height="802" splitType="Stretch">
+			<line>
+				<reportElement uuid="c3063c9a-c82a-401a-abcc-45f3fd100118" x="-2" y="0" width="557" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="23ede276-d62c-4cd8-9f9f-9ba09fdc20fc" x="1" y="801" width="557" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="f3f8d665-e632-4924-8aac-5a7595e6c2c5" x="555" y="0" width="2" height="801"/>
+			</line>
+			<line>
+				<reportElement uuid="b537534e-de79-4867-babe-55486f1b6792" x="-1" y="1" width="2" height="801"/>
+			</line>
+		</band>
+	</background>
+	<title>
+		<band height="123" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7d87dca7-49f3-43b5-9135-6c1d60f74bb6" x="100" y="0" width="309" height="46" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Workload Report]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d6443bae-3152-4fe3-bb12-5202b54507dc" x="175" y="75" width="167" height="20" forecolor="#0000FF"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="21">
+			<staticText>
+				<reportElement uuid="71bc7f01-552f-4a54-a08f-e3bd0a541e0b" x="105" y="0" width="33" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hour]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b9826715-a756-470a-8a68-cbb64ca8ff75" x="153" y="0" width="141" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number of Transactions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2ce5dd8c-33da-4fc8-8ad2-1c6511ecf5c5" x="309" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sales Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField pattern="">
+				<reportElement uuid="8139178e-5f46-48ad-8b2e-3ce8da43588b" x="100" y="0" width="53" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hour}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="false">
+				<reportElement uuid="cd3fbcdb-9a31-4518-9d71-1abaa0829a74" x="294" y="0" width="115" height="20" forecolor="#009900"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Amount} == null ? 0: $F{Amount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement uuid="1ebb74cf-469b-4ccd-a921-c2800a8b6350" mode="Transparent" x="153" y="0" width="141" height="20" forecolor="#0000FF" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NumberOfTransactions}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="87">
+			<textField pattern="¤ #,##0.00">
+				<reportElement uuid="0abb6528-d072-4d8e-8f51-463df49ce87c" x="294" y="23" width="115" height="20" forecolor="#009900"/>
+				<box>
+					<pen lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement uuid="0bf24cb5-5fb4-4277-bc4d-76f5feea561f" x="153" y="23" width="141" height="20" forecolor="#0000FF"/>
+				<box>
+					<pen lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalTransactions}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="43eb8e64-5887-4707-a9e8-62811f3adaa6" x="153" y="3" width="141" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Transactions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5c4a9edc-ae3a-40e9-8047-7e4f089468e9" x="309" y="3" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b8b345da-8941-43a0-8120-a4a87ba1d2d9" x="309" y="43" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Average Per Sale]]></text>
+			</staticText>
+			<textField pattern="¤ #,##0.00">
+				<reportElement uuid="e4059c51-98c8-4639-900d-7033dac9c862" x="297" y="63" width="112" height="20"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalAmount}/$V{TotalTransactions}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="50">
+			<staticText>
+				<reportElement uuid="f3a64131-2af0-4ac2-b58d-bdc133d9437b" x="5" y="22" width="550" height="28" forecolor="#FF0000"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Note that "Total Transactions" includes only sales. Wastes,paidouts and "no sale" are not included in "Total transactions".]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="231d1817-9fe4-4124-b00b-d9d5d59a7eed" x="5" y="49" width="550" height="1"/>
+			</line>
+			<bar3DChart>
+				<chart theme="default">
+					<reportElement uuid="43dca992-eb8c-4798-acf9-e237d85af131" x="5" y="49" width="548" height="265"/>
+					<chartTitle>
+						<titleExpression><![CDATA["Transactions per hour"]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Transactions"]]></seriesExpression>
+						<categoryExpression><![CDATA[($F{NumberOfTransactions}.equals( 0 )? ' ' :$F{hour} )]]></categoryExpression>
+						<valueExpression><![CDATA[$F{NumberOfTransactions}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot isShowLabels="true">
+					<plot/>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF">
+						<font size="8" isBold="true"/>
+					</itemLabel>
+					<categoryAxisLabelExpression><![CDATA["Hour"]]></categoryAxisLabelExpression>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisLabelExpression><![CDATA["No Of Transactions"]]></valueAxisLabelExpression>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="787" splitType="Stretch">
+			<bar3DChart>
+				<chart theme="default">
+					<reportElement uuid="cf43aae9-80bc-439a-a8bc-4259c9d2fc24" x="5" y="265" width="548" height="265"/>
+					<chartTitle>
+						<titleExpression><![CDATA["Sales per hour"]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Sales"]]></seriesExpression>
+						<categoryExpression><![CDATA[($F{NumberOfTransactions}.equals( 0 )? " " :$F{hour} )]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Amount}.toBigInteger()]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot isShowLabels="true">
+					<plot/>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF">
+						<font size="7" isBold="true"/>
+					</itemLabel>
+					<categoryAxisLabelExpression><![CDATA["Hour"]]></categoryAxisLabelExpression>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisLabelExpression><![CDATA["Amount"]]></valueAxisLabelExpression>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</summary>
+</jasperReport>

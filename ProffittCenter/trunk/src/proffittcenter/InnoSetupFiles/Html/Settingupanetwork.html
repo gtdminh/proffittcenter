@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Setting up a network</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo"
+        title="ProffittCenter logo" style="width: 124px; height: 124px;"
+        checked="true">Setting up a network<br>
+    </div>
+    <p class="rvps3"><span class="rvts9">Setting up a network is an
+        extensive subject and I have not come up with a definitive
+        answer. This note is just to relate my own experience.</span></p>
+    <p class="rvps3"><span class="rvts9">1. &nbsp;You need to have a
+        network set up with a router. I have a wireless router supplied
+        by TalkTalk. The server (main computer) is wired in. The router
+        can be reached by typing 192.168.1.1 into the address bar of my
+        &nbsp;browser. Everything left on default settings.</span></p>
+    <p class="rvps3"><span class="rvts9">2. &nbsp;Each computer has an
+        assigned name. </span></p>
+    <p class="rvps3"><span class="rvts9">3. &nbsp;In your firewall, open
+        port 3306 on server on each client machine. This is
+        straightforward in Windows firewall.</span></p>
+    <p class="rvps3"><span class="rvts9">4. &nbsp;On the server, bring
+        up the XAMPP control panel and make sure that MySQL and Apache
+        are both running.</span></p>
+    <p class="rvps3"><span class="rvts9">5. &nbsp;On the server start
+        ProffittCenter Pro and use 'localhost' for server name. The
+        database name is till, the User name is root, and the password
+        is the one you have set.</span></p>
+    <p class="rvps3"><span class="rvts9">6. &nbsp;Make a note of the
+        other computer names. Find these by right clicking on My
+        Computer and selecting Properties.</span></p>
+    <p class="rvps3"><span class="rvts9">7. &nbsp;On the server, log
+        into XAMPP by putting localhost into the address bar of a
+        browser, and then start phpMyAdmin.</span></p>
+    <p class="rvps3"><span class="rvts9">8. Under 'Privileges', create a
+        new User for each other computer, using the computer name as a
+        user name and making a note of the passwords (required).</span></p>
+    <p class="rvps3"><span class="rvts9">9. Now, in ProffittCenter Pro,
+        on each other computer, under Settings, Make the Server name the
+        computer name of the server, the User name is the name of the
+        current computer, and the password is the one we just created
+        for that user name. The database remains till. Check that you
+        get a connection.</span></p>
+    <p class="rvps3"><span class="rvts9">10. Well, if everything works,
+        your home and dry. If not, please get in touch although you
+        should expect to pay for anything more than basic help on this.</span></p>
+  </body>
+</html>

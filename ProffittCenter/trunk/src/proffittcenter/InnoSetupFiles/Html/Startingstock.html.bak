@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Starting stock</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo" title="ProffittCenter logo"
+        style="width: 124px; height: 124px;" checked="true">Starting stock</div>
+    <p class="rvps3"><span class="rvts9">This screen is activated from the menu
+        with </span><span class="rvts12">Stock&gt;Starting stock</span><span class="rvts9">.</span></p>
+    <p class="rvps3"><span class="rvts9">Type or scan a new product code (twice
+        to ensure no miss-scans) and the </span><span class="rvts12">New
+        product</span><span class="rvts9"> screen will appear. </span></p>
+    <p class="rvps3"><span class="rvts9">Pressing the 10,000 Code button will
+        create an unused <a target="_top" href="10000codes.html">10,000 code</a>,
+        including the initial 10,000.</span></p>
+    <p class="rvps3"><span class="rvts9">Entering a single letter will create a
+        new product for a </span><span class="rvts12">Hot key</span><span class="rvts9">.
+        Pressing the Quit button with the mouse or pressing the </span><span class="rvts12">Escape</span><span
+        class="rvts9"> key returns to the sales screen.</span></p>
+    <p class="rvps3"><span class="rvts9">The Starting stock screen can be used
+        for the initial entry of stock when you are starting out, but it should
+      </span><span class="rvts18">not</span><span class="rvts9"> be used
+        generally; instead use the </span><span class="rvts12">Delivery entry</span><span
+        class="rvts9"> screen.</span></p>
+    <p class="rvps3"><span class="rvts9">When a new product is created, it will
+        be assigned default Pack and Pack Supplier records based on the defaults
+        set in the department chosen.</span></p>
+    <span class="rvts8"></span>
+    <p class="rvps3"><span class="rvts10"></span></p>
+    <p class="rvps3"></p>
+    <span class="rvts8"></span>
+    <p class="rvps3"><span class="rvts9"></span></p>
+  </body>
+</html>

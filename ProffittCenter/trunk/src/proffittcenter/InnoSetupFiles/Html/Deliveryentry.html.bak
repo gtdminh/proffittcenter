@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Delivery entry</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo" title="ProffittCenter logo"
+        style="width: 124px; height: 124px;" checked="true">Delivery entry</div>
+    <p class="rvps3"><span class="rvts9">The </span><span class="rvts12">Delivery
+
+
+        entry</span><span class="rvts9"> screen is accessible either by the menu
+        option &nbsp;or by pressing the function key F11.</span></p>
+    <p class="rvps3"><span class="rvts9">The </span><span class="rvts12">Select
+        supplier</span><span class="rvts9"> dialog is shown first. Select the
+        supplier and then press the Enter key to accept.</span></p>
+    <p class="rvps3"><span class="rvts9">The </span><span class="rvts12">Select
+        delivery</span><span class="rvts9"> dialog then appears. This show a
+        list of deliveries, identified by their delivery note numbers. Click on
+        one of these and then press Enter or click the OK button. Alternatively,
+        if this is a new delivery, type in the delivery note number (or code)
+        and then click OK; you will then be asked to enter the (delivery note)
+        date.</span></p>
+    <p class="rvps3"><span class="rvts9">The </span><span class="rvts12">Delivery
+
+
+        entry</span><span class="rvts9"> screen then appears.</span></p>
+    <p class="rvps3"><span class="rvts9">Then type or scan, the pack code. If
+        the pack is recognised, the remaining boxes are filled in, and entry
+        moves to the Number of packs box with a default value of one. If more
+        than one pack is delivered, type in the number followed by the Enter
+        key. If it is not recognised, the system will issue an error beep. Enter
+        the code a second time to bring up the &nbsp;screen. Entering the code
+        twice avoids the creation of bogus codes when only a partial scan is
+        completed. The pack codes entered may be the bar code on the pack, the
+        supplier stock code, or an arbitrary code for your convenience. Both
+        letters and numbers are acceptable.</span></p>
+    <p class="rvps3"><span class="rvts9">For instance, for milk, we use the set
+        of codes pas, 2pas, 4pas for one, two and four pint pasteurised milk.
+        For newspapers, we found it convenient to use the single newspaper bar
+        code as a pack code for a paper. This has the advantage that one is not
+        caught out by new Bar codes at the point of sale. For frozen foods, we
+        use the supplier stock codes shown on the invoice. This allows frozen
+        food to be placed immediately into the freezer, prior to data entry. If
+        an unrecognised code is encountered, it is necessary to retrieve a
+        sample from the freezer to obtain the product bar code. For most other
+        products, we use the pack bar code. It may not be possible to read this
+        with a CCD scanner.</span></p>
+    <p class="rvps3"><span class="rvts9">For most items obtained singly, other
+        than milk, we have a policy of always buying in two at a time, as this
+        will allow for sales to increase more easily with demand. We then
+        entered a 2 before scanning the single item bar code. This scheme is
+        extendible to higher numbers. The advantage of this, over just using the
+        bar code, is that a common mistake is to scan a bar code after serving a
+        customer without first pressing F11. Without the need for a preceding
+        digit, the item will be recognised as a sale.</span></p>
+    <p class="rvps3"><span class="rvts9">On pressing the Tab key, the focus
+        moves to the Pack price box. Check this value to see if it has changed
+        since the last delivery, and if it has, then type in the new wholesale
+        price in pence, excluding VAT, followed by the Enter key. (Exclude VAT
+        even if you are unregistered.)</span></p>
+    <p class="rvps3"><span class="rvts9">Entry then moves to the Product price
+        box. If this has changed, type in the new price in pence, followed by
+        the Tab key. If a new price is entered, an option to print a new shelf
+        edge label will be offered when you press the Enter key or click the OK
+        button. If you answer no, then you will not be offered the choice
+        subsequently.<br>
+      </span></p>
+    <p class="rvps3"><span class="rvts9">If you wish to maintain the margin
+        after a price increase, type in the margin and press the Enter key to
+        give a new price at the specified margin.</span><span class="rvts9">
+        &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+    <p class="rvps3"><span class="rvts9">If the margin is out of range of the
+        default department margin, a warning dialog will appear. The mouse can
+        be used to go back to the Product price box if a change is needed. If
+        not, pressing the Enter key again will enter the data into the database.</span></p>
+    <p class="rvps3"><span class="rvts9">The Cancel button will cancel the
+        current inputs but leave the screen active while the Quit button or the
+        Escape key will return to the sales screen.</span></p>
+    <p class="rvps3"><span class="rvts9">It is permissible to have a Number of
+        cases value of zero. This allows the wholesale price to be updated
+        without a delivery.</span></p>
+    <p class="rvps3"><span class="rvts9">Pressing the Enter key will operate the
+        OK button. The delivery is then entered into the delivery table and any
+        changes made are updated.</span></p>
+    <p class="rvps3"></p>
+    <span class="rvts8"></span>
+    <p class="rvps3"><span class="rvts9"></span></p>
+  </body>
+</html>

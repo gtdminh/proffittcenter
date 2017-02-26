@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Price over</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo" title="ProffittCenter logo"
+        style="width: 124px; height: 124px;" checked="true">Price over</div>
+    <p class="rvps3"><span class="rvts10">This feature allows an operator to
+        vary the price at the point of sale. The item is sold in the normal way.
+        Then enter the at symbol, @,</span><span class="rvts10"><span class="rvts10">
+          followed by the price in pence,</span> (or alternatively, the
+        character = can be used, which avoids the use of the shift key, but in
+        this case reverse the order: use 123= rather than @123). The selling
+        price is adjusted for the current or selected line only. The price of
+        the product in the product table is </span><span class="rvts15">not </span><span
+        class="rvts10">changed. Any items sold subsequently will be at the
+        original price, even during the current sale. If an offer is in use on
+        the product, then it will not apply to a priced over item. If only one
+        item of several is to be reduced, then it needs to be on a separate
+        line, so deal with it first.</span></p>
+    <p class="rvps3"><span class="rvts10">If a negative number is entered, the
+        final price will be the original price minus the entered value: say the
+        original price is £1.00 and we enter @-15, then the price charged will
+        be £1.00 - 15 p = 85p.<br>
+      </span></p>
+    <p class="rvps3"><span class="rvts10">There is interaction between price
+        over and . See this section for details.</span></p>
+    <p class="rvps3"><span class="rvts9">This operation is restricted to those
+        with the manager or owner authority. If the operator does not have
+        authority, a dialog box is displayed and an owner/manager can scan their
+        pass to allow the price over.</span></p>
+    <p class="rvps3"><span class="rvts9">The maximum price that can be entered
+        as a price over is £1200. The price may be increased as well as reduced.
+        The need for this might arise if you were to use the program to keep
+        track of auction sales in addition to shop sales.</span></p>
+    <p></p>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Barcode" pageWidth="252" pageHeight="108" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="252" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="cb8bbfee-852d-47ef-92fd-42b935b91988">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Description" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Abcdefghijklm"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Barcode" class="java.lang.String">
+		<defaultValueExpression><![CDATA["12345678901"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Description" class="java.lang.String"/>
+	<field name="Price" class="java.lang.String"/>
+	<field name="Symbol" class="java.lang.String"/>
+	<lastPageFooter>
+		<band height="105">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ed39481e-5feb-4c24-b409-d30aa80d08a5" positionType="FixRelativeToBottom" x="15" y="21" width="223" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Description}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement uuid="07e0113b-ae00-4b50-84b1-4f649bcc8486" x="50" y="41" width="148" height="46"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39 (Extended)" drawText="true" checksumRequired="false" barWidth="0" barHeight="0">
+					<jr:codeExpression><![CDATA[$P{Barcode}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+		</band>
+	</lastPageFooter>
+</jasperReport>

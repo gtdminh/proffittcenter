@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2011-02-20T09:05:43</date>
+  <millis>1298192743321</millis>
+  <sequence>0</sequence>
+  <logger></logger>
+  <level>SEVERE</level>
+  <class>java.util.logging.LogManager$RootLogger</class>
+  <method>log</method>
+  <thread>10</thread>
+  <message>DatabaseCreate.connectionQuery </message>
+  <param>SQLException: Access denied for user 'root'@'localhost' (using password: NO)</param>
+</record>
+</log>

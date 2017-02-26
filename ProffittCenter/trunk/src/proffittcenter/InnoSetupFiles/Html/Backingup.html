@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Backing up</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo"
+        title="ProffittCenter logo" style="width: 124px; height: 124px;"
+        >Backing up </div>
+    <p class="rvps3"><span class="rvts10">Facilities are built into
+        ProffittCenter to back up the MySQL database to an on-line
+        server over the Internet every time you shut down ProffittCenter
+        on the computer with the server (mysql database) running on it.
+      </span></p>
+    <p class="rvps3"><span class="rvts10"><br>
+      </span></p>
+    <p class="rvps3"><span class="rvts10">The preferred backing up
+        solution is now provided. Just install the free Dropbox
+        software, and everything will be taken care of. The Dropbox
+        software is available on the Internet - just click on the link
+        in the </span><span class="rvts11">Help</span><span class="rvts10">
+        menu or on the </span><span class="rvts11">File&gt;Settings
+        &gt;Server</span><span class="rvts10"> tab. Not only is this
+        solution simpler to get working, it is not necessary to wait
+        while a sizable attachment to an email is sent, when shutting
+        down at the end of a long day. Dropbox will quietly upload the
+        file in the background during the next working day. Files are
+        saved with a name that includes the day of the month, ensuring
+        that only month-old files are overwritten. Earlier versions are
+        available on Dropbox.</span></p>
+    <p class="rvps3"><span class="rvts19">In the Settings screen are two
+        entries: Backup email address and Backup password. The backup
+        email address and password are just the values for a gmail
+        account which may be your own or one you have created just to
+        hold your backups. The files will have the name tillDumpxx.sql
+        where xx is the numeric day of the month. Do not switch off your
+        computer until the backing up is complete. This may take some
+        time. <br>
+      </span></p>
+    <p class="rvps3"><span class="rvts19">Subsequently, a log file of
+        any errors is saved locally in My Documents/ProffittCenter
+        Reports or alternatively in a Dropbox folder. This is not dated,
+        so only one file will be available when you look.</span></p>
+    <p class="rvps3"><span class="rvts9">If you ever need to restore the
+        database at any time, download the latest backup file from your
+        gmail account, or from the Dropbox location, and then run the
+        sql file using phpmyadmin, or other database management tool. (I
+        always use the free version of Navicat)</span></p>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="supplyerStockList" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="40e2c2dc-27e0-4d67-ba18-16383f5a2e5a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="supplier" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[5]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+ Products.Description AS description,
+Products.ID AS Barcode,
+Skus.Quantity,
+Products.Price,
+DeliveryLines.PackSize AS packSize,
+DeliveryLines.PackPrice AS packPrice,
+Suppliers.Description AS supplier
+FROM Products,Skus,DeliveryLines,Deliveries,Suppliers
+WHERE Products.Sku=Skus.ID
+AND Deliveries.ID=DeliveryLines.Delivery
+AND DeliveryLines.Product=Products.ID
+AND Deliveries.Supplier=$P{supplier}
+AND Deliveries.Supplier=Suppliers.ID
+GROUP BY Products.Description
+ORDER BY Products.Description,Deliveries.WhenCreated DESC]]>
+	</queryString>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[Full description of product]]></fieldDescription>
+	</field>
+	<field name="Barcode" class="java.math.BigInteger"/>
+	<field name="Quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Price" class="java.lang.Long">
+		<fieldDescription><![CDATA[Price in pence]]></fieldDescription>
+	</field>
+	<field name="packSize" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="packPrice" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="supplier" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="eefdf4b1-ee80-4b61-857d-8fd86f126671" x="0" y="0" width="555" height="35"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Supplier Stock List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="459af5cf-43f1-4912-ae41-c8353d0f3d57" x="1" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Supplier name: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6595f57c-022c-46c4-9338-0a19064c9dbc" x="101" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplier}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="39e75615-2b98-478c-888c-e7561873c209" x="1" y="2" width="236" height="20"/>
+				<textElement/>
+				<text><![CDATA[Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2ec35310-7cdd-4a21-829f-d341a98c3086" x="451" y="2" width="51" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Case size ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="26a8ad5a-1527-4c10-9b5b-bcab13a07adf" x="502" y="0" width="54" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Wholesale ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d1b5f48c-585c-48fa-9e32-50e3de1b0a89" x="403" y="2" width="46" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Price ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d010de37-b032-4cb5-8cac-50a0d671c67e" x="354" y="2" width="49" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Quantity ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ea80ef36-5ce5-4d27-bf5b-ddf221f62a58" x="237" y="2" width="117" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Barcode ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c84c0278-562d-4127-b931-701686ed2915" x="237" y="0" width="117" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Barcode}+" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f66755df-65a5-47d2-a6c8-663f39a8c5c9" x="1" y="0" width="236" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement uuid="1cab0419-f6da-47a8-918e-c959de6695bf" x="501" y="0" width="54" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{packPrice}/100]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e20fce64-58e7-4c55-96a0-a3e26438e791" x="449" y="0" width="51" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{packSize}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement uuid="27396af8-e4d0-4337-aac9-b278ab409e89" x="402" y="0" width="46" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Price}/100]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c4266f0f-b673-4e4e-a975-49b8e476aaff" x="354" y="0" width="49" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Quantity}+" "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

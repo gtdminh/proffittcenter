@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Barcode" pageWidth="252" pageHeight="108" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="252" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Description" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Abcdefghijklm"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Barcode" class="java.lang.String">
+		<defaultValueExpression><![CDATA["12345678901"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT Products.Description, FORMAT(Products.Price/100,2) AS Price, Taxes.Symbol
+FROM Products, Skus, Taxes
+WHERE Products.ID = $P{Barcode}
+AND Products.Sku = Skus.ID
+AND Skus.Tax = Taxes.ID]]>
+	</queryString>
+	<field name="Description" class="java.lang.String"/>
+	<field name="Price" class="java.lang.String"/>
+	<field name="Symbol" class="java.lang.String"/>
+	<lastPageFooter>
+		<band height="105">
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="15" y="10" width="185" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="72" y="30" width="140" height="57"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39 (Extended)" drawText="true" checksumRequired="false" barWidth="0" barHeight="0">
+					<jr:codeExpression><![CDATA[$P{Barcode}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="200" y="10" width="42" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Price}+" "+$F{Symbol}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

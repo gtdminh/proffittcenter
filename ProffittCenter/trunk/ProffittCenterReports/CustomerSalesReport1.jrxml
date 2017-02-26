@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="salesReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="cbda90ff-28e0-4ed3-9a01-a198aa507775">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="month" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="year" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2010]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+Sales.ID AS Sale,DATE(Sales.WhenCreated) AS Date,
+IF(MONTH(Sales.WhenCreated)=$P{month} AND YEAR(Sales.WhenCreated)=$P{year},
+Sales.Total,0) AS Total,
+IF(MONTH(Sales.WhenCreated)=$P{month} AND YEAR(Sales.WhenCreated)=$P{year},Sales.Tax/100,0) AS Tax,
+
+ Sales.Waste AS Waste,
+ Customers.Name1 AS N,
+
+ if(Sales.Waste=0 AND MONTH(Sales.WhenCreated)=$P{month} AND YEAR(Sales.WhenCreated)=$P{year},Sales.Total,
+
+ if(Sales.Waste=4 AND MONTH(Sales.WhenCreated)=$P{month} AND YEAR(Sales.WhenCreated)=$P{year},
+ Sales.Total,0)) AS purchase,
+
+ if(Sales.Waste=4 AND MONTH(Sales.WhenCreated)=$P{month} AND YEAR(Sales.WhenCreated)=$P{year},
+ Sales.Total-Sales.Debit-Sales.Coupon,0) AS charge,
+
+ if(Sales.Waste=5 AND MONTH(Sales.WhenCreated)=$P{month} AND YEAR(Sales.WhenCreated)=$P{year},
+ Sales.Total-Sales.Debit-Sales.Coupon,0) AS received,
+
+#Balance
+ (if(Sales.Waste=4 AND (MONTH(Sales.WhenCreated)<=$P{month} AND YEAR(Sales.WhenCreated)=$P{year}
+ OR YEAR(Sales.WhenCreated)<$P{year}),Sales.Total-Sales.Debit-Sales.Coupon,0)
+ -if(Sales.waste=5 AND (MONTH(Sales.WhenCreated)<=$P{month} AND YEAR(Sales.WhenCreated)=$P{year}
+ OR YEAR(Sales.WhenCreated)<$P{year}),Sales.Total,0))
+ AS Balance,
+
+(CURDATE()) AS now,
+ if(Sales.Waste=0,'Cash',if(Sales.Waste=4,'Charged',
+ if(Sales.Waste=5,'Received on account','*'))) AS Type,
+ Sales.Customer AS Customer
+ FROM Sales
+ LEFT JOIN Customers ON Customers.ID=Sales.Customer
+ WHERE (Sales.Waste = 4 OR Sales.Waste = 5 OR Sales.Waste = 0)
+ AND Customer <> 10000380000 AND Customer <> 0
+ ORDER BY Customers.Name1,Customers.Name2,Sales.WhenCreated,Sales.Waste]]>
+	</queryString>
+	<field name="Sale" class="java.lang.Long"/>
+	<field name="Date" class="java.sql.Date"/>
+	<field name="Total" class="java.lang.Long"/>
+	<field name="Tax" class="java.lang.Integer"/>
+	<field name="Waste" class="java.lang.Integer"/>
+	<field name="N" class="java.lang.String"/>
+	<field name="purchase" class="java.lang.Long"/>
+	<field name="charge" class="java.lang.Long"/>
+	<field name="received" class="java.lang.Long"/>
+	<field name="Balance" class="java.lang.Long"/>
+	<field name="now" class="java.sql.Date"/>
+	<field name="Type" class="java.lang.String"/>
+	<field name="Customer" class="java.math.BigInteger"/>
+	<variable name="purchases" class="java.lang.Double" resetType="Group" resetGroup="Customer" calculation="Sum">
+		<variableExpression><![CDATA[$F{purchase}]]></variableExpression>
+	</variable>
+	<variable name="received_1" class="java.lang.Double" resetType="Group" resetGroup="Customer" calculation="Sum">
+		<variableExpression><![CDATA[$F{received}]]></variableExpression>
+	</variable>
+	<variable name="charged" class="java.lang.Double" resetType="Group" resetGroup="Customer" calculation="Sum">
+		<variableExpression><![CDATA[$F{charge}]]></variableExpression>
+	</variable>
+	<variable name="totalPurchases" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{purchase}]]></variableExpression>
+	</variable>
+	<variable name="totalReceived" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{received}]]></variableExpression>
+	</variable>
+	<variable name="totalOutstanding" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Balance}]]></variableExpression>
+	</variable>
+	<variable name="Balance_1" class="java.lang.Double" resetType="Group" resetGroup="Customer" calculation="Sum">
+		<variableExpression><![CDATA[$F{Balance}]]></variableExpression>
+	</variable>
+	<variable name="vat" class="java.lang.Double" resetType="Group" resetGroup="Customer" calculation="Sum">
+		<variableExpression><![CDATA[$F{Tax}]]></variableExpression>
+	</variable>
+	<variable name="totalVat" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Tax}]]></variableExpression>
+	</variable>
+	<group name="Customer" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{Customer}]]></groupExpression>
+		<groupHeader>
+			<band height="21">
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="609af82a-d1a0-4dab-890a-1c5cb538b59a" x="0" y="0" width="184" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{N}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="b2cc1da1-e567-4ccd-996c-516fef95dc37" x="184" y="1" width="92" height="20"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[Customer number: ]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="efcd1bdc-ae77-4ff5-8c43-60eeddfe5e64" x="276" y="1" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Customer}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="22">
+				<staticText>
+					<reportElement uuid="835591ce-9a33-41a4-87d1-1d00966fbe34" x="253" y="0" width="74" height="20"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[Total received: ]]></text>
+				</staticText>
+				<textField pattern="###0.00;(###0.00)">
+					<reportElement uuid="70aa14d1-a714-4ec8-86f8-314a986f300d" x="327" y="0" width="76" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$V{received_1}/100]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0.00;(###0.00)">
+					<reportElement uuid="dcdfe997-1a48-4a58-a994-e701361ce2a1" x="486" y="0" width="69" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[($V{Balance_1})/100]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="4c45fed7-0366-455c-994a-9609a27c22a0" x="417" y="0" width="69" height="20"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[Balance owing: ]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="1aad10d1-ab34-4ba4-9292-d66470174457" x="0" y="20" width="555" height="1"/>
+				</line>
+				<staticText>
+					<reportElement uuid="80913530-bdf9-48ee-824c-8f419ecf1784" x="143" y="2" width="61" height="18"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[VAT:]]></text>
+				</staticText>
+				<textField pattern="###0.00;(###0.00)">
+					<reportElement uuid="cd386303-cfe5-4c55-85fd-88599478526b" x="204" y="1" width="49" height="19"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$V{vat}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="cce4db0d-7620-4a9e-9e2d-3160aceb0594" x="0" y="2" width="120" height="20"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[Total purchases inc VAT: ]]></text>
+				</staticText>
+				<textField pattern="###0.00;(###0.00)">
+					<reportElement uuid="efdceee2-7e0d-4f2f-b68f-a141dd3a0960" x="120" y="1" width="52" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$V{purchases}/100]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="1" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="185" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="cc50abaa-4d7a-4edd-8f0b-3f9d73d7a2d1" x="3" y="104" width="286" height="58"/>
+				<textElement textAlignment="Center">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Monthly sales report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4420c90a-a3f8-4368-a730-60f5fab68ca7" x="372" y="163" width="130" height="20"/>
+				<textElement/>
+				<text><![CDATA[All figures include VAT]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4ec9f196-59d6-44bc-8d4d-01f19d48c3e9" x="241" y="163" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{now}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5e7ad6d9-d1ff-4f84-bf3c-cb0b4335707d" x="36" y="162" width="53" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{month}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5a502adf-3d3a-4ba6-9c34-f1055402306b" x="172" y="162" width="69" height="21"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[date created: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64167cf8-2f5e-45e3-95db-ab521de0a17f" x="0" y="162" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[Month: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5f742050-3cd3-4a33-9085-9b2ac7f33a98" x="89" y="162" width="31" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Year:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="10eb05fe-c4bc-4d60-9270-811daaa6b28d" x="120" y="163" width="52" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="4c1f48b7-7e92-4519-b25e-8b155e53cfa5" x="85" y="1" width="58" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Invoice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ff2046b8-2930-4513-b2c1-b03b8f631d48" x="143" y="0" width="61" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2f99c731-eff0-44c4-83e8-842376d0f3f1" x="214" y="1" width="50" height="20"/>
+				<textElement/>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="03fe6a99-07fc-4215-8140-fb0d2aef1b48" x="0" y="0" width="85" height="20"/>
+				<textElement/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{Total}!=0]]></printWhenExpression>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="60f2ca9d-837c-4367-8b16-809b43e7a704" x="0" y="0" width="85" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fe548e6e-15bd-4894-8ebf-f30cb07e3b71" x="85" y="0" width="58" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Sale}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;(###0.00)">
+				<reportElement uuid="c24e1314-8748-49bf-b366-f09aa3fcd195" x="143" y="0" width="61" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Total}/100]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="42e0d50a-9e9f-4d56-af5f-d34c9f17badb" x="214" y="0" width="178" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Type}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7d749b76-6fae-472d-91e5-7afe5891a6cd" x="0" y="32" width="120" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Total purchases inc. VAT: ]]></text>
+			</staticText>
+			<textField pattern="###0.00;(###0.00)">
+				<reportElement uuid="0075feab-c688-4d41-b216-f22f837e58df" x="120" y="32" width="52" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{totalPurchases}/100]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="78115280-009d-4c06-a4f5-876bdc28eeb2" x="172" y="32" width="81" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Total VAT: ]]></text>
+			</staticText>
+			<textField pattern="###0.00;###0.00-">
+				<reportElement uuid="93a37565-e8c0-496e-bf9c-aa615c897b15" x="253" y="32" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{totalVat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6f845140-5ae3-4503-b45f-ddc74bb64f55" x="319" y="32" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Total outstanding: ]]></text>
+			</staticText>
+			<textField pattern="###0.00;(###0.00)">
+				<reportElement uuid="e1ae6f21-3157-4beb-9476-a9bc4e4eca03" x="419" y="32" width="83" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{totalOutstanding}/100]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="bd16682a-4de5-44d0-8a55-dd81221a64f9" x="0" y="3" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="ac6d14be-1eeb-4b77-8a54-fda4b9fd0fe1" x="0" y="0" width="555" height="26"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Total sales summary for month]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

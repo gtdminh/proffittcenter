@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b275f5dd-ff6d-4164-8c0d-5af364344d07">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="theDate" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new java.util.Date("02-FEB-15") ]]></defaultValueExpression>
+	</parameter>
+	<parameter name="poundSymbol" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["£"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     SUM(SaleLines.Price*Salelines.Quantity) AS totalSales,     SUM(ABS(SaleLines.Price*Salelines.Quantity)*Taxes.Rate) / 10000 AS VAT,
+Departments.Description AS aDepartment
+FROM Sales,SaleLines,Products,Skus,Departments,Taxes
+WHERE Date(Sales.WhenCreated)=DATE($P{theDate})
+AND SaleLines.Sale=Sales.ID
+AND SaleLines.Product=Products.ID
+AND Skus.ID=Products.Sku
+AND Departments.ID = Skus.Department
+AND Taxes.ID=Skus.Tax
+GROUP BY aDepartment]]>
+	</queryString>
+	<field name="totalSales" class="java.lang.Double"/>
+	<field name="VAT" class="java.lang.Double"/>
+	<field name="aDepartment" class="java.lang.String"/>
+	<group name="departments">
+		<groupExpression><![CDATA[$F{aDepartment}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<textField>
+					<reportElement x="0" y="0" width="280" height="30" uuid="43a3ceda-ba33-4740-9f8f-0d6a454242c5"/>
+					<textElement>
+						<font size="16"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aDepartment}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="200" y="30" width="100" height="20" uuid="2311073b-6c04-47fb-9400-0f386de384e8"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA["Sales inc. VAT ("+$P{poundSymbol}+")"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="100" y="30" width="100" height="20" uuid="94d339d6-ae96-4731-a71e-f5c1acb90a0e"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA["VAT ("+$P{poundSymbol}+")"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="30" width="100" height="20" uuid="a1ec698a-c73d-44fd-9bba-16756214fe04"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA["Sales excl. VAT ("+$P{poundSymbol}+")"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="1"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="280" height="40" uuid="ac26eff0-9234-498b-817b-cdcb3db4ac3f"/>
+				<textElement textAlignment="Right">
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sales by departments - "]]></textFieldExpression>
+			</textField>
+			<textField pattern="M/d/yy" isBlankWhenNull="true">
+				<reportElement x="280" y="0" width="280" height="40" uuid="c6de9254-7bcb-4236-97d7-7ae9683986a2"/>
+				<textElement textAlignment="Left">
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{theDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="100" height="19" uuid="1ec63109-414b-4c7d-8760-780616acf80f"/>
+				<textElement textAlignment="Right">
+					<paragraph rightIndent="10" spacingAfter="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalSales}/100]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="100" height="19" uuid="812c3748-53c1-4df7-8fd3-8268ac3146c1"/>
+				<textElement textAlignment="Right">
+					<paragraph rightIndent="10" spacingAfter="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VAT}/100]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement x="200" y="0" width="100" height="19" uuid="59e62cd2-0c5b-4c12-b871-932965109fba"/>
+				<textElement textAlignment="Right">
+					<paragraph rightIndent="10" spacingAfter="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{totalSales}+$F{VAT})/100]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

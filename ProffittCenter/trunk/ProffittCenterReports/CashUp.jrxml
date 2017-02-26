@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CashUp" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0f678e1e-f22a-4ce0-84f8-0215a5ef3134">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Cashup_ID" class="java.lang.Integer"/>
+	<parameter name="Date" class="java.util.Date"/>
+	<parameter name="Operator" class="java.lang.String"/>
+	<parameter name="Till_ID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[3]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Takings" class="java.lang.String"/>
+	<parameter name="Charge" class="java.lang.String"/>
+	<parameter name="Agency" class="java.lang.String"/>
+	<parameter name="endDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="startDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="debitTotal" class="java.lang.String"/>
+	<parameter name="couponTotal" class="java.lang.String"/>
+	<parameter name="paidOuts" class="java.lang.String"/>
+	<parameter name="chequeTotal" class="java.lang.String"/>
+	<parameter name="fixedFloat" class="java.lang.String"/>
+	<parameter name="received" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="sales_Debit" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sales_Coupon" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a88e29d0-3f59-4ad9-9c0e-fb34faa29cd2" x="111" y="0" width="200" height="35"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Cash up details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="300" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="0003162d-6a9c-4d56-a363-bd6a141f043b" x="111" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Cash up ID: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3238154a-65aa-4d1f-990a-e2a34dafd236" x="111" y="20" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Start date: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="11ed0c4a-79fd-4458-94a2-e24ee0973308" x="111" y="60" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Operator: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="368a11ca-854c-4d58-b5ef-44af2ca9594e" x="111" y="80" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Till ID: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d3c26826-f27f-4d77-a4e5-1df90c510ff2" x="111" y="121" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Takings: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7f2763e0-6fd2-45cf-9fa6-394abbef2f2f" x="111" y="141" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Charge: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d3f2d495-a180-419e-a634-8f1934ddf724" x="111" y="161" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Agency: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0cd98c34-5496-423a-b92a-8281679a5a80" x="211" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{Cashup_ID}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="84523cd5-f2ec-4f98-aa47-f464fd2f203f" x="211" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{startDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3800aee3-d813-4458-bad5-76efce433956" x="211" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{Operator}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c02ddb78-a898-4179-8f0d-b62d606037f8" x="211" y="80" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{Till_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7887cdaf-d875-4902-8822-279dc454188c" x="211" y="121" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{Takings}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ed0e44bb-58e4-479f-8867-f4c661ce76ad" x="211" y="141" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{Charge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ec8b029e-6a3d-4dd6-80cc-9df75eeb6334" x="211" y="161" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{Agency}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7a1cde11-6788-4c0f-9e77-5bca8de30c83" x="111" y="40" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[End date: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="42ea0296-ec74-45b3-8c52-7740c29cc962" x="211" y="40" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{endDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9f982d23-6afd-4d6f-a403-80a38fb86722" x="111" y="200" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Debits: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aaf15501-ad78-492d-8263-83198daa0820" x="111" y="240" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Coupons: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0ba02ce2-30f3-428a-900d-67a41441c4b5" x="211" y="200" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{debitTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8e98df7b-59a3-4cab-8009-ec06d55a0a5d" x="211" y="240" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{couponTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bd7689a0-8133-406d-b98e-5bec2fb213a5" x="111" y="260" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Paid outs: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="7441a872-b9c6-44ff-b52f-439ec907ead9" x="211" y="260" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paidOuts}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0d0d6979-94fd-45bc-a577-cdbda1b2f613" x="111" y="220" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Coupons: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="dc379028-40b7-420b-bacf-a5aa4436f309" x="211" y="220" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{chequeTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6b87a3d2-8a69-48f1-a5c7-24caec338238" x="211" y="180" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{Charge}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d8845900-858a-4b4f-90d7-c3cace1c9616" x="111" y="181" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Charge: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="62a2fd1d-1ed1-4f03-9b17-80e454e015f5" x="111" y="100" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Fixed float: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b153bf38-0871-4844-bfb0-6325a3e54174" x="211" y="100" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{fixedFloat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="93f2acdc-7c2d-448d-ba70-ebb1ae56a6ae" x="111" y="280" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Received: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a5e72fc0-43f9-4745-83ad-b47e8be08079" x="211" y="280" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{received}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

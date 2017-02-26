@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7c26eee2-0d40-49ad-a5f5-13d29884a234">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<parameter name="normal" class="java.lang.Integer">
+		<parameterDescription><![CDATA[0]]></parameterDescription>
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="charged" class="java.lang.Integer">
+		<parameterDescription><![CDATA[4]]></parameterDescription>
+		<defaultValueExpression><![CDATA[4]]></defaultValueExpression>
+	</parameter>
+	<parameter name="from" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new Date()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="to" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new Date()]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT Departments.Description,
+#calculate appropriate sold amount based on products.encoded value
+sum(if (products.Encoded <2,
+round((salelines.Quantity*(salelines.Price/100)),2),
+round(((salelines.Quantity/1000)*(salelines.Price/100)),2)
+))as Value
+from
+#First IDentify sales.ID range which will be used in calculations, this improves performance in long term
+#as otherwise mysql would need to scan whole sales table if used in where clause with sales.waste
+(select max(sales.ID)as top, min(sales.ID) as bottom
+from
+sales
+where
+sales.Whencreated between $P{from} and $P{to}) b,
+
+salelines
+inner join sales on sales.ID=salelines.Sale
+inner join products on salelines.Product=Products.ID
+inner join skus on skus.ID=products.Sku
+inner join departments on skus.Department=departments.ID
+where
+(sales.ID between b.bottom and b.top and sales.Waste=$P{normal} or
+sales.ID between b.bottom and b.top and sales.Waste=$P{charged})
+group by Departments.ID
+order by Value;]]>
+	</queryString>
+	<field name="Description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Value" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="426" splitType="Stretch">
+			<elementGroup/>
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement uuid="31c8ea77-2fc6-4b18-b01d-466524a3643e" x="0" y="0" width="555" height="426"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{Description}]]></keyExpression>
+					<valueExpression><![CDATA[$F{Value}]]></valueExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF"/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d8c5c24a-c191-40d4-8df1-46e1d570a677" x="0" y="0" width="555" height="28"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Sales by department]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

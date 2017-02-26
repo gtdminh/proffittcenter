@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="589" pageHeight="828" columnWidth="589" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="6"/>
+	<parameter name="sales_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA["100"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="isCopy" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[true]]></defaultValueExpression>
+	</parameter>
+	<parameter name="discount" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="columnHeader" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[false]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     Sales.ID AS Sale,
+     FORMAT((Sales.Total)/100,2) AS GrossTotal,
+FORMAT(Sales.Tax/100,2) As TaxTotal,
+FORMAT((Sales.Total-Sales.Tax)/100,2) AS NetTotal,
+Sales.Customer AS Customer,
+Sales.Waste AS Waste,
+Customers.Name1 AS Name1,
+Customers.Name2 AS Name2,
+Customers.Address1 AS Address1,
+Customers.Address2 AS Address2,
+Customers.Address3 AS Address3,
+Customers.PostCode AS PostCode, Customers.Town AS Town,
+Customers.County AS County,
+Customers.Discount AS Discount,
+DeliveryAddresses.CustomerOrder AS CustomerOrder,
+DeliveryAddresses.Name1 AS DeliveryName,
+DeliveryAddresses.PostCode AS DeliveryPostCode,
+DeliveryAddresses.Address1 AS DeliveryAddress1,
+DeliveryAddresses.Address2 AS DeliveryAddress2,
+DeliveryAddresses.Address3 AS DeliveryAddress3,
+DeliveryAddresses.Town AS DeliveryTown,
+DeliveryAddresses.County AS DeliveryCounty
+FROM
+      Sales
+INNER JOIN Customers ON Sales.Customer=Customers.ID
+LEFT JOIN DeliveryAddresses ON Sales.ID=DeliveryAddresses.Sale
+WHERE Sales.ID=$P{sales_ID}]]>
+	</queryString>
+	<field name="Sale" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GrossTotal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TaxTotal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NetTotal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Customer" class="java.math.BigInteger">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Waste" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PostCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Town" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="County" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Discount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CustomerOrder" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DeliveryName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DeliveryPostCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DeliveryAddress1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DeliveryAddress2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DeliveryAddress3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DeliveryTown" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DeliveryCounty" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="328" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="139" width="250" height="13"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="152" width="250" height="13"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Address2}+" " + $F{Address1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="165" width="250" height="13"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Address3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="191" width="250" height="13"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{County}+" " + $F{PostCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="227" width="152" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Customer}.longValue()==10000380000l?$P{isCopy}:""+$F{Customer}+$P{isCopy}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="434" y="244" width="100" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="267" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["30 days"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="222" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[($F{Waste}.intValue()==0)?$F{Sale}+" Cash sale":($F{Waste}.intValue()==4)?$F{Sale}+" On account":($F{Waste}.intValue()==5)?$F{Sale}+" Received":$F{Sale}+" Other"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="177" y="261" width="107" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CustomerOrder}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="178" width="250" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Town}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="336" y="139" width="165" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DeliveryName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="336" y="152" width="164" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DeliveryAddress1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="336" y="165" width="164" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DeliveryTown}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="336" y="178" width="164" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DeliveryCounty}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="336" y="191" width="164" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DeliveryPostCode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{columnHeader}]]></printWhenExpression>
+			<staticText>
+				<reportElement x="115" y="0" width="221" height="20"/>
+				<textElement/>
+				<text><![CDATA[Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="0" width="29" height="20"/>
+				<textElement/>
+				<text><![CDATA[Width]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="0" width="43" height="20"/>
+				<textElement/>
+				<text><![CDATA[List price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="0" width="21" height="20"/>
+				<textElement/>
+				<text><![CDATA[Per]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="0" width="24" height="20"/>
+				<textElement/>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="43" height="20"/>
+				<textElement/>
+				<text><![CDATA[Net]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="539" y="0" width="24" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tax]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="128" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="220" height="126" isPrintInFirstWholeBand="true"/>
+				<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+				<subreportParameter name="salesID">
+					<subreportParameterExpression><![CDATA[$F{Sale}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="discount">
+					<subreportParameterExpression><![CDATA[$F{Discount}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["./" + "Invoice_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="170" splitType="Stretch">
+			<textField>
+				<reportElement x="482" y="89" width="40" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["" +$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="545" y="89" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="170">
+			<textField isBlankWhenNull="true">
+				<reportElement x="492" y="67" width="53" height="21"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GrossTotal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="492" y="44" width="53" height="21"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TaxTotal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="492" y="23" width="53" height="21"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NetTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="95" width="40" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[""+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="545" y="95" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

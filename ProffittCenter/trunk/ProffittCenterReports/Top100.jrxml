@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Top100" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="29"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="month" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[5]]></defaultValueExpression>
+	</parameter>
+	<parameter name="year" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2011]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kgSymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["kg"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select products.id as Barcode,
+trim(products.description)as description,
+products.Price/100 as Retail,
+trim(departments.Description)as DepartmentDescription,
+if(products.encoded =2,round(sum(salelines.quantity/1000),3),null)as KgSold,
+products.encoded,
+if(products.encoded !=2, sum(salelines.quantity),count(salelines.id)) as UnitsSold,
+d.sdate,
+if(products.encoded!=2, skus.quantity,skus.quantity/1000)as inStock,
+if((select product from deliverylines
+where deliverylines.product=Barcode limit 0,1 ) is not null
+,
+(select deliverylines.packsupplier from deliverylines
+where deliverylines.product=Barcode order by deliverylines.id desc limit 0,1),
+
+(select packsuppliers.id from packsuppliers
+inner join packs on packsuppliers.pack=packs.id
+where packs.product=Barcode
+order by packsuppliers.id desc limit 0,1)
+)as packsuppliersID,
+#Find a cost price for the product
+@cost:=(select round((packsuppliers.price/100)/packs.size,2) from packsuppliers
+inner join packs on packsuppliers.pack=packs.id where packsuppliers.id=packsuppliersID)as cost,
+
+(select suppliers.Description from packsuppliers
+inner join suppliers on packsuppliers.supplier=suppliers.id where packsuppliers.id=packsuppliersID)as SupplierName,
+
+(1-((@cost+(@cost*(taxes.rate/1000)))/(products.price/100))) as margin
+
+
+from
+(select @a:=CONCAT($P{year},'-',LPAD($P{month},2,'00'),'-','01')as Sdate ,last_day(@a)as
+Ldate)d,
+salelines
+inner join sales on sales.id=salelines.sale
+left join products on salelines.product=products.id
+inner join skus on skus.id=products.sku
+inner join departments on departments.id=skus.department
+inner join taxes on taxes.id=skus.tax
+
+where
+sales.whencreated between d.Sdate  and d.Ldate and sales.waste=4
+or
+sales.whencreated between d.Sdate  and d.Ldate and sales.waste=0
+group by salelines.product order by UnitsSold desc limit 0,100;]]>
+	</queryString>
+	<field name="Barcode" class="java.math.BigInteger"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="Retail" class="java.lang.Double"/>
+	<field name="DepartmentDescription" class="java.lang.String"/>
+	<field name="KgSold" class="java.math.BigDecimal"/>
+	<field name="encoded" class="java.lang.Integer"/>
+	<field name="UnitsSold" class="java.math.BigDecimal"/>
+	<field name="sdate" class="java.lang.String"/>
+	<field name="inStock" class="java.math.BigDecimal"/>
+	<field name="packsuppliersID" class="java.math.BigInteger"/>
+	<field name="cost" class="java.lang.Double"/>
+	<field name="SupplierName" class="java.lang.String"/>
+	<field name="margin" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="249" height="33"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Top 100 Sellers For]]></text>
+			</staticText>
+			<textField pattern="MMMMM yyyy">
+				<reportElement x="249" y="0" width="239" height="33" forecolor="#0033CC"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sdate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="195" y="0" width="249" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="85" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Barcode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="605" y="0" width="40" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Retail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="67" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Units Sold]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="0" width="48" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Per]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="745" y="0" width="57" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[In stock]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="0" width="110" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="557" y="0" width="48" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="693" y="0" width="52" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Margin]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="511" y="0" width="46" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kgSymbol} + " Sold"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="195" y="0" width="249" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="605" y="0" width="40" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Retail}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="511" y="0" width="46" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{KgSold}.toPlainString()+ " "+ $P{kgSymbol}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement x="444" y="0" width="67" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{UnitsSold}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="85" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Barcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="645" y="0" width="48" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[($F{encoded}.equals(2)?$P{kgSymbol}:"unit")]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="745" y="0" width="57" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inStock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="0" width="110" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DepartmentDescription}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="557" y="0" width="48" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cost}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00 %">
+				<reportElement x="693" y="0" width="52" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{margin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="682" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="762" y="0" width="40" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="0" width="144" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

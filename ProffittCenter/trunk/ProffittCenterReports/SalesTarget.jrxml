@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesTarget" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="operator" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="target" class="java.lang.Integer">
+		<parameterDescription><![CDATA[Target in pence]]></parameterDescription>
+		<defaultValueExpression><![CDATA[10000]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select sum(sales.total/100) as amount,operators.description
+,count(sales.id) as transactions,(datediff(last_day(curdate()),curdate()-1))as daysleft
+ from sales
+left join operators on sales.operator=operators.id
+where sales.operator=$P{operator} and sales.whencreated>date_sub(curdate(), interval
+dayofmonth(curdate())-1 day) and sales.waste in (0,4)
+group by sales.operator]]>
+	</queryString>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="transactions" class="java.lang.Long"/>
+	<field name="daysleft" class="java.lang.Long"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="556" height="1"/>
+			</line>
+			<line>
+				<reportElement x="1" y="801" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement x="555" y="1" width="1" height="800"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="801"/>
+			</line>
+		</band>
+	</background>
+	<title>
+		<band height="105" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="15" width="222" height="43"/>
+				<textElement verticalAlignment="Middle">
+					<font size="24" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Target For Operator]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="233" y="15" width="175" height="43" forecolor="#0033CC"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="196" y="0" width="144" height="20" forecolor="#FF0000"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="408" y="15" width="146" height="43"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{target}/100]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20">
+			<staticText>
+				<reportElement x="1" y="0" width="106" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Target]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="0" width="113" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="0" width="134" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remaining]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="0" width="107" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Days Left]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="94" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No of Sales]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="273" splitType="Stretch">
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="1" y="0" width="106" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{target}/100]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="107" y="0" width="113" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="314" y="0" width="134" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[($F{amount}>($P{target}/100)? 0:(($P{target}/100)-$F{amount}))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="94" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{transactions}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="107" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{daysleft}]]></textFieldExpression>
+			</textField>
+			<thermometerChart>
+				<chart>
+					<reportElement x="1" y="20" width="181" height="253"/>
+					<chartTitle position="Top">
+						<titleExpression><![CDATA["Target"]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<valueDataset>
+					<valueExpression><![CDATA[$F{amount}]]></valueExpression>
+				</valueDataset>
+				<thermometerPlot valueLocation="bulb" mercuryColor="#00FF00">
+					<plot/>
+					<valueDisplay color="#000000" mask="€">
+						<font size="12"/>
+					</valueDisplay>
+					<dataRange>
+						<lowExpression><![CDATA[0]]></lowExpression>
+						<highExpression><![CDATA[$P{target}/100]]></highExpression>
+					</dataRange>
+					<lowRange>
+						<dataRange>
+							<lowExpression><![CDATA[]]></lowExpression>
+							<highExpression><![CDATA[]]></highExpression>
+						</dataRange>
+					</lowRange>
+					<mediumRange>
+						<dataRange>
+							<lowExpression><![CDATA[]]></lowExpression>
+							<highExpression><![CDATA[]]></highExpression>
+						</dataRange>
+					</mediumRange>
+					<highRange>
+						<dataRange>
+							<lowExpression><![CDATA[]]></lowExpression>
+							<highExpression><![CDATA[]]></highExpression>
+						</dataRange>
+					</highRange>
+				</thermometerPlot>
+			</thermometerChart>
+			<meterChart>
+				<chart>
+					<reportElement x="182" y="20" width="372" height="253"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<valueDataset>
+					<valueExpression><![CDATA[$F{amount}]]></valueExpression>
+				</valueDataset>
+				<meterPlot shape="pie" angle="180" tickInterval="50.0" meterColor="#FFFFFF" needleColor="#000000" tickColor="#000000">
+					<plot/>
+					<tickLabelFont/>
+					<valueDisplay color="#000000"/>
+					<dataRange>
+						<lowExpression><![CDATA[0]]></lowExpression>
+						<highExpression><![CDATA[$F{amount}>=$P{target}/100?$F{amount}:$P{target}/100]]></highExpression>
+					</dataRange>
+					<meterInterval label="Target" color="#FF3333" alpha="1.0">
+						<dataRange>
+							<lowExpression><![CDATA[0]]></lowExpression>
+							<highExpression><![CDATA[$P{target}/100]]></highExpression>
+						</dataRange>
+					</meterInterval>
+					<meterInterval label="Over Target" color="#00CC00" alpha="1.0">
+						<dataRange>
+							<lowExpression><![CDATA[$P{target}/100]]></lowExpression>
+							<highExpression><![CDATA[$F{amount}>$P{target}/100?$F{amount}:$P{target}/100]]></highExpression>
+						</dataRange>
+					</meterInterval>
+				</meterPlot>
+			</meterChart>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="28">
+			<staticText>
+				<reportElement x="11" y="0" width="544" height="14"/>
+				<textElement/>
+				<text><![CDATA[Note that "days left" column includes the day the report was printed and the last day of the month as well.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="14" width="543" height="14"/>
+				<textElement/>
+				<text><![CDATA[Remaining sales column will show 0 if target was reached]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

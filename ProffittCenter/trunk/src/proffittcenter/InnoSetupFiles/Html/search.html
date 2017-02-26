@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+	<link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
+	<link href="css/toc.css" rel="stylesheet" media="screen" type="text/css" />
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<title>ProffittCenter- Search</title>
+	<meta content="help,authoring" name="keywords" />
+	<meta content="HelpNDoc help file" name="description" />
+	<script type="text/javascript">
+	
+		var bSearchDataLoaded = false;
+	
+		$(document).ready(function()
+		{
+			// Load search data
+			$.getScript("js/searchdata.js",	function() {
+				bSearchDataLoaded = true;
+			});
+		});
+		
+		function PerformSearch()
+		{
+			sValue = $("#search").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('<li class="menu level1"><span class="name">No results found.</span></li>');
+			}
+			else
+			{
+				$("#search_results").html('');
+				var oUl = $("#search_results");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					oUl.append("<li class='menu level1'><a href='" + aTl[oSearchEngine.aResults[nCnt]][0] + "?search=" + escape(sValue) + "'><span class='name'>" + unescape(aTl[oSearchEngine.aResults[nCnt]][1]) + "</span><span class='arrow'></span></a></li>");
+				}
+			}
+		}
+	
+	</script>
+</head>
+
+<body>
+
+<div id="topbar">
+	<div id="title">
+		ProffittCenter</div>
+</div>
+<div id="tributton">
+	<div class="links">
+		<a href="ProffittCenter.html">Table of contents</a><a href="keywords.html">Index</a><a id="pressed" href="search.html">Search</a></div>
+</div>
+<div class="searchbox">
+	<form action="" method="get" onsubmit="PerformSearch(); return false;">
+		<fieldset><input id="search" placeholder="search" type="text" />
+		<input id="submit" type="hidden" /></fieldset>
+	</form>
+</div>
+<div id="content">
+	<span class="graytitle">Search results</span>
+	<ul id="search_results" class="pageitem">
+		<li class="menu level1">
+			<span class="name">No search performed.</span>
+		</li>
+	</ul>
+</div>
+<div id="footer">
+	<div>Copyright &copy; 2011 by &lt;Dave Proffitt&gt;. All Rights Reserved.</div>
+</body>
+
+</html>
+

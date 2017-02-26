@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lowStock" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d14486ee-4e60-4fbe-ad18-358d8e0f2591">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Supplier" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT  Skus.ID AS Sku,Skus.Quantity,
+(SELECT Products.`Description` FROM Products
+LEFT JOIN Packs ON Packs.Product=Products.ID
+LEFT JOIN PackSuppliers ON PackSuppliers.Pack=Packs.ID
+WHERE Skus.ID=Products.`Sku` AND Products.`Description` IS NOT NULL
+AND PackSuppliers.Supplier=$P{Supplier}
+ORDER BY PackSuppliers.`WhenCreated` DESC LIMIT 1)as Description,
+Suppliers.Description AS Supplier
+FROM Skus,Suppliers
+WHERE  Skus.Quantity<Skus.Minimum
+AND $P{Supplier}= Suppliers.ID
+AND Skus.ID>2
+ORDER BY Description]]>
+	</queryString>
+	<field name="Sku" class="java.lang.Long"/>
+	<field name="Quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Supplier" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e7b077a4-6309-4286-a59e-5049c4a4dc1a" x="171" y="0" width="177" height="27"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Low stock report]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b6879b60-5c40-48eb-a2fd-3d6849dcfe05" x="405" y="0" width="150" height="27"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Supplier}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="68ddd469-8f93-438d-966b-337b4701ab33" x="348" y="0" width="57" height="27"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supplier:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b67524da-7de7-494f-a33a-563d17eef208" x="0" y="32" width="252" height="20"/>
+				<textElement/>
+				<text><![CDATA[Stock quantity less than Skus Minimum value]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3290bff2-a46b-43b0-b68a-1e8933feeffd" x="0" y="0" width="111" height="13"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Product description: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e21bb21b-0584-4293-869c-841637a601a8" x="171" y="0" width="100" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d0ab23d3-62c0-44a7-bf68-3cf9c6419562" x="327" y="0" width="41" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SKU: ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{Description}!=null]]></printWhenExpression>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="53b54bf0-3e78-4f3d-85a6-110aca3ecbaa" x="0" y="0" width="171" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="93a12058-ee6f-401e-a3f4-ef3f64508cec" x="171" y="0" width="100" height="10"/>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="21f0bd27-adc5-45c0-aa35-eccc25210705" x="327" y="0" width="41" height="10"/>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Sku}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

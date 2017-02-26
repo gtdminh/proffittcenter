@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Settings</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo" title="ProffittCenter logo"
+        style="width: 124px; height: 124px;" checked="true">Settings </div>
+    <p class="rvps3"><span class="rvts9">The Settings screen is reached by
+        activating the menu entry </span><span class="rvts12">File&gt;Settings</span><span
+        class="rvts9"> and requires that the operator has owner or manager
+        privileges. This screen is also displayed at start-up if no database is
+        found. It will normally be the first screen encountered after installing
+        the program. If you have not installed MySQL via XAMPP, freely available
+        from the "Apache Friends" website, then do this first. </span></p>
+    <p class="rvps3"><span class="rvts9">The </span><span class="rvts12">Settings</span><span
+        class="rvts9"> screen is divided into three separate tabs: </span><span
+        class="rvts12">server</span><span class="rvts9">, </span><span class="rvts12">hardware</span><span
+        class="rvts9">, and </span><span class="rvts12">shop</span><span class="rvts9">.
+      </span></p>
+    <p class="rvps3"><span class="rvts9">The </span><span class="rvts18">Server</span><span
+        class="rvts9"> tab holds all the required settings for connection to a
+        database (MySQL). First there is the server name, the database name, the
+        MySQL user name and password. The default for these are <em>localhost </em>(for
+        a server running on the same computer), <em>till</em>, <em>root </em>and
+        <em>blank</em>. These need to match your own set-up of &nbsp;MySQL. For
+        an on-line database, we have (for example)</span><span class="rvts12">
+        www.proffittcenter.org, proff2_till, proff2_test</span><span class="rvts9">,
+        and the password, which needs to be entered twice. </span></p>
+    To maintain a regular backup of the database, install the free Dropbox
+    program. <span class="rvts20">You can install Dropbox by clicking on the
+      link on the Server tab, and following the instructions. Once installed,
+      backing up is automatic.</span>
+    <p class="rvps3"><span class="rvts18">It is always necessary to click the
+        'Test connection' button before the main 'OK' button is enabled. </span></p>
+    <p class="rvps3"><span class="rvts9">If an empty database engine is found,
+        additional buttons will be enabled on the Server page to install the
+        database, and then install all the required tables. These must be
+        clicked in turn, before proceeding to the main OK button.</span></p>
+    <p class="rvps3"><span class="rvts9">The </span><span class="rvts17">Hardware</span><span
+        class="rvts9"> tab hold values for a specific hardware setup. Select an
+        available port and then click the 'Test' button to see if the connection
+        works. The code table and select font drop down box can be set as
+        required. Here, in the UK, the UK setting, and the Page 19 (PC858 EURO)
+        setting proved useful. Click 'Touch screen' if you want to use that
+        facility. The 'Invoice printer' is for the use of an attached Windows
+        printer instead of a receipt printer. (Not recommended)</span></p>
+    <p class="rvps3"><span class="rvts9">The </span><span class="rvts17">Shop</span><span
+        class="rvts9"> tab hold values specific to a particular shop, such as
+        shop name and address. Note the pound and penny symbols: insert your own
+        for local currency. Select the character set Cp850 for a start. </span></p>
+    <p class="rvps3"><span class="rvts9">The tax regime for the UK, the choice
+        is between unregistered (for VAT), registered and wholesale registered.
+        The difference is that for wholesale, selling prices are quoted
+        excluding VAT, and the VAT is added to the total. For retail, VAT is
+        included in each price.</span></p>
+    <p class="rvps3"><span class="rvts9">Then, there is a check box 'Receipt
+        always' and 'Print receipt if greater than:'. Check this if you want a
+        receipt to be issued for all transactions, or increase the value from
+        zero if you want printed receipts for larger transactions only. You can
+        always print receipts on demand by &nbsp;pressing the 'Print Screen'
+        key.</span></p>
+    <p class="rvps3"><span class="rvts12">Set</span><span class="rvts9"> </span><span
+        class="rvts12">Autoclear in minutes</span><span class="rvts9"> refers to
+        the locking of the sales screen if left for an extended period. Set the
+        value to zero if you do not want this feature. Set the value to -1 if
+        you want the screen to lock after every sale.<br>
+      </span></p>
+    <p class="rvps3"><span class="rvts9">The 'Float value' allows for a fixed
+        float to be set. Leave this at zero and you will be asked to enter the
+        float for the shift.</span></p>
+    <p class="rvps3"><span class="rvts9">Till ID should be zero for the back
+        office, and any low number for sales stations.</span></p>
+    <p class="rvps3"><span class="rvts9">Unchecking the </span><a class="rvts16"
+        href="file:///C:/Users/Dave/Documents/NetBeansProjects/ProffittCenter/src/proffittcenter/InnoSetupFiles/Html/Newproduct.html">New
+
+
+
+
+        product</a><span class="rvts9"> box will disable the creation of new
+        product in the sales screen.</span></p>
+    <p class="rvps3"><span class="rvts9"><br>
+      </span></p>
+    <p class="rvps3"><span class="rvts9">Remember, if changes are made on any
+        page, it is necessary to click the OK button which will save the changed
+        values. The program will then shut down and needs to be re-started.</span></p>
+    <p class="rvps3"><span class="rvts9">To set up with an on-line database, the
+        following may be helpful.</span></p>
+    <p class="rvps3"><span class="rvts9">I use Lunar hosts as my provider, using
+        CPanel.</span></p>
+    <p class="rvps3"><span class="rvts9">In CPanel click on MySQL databases.
+        Then click Create New Database and fill in database name.</span></p>
+    <p class="rvps3"><span class="rvts9">Then create a user:</span></p>
+    <p class="rvps3"><span class="rvts9">Then add user to the database you
+        created:</span></p>
+    <p class="rvps3"><span class="rvts9">When you click on Add, you get a chance
+        to grant privileges for this user's account:</span></p>
+    <p class="rvps3"><span class="rvts9">Having made a note of all the relevant
+        values, go to File&gt;Settings on the Server tab:</span></p>
+    <p class="rvps3"><span class="rvts9">Then the normal process will create the
+        database and empty tables.</span></p>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>The ordering process</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo"
+        title="ProffittCenter logo" style="width: 124px; height: 124px;"
+        checked="true">The ordering process</div>
+    <p class="rvps3"><span class="rvts10">Ordering with ProffittCenter
+        introduces a number of unique ideas to generate orders with an
+        uncanny intelligence. After using the system for some time, one
+        really begins to believe that the system knows best. Before that
+        time, there is ample opportunity to modify and adapt generated
+        orders, so you never loose control.</span></p>
+    <p class="rvps3"><span class="rvts10">The first innovation is the
+        estimation of the stock level required. It is best to think of
+        this with the aid of a concrete example. I will base one on my
+        own experience; collecting goods from Booker Cash &amp; Carry,
+        three times a week. On Monday, Wednesday and Friday mornings,
+        and also, occasionally, on Saturday morning. Sunday was our
+        busiest day of the week. Clearly, a fixed level for re-ordering
+        a product might have worked, but it would be sub-optimal. The
+        best answer has to be to look at the past sales record to
+        determine future requirements.</span></p>
+    <p class="rvps3"><span class="rvts10">The way this is done is
+        explained here. Consider going to Bookers on a Wednesday. The
+        program knows the stock level when generating the order, and the
+        day when fresh stock will be fetched (Friday), after this order
+        is collected. It needs to calculate the number that might be
+        sold between Wednesday morning and Friday morning, and to order
+        a fresh case if this exceeds the number in stock. The best
+        estimate of this number to be sold is obtained by looking at how
+        many were sold in the same time period during the previous week.
+        As this might have been exceptional, the number sold in the same
+        time period two and three weeks before is also calculated, and
+        the worst case (the maximum) selected. This alone would not have
+        any predictive qualities, so in addition to this, three weeks
+        from the previous year are selected, centred on the current time
+        period, but sticking to the same days of the week. As a result
+        of this, items that are seasonal will magically be re-ordered in
+        time.</span></p>
+    <p class="rvps3"><span class="rvts10"><br>
+      </span></p>
+    <p class="rvps3"><span class="rvts10">The second innovation is the
+        integration or stock-checking with the ordering process. It was
+        found in practice that a major reason for errors in orders was
+        errors in stock levels. The worst of these is when a case has
+        not been entered into the system on the previous delivery. In
+        this situation, a second case would be collected, which is not
+        only needlessly expensive, but creates shelf-life problems. To
+        avoid this, each time an order is created, the stock levels of
+        all ordered items should be counted. These levels can be
+        corrected on the order form, and if necessary, the item can be
+        deleted, or a fresh order generated with the corrected values.
+        This has an added benefit in that the levels of stock for items
+        that are ordered are generally low so that counting can be done
+        quickly, and accurately. Once the levels are checked, the stock
+        levels are time stamped, and so will not be included in the next
+        regular stock take, so no additional time is taken.</span></p>
+    <p class="rvps3"><span class="rvts10">The third innovation is the
+        calculation of , or return on capital invested (roci). No other
+        EPOS system that we know of will provide this vital figure.
+        Yield is the effective return on investment obtained by
+        investing in a particular line of stock. If you are ever in the
+        position of being limited with the amount of cash that you can
+        invest in stock, then common sense dictates that it should be
+        invested in stock with the highest . This can be easily done
+        with ProffittCenter.The fourth innovation is the calculation of
+        a sell by date. This allows for the rejection of any stock at a
+        cash and carry that will not be sold completely by it's expire
+        date (sell by or use by date in UK).</span></p>
+    <p class="rvps3"><span class="rvts10">This has all been explained
+        with just one example. The process is just as applicable to
+        daily milk deliveries, or monthly biscuit orders. Set up the
+        supplier defaults correctly, and all situations are dealt with
+        correctly. Understanding the ordering system is more complicated
+        than with other systems, but is no more complicated to use once
+        defaults have been correctly set up. So persevere and you
+        business will benefit greatly.</span></p>
+    <p class="rvps3"><span class="rvts10">The MinStockLevel in the stock
+        record is also now included in the calculations. Do not use this
+        as the default for ordering: a value of 1 is sufficient for
+        general use.</span></p>
+    <span class="rvts8"></span>
+    <p class="rvps3"></p>
+    <span class="rvts8"></span>
+    <p class="rvps3"><span class="rvts9"></span></p>
+  </body>
+</html>

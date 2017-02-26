@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProductSales" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="985beb63-cc88-4233-add7-313732287b6d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="Barcode" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[40111315L]]></defaultValueExpression>
+	</parameter>
+	<parameter name="year" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2011]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT Products.Description,SUM(SaleLines.Quantity)AS ProductQuantity,
+FORMAT(SUM(SaleLines.Quantity*SaleLines.Price*10000/(10000+SaleLines.taxRate))/100,2)AS ProductSales,
+WEEK(Sales.WhenCreated) AS WeekNumber, FORMAT(SUM((SaleLines.Quantity*(SaleLines.Price*10000/(10000+SaleLines.taxRate)-SaleLines.wholesalePrice)/SaleLines.packSize)/100),2)AS Profit
+ FROM Products,SaleLines,Sales
+WHERE Products.ID=$P{Barcode} AND
+SaleLines.Encode=0
+#0 is normal, 4 is charged
+ AND (Sales.Waste=0 OR sales.Waste=4)
+AND SaleLines.Product=Products.ID AND SaleLines.Sale=Sales.ID
+AND YEAR(Sales.WhenCreated)=$P{year}
+GROUP BY WeekNumber
+ORDER BY WeekNumber]]>
+	</queryString>
+	<field name="Description" class="java.lang.String"/>
+	<field name="ProductQuantity" class="java.math.BigDecimal"/>
+	<field name="ProductSales" class="java.lang.String"/>
+	<field name="WeekNumber" class="java.lang.Long"/>
+	<field name="Profit" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement uuid="4e7d8bca-84de-4ddf-ad34-01dd7bc3b1b2" style="SubTitle" x="0" y="16" width="100" height="24" forecolor="#990099"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Week"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="4899549e-2159-4283-be1c-df1b2eb35fdc" x="221" y="16" width="100" height="24" forecolor="#990099"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Value]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="8a083c68-71f3-4e2d-a4e6-4b8ef7d99fc0" x="100" y="16" width="100" height="24" forecolor="#990099"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Quantity]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="c09485aa-6a9b-486c-b732-f6abf91568e7" x="321" y="16" width="100" height="24" forecolor="#990099"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Profit]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement uuid="077e8925-5724-4009-9c71-5f7ab7cd151c" x="275" y="0" width="300" height="64"/>
+				<imageExpression><![CDATA["leaf_banner_violet.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="6afb0c9b-86d5-428b-8874-1fe905f87820" style="Title" x="0" y="13" width="263" height="33" forecolor="#990099"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Product sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ecc650f3-4ff3-4bb8-a239-0b798fa4ad62" style="SubTitle" x="0" y="46" width="263" height="22"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Weekly sales of a product]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d73de31a-3881-4ad6-94ba-c1835c4b060c" style="Column header" x="0" y="19" width="100" height="15"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Product: ]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="51630203-3e94-479e-9c6a-d08471aeffc9" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="a5201e97-07d7-48fa-9bc5-5d97d9a0c429" x="100" y="19" width="100" height="15" backcolor="#666666"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="973fc9f2-3128-4109-972e-36670428c995" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="ac6dd7d5-4cf2-407b-9b19-db61a26715ce" style="Detail" x="221" y="0" width="100" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ProductSales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9be7b60c-c572-43f8-a66c-ead7bf41f89b" x="0" y="2" width="100" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{WeekNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="513797e6-7d35-47ee-9dde-3872d1f8fc3e" x="100" y="2" width="100" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ProductQuantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6f4d55cb-ba86-44c0-958d-95b957b23ebe" x="321" y="2" width="100" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Profit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="12f10373-7e66-44a5-a9a9-1c04413579b0" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="d323a1e8-4094-43ac-93a9-006565883c8d" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="74e41176-9bed-4e11-86d6-6eac4cac4fa9" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="fc91d659-e3d1-4219-a76e-6c662ab95a52" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

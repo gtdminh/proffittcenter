@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProductSales" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9c64401-eb28-438d-8c6b-28a4dfa8fa06">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="department" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<parameter name="year" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[Calendar.getInstance().get(Calendar.YEAR)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="poundSymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["£"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT Departments.Description AS DepartmentDescription,SUM(SaleLines.Quantity)AS ProductQuantity,
+FORMAT(SUM(SaleLines.Quantity*SaleLines.Price*10000/(10000+SaleLines.taxRate))/100,2)
+AS ProductSales,
+MONTHNAME(Sales.WhenCreated) AS MonthName,
+FORMAT (SUM(IF(SaleLines.packSize!=0,SaleLines.Quantity*SaleLines.Price*10000/(10000+SaleLines.taxRate)
+-SaleLines.wholesalePrice/SaleLines.packSize,0)/100),2)AS Profit
+ FROM SaleLines,Sales,Departments,Skus,Products
+ WHERE SaleLines.Encode=0
+ AND SaleLines.Product=Products.ID
+#0 is normal, 4 is charged
+ AND (Sales.Waste=0 OR sales.Waste=4)
+ AND Products.Sku=Skus.ID
+ AND Skus.Department=Departments.ID
+ AND SaleLines.Sale=Sales.ID
+ AND Skus.Department=$P{department}
+ AND YEAR(Sales.WhenCreated)=$P{year}
+ GROUP BY MONTH(Sales.WhenCreated)
+ ORDER BY MONTH(Sales.WhenCreated)]]>
+	</queryString>
+	<field name="DepartmentDescription" class="java.lang.String"/>
+	<field name="ProductQuantity" class="java.math.BigDecimal"/>
+	<field name="ProductSales" class="java.lang.String"/>
+	<field name="MonthName" class="java.lang.String"/>
+	<field name="Profit" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<staticText>
+					<reportElement uuid="e31bc2f9-4a1d-4384-93e1-82b6ca2e3683" x="100" y="16" width="100" height="24" forecolor="#990099"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Quantity]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="98a0d23c-2cdc-406c-8f13-d641b51424e6" x="0" y="16" width="100" height="24" forecolor="#990099"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Month]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="f6e455b0-ba04-40eb-9cc4-fe84703f7183" x="345" y="20" width="100" height="20" forecolor="#990099"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Profit (" + $P{poundSymbol}+")"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="b78ed139-3f5d-46fc-b529-4c5319317d1f" x="221" y="20" width="100" height="20" forecolor="#990099"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Value (" + $P{poundSymbol}+")"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="1"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<image>
+				<reportElement uuid="06e43800-d0bb-4dda-b3ec-59e9c7017b12" x="275" y="0" width="300" height="64"/>
+				<imageExpression><![CDATA["leaf_banner_violet.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="a07bb703-0cf7-4b7c-99f1-da283897fd25" style="Title" x="0" y="13" width="263" height="33" forecolor="#990099"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Department sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b003b1c4-3d85-40cf-ae72-e69e7a78bda2" style="SubTitle" x="0" y="46" width="263" height="22"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Monthly sales of a department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7591dd1f-b388-4aa1-91e6-6610325e98ee" style="Column header" x="0" y="68" width="100" height="15"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Department: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6bb87a9c-add7-48cb-b40b-b4a6b21aeff9" x="100" y="68" width="100" height="15" backcolor="#666666"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DepartmentDescription}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="cc53f124-f5c8-4152-8e9d-62f60d761f52" style="Column header" x="200" y="68" width="100" height="15"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Year: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="22f1582b-e78c-4e85-b608-ae23e3900d81" x="300" y="68" width="100" height="15" backcolor="#666666"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="43c54044-e176-4241-acb3-3a63ab267690" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="aa63312c-9d31-494d-a294-1b9e50e00455" style="Detail" x="221" y="0" width="100" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ProductSales}+" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5fd4c26d-3672-463f-8071-100c148b01bb" x="0" y="2" width="100" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MonthName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c98f9164-2a1e-4756-a36d-48bf8c87a5d6" x="100" y="2" width="100" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ProductQuantity}+" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d87e1c65-9521-47c1-bf1a-ae6aa625438b" x="345" y="2" width="100" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Profit}+" "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="7e637249-82fe-4849-99f6-7dfedbfc79b1" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="0d86dde5-7243-465b-b53a-714707ba0deb" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="4241f8ca-28b5-40a6-863a-1b2eaef90551" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="5f93b5d5-d396-4359-a223-9cfb0197101f" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Invoice_subreport1" pageWidth="589" pageHeight="100" columnWidth="549" leftMargin="40" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1"/>
+	<parameter name="salesID" class="java.lang.String">
+		<defaultValueExpression><![CDATA["100"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+ FORMAT((SaleLines.Price*SaleLines.Quantity)/100,2) AS NetPrice,
+SaleLines.Quantity AS Qty,
+                   Products.Description AS ProductDescription,
+Products.Per AS Per,
+                   FORMAT(Products.Price/100,2) AS ListPrice,
+                   FORMAT(Taxes.Rate/100,1) AS Tax,
+FORMAT(Taxes.Rate,2) AS Vat ,
+
+if (Products.Price=0, 0,FORMAT(FLOOR((CAST(Products.Price AS SIGNED)-SaleLines.Price)*100/Products.Price+.5),0)) AS Discount2
+                   FROM SaleLines
+                   INNER JOIN Products ON SaleLines.Product=Products.ID
+                   INNER JOIN Skus ON Products.Sku=Skus.ID
+                   INNER JOIN Taxes ON Skus.Tax=Taxes.ID
+                   WHERE SaleLines.Sale=$P{salesID}]]>
+	</queryString>
+	<field name="NetPrice" class="java.lang.String"/>
+	<field name="Qty" class="java.lang.Integer"/>
+	<field name="ProductDescription" class="java.lang.String"/>
+	<field name="Per" class="java.lang.String"/>
+	<field name="ListPrice" class="java.lang.String"/>
+	<field name="Tax" class="java.lang.String"/>
+	<field name="Vat" class="java.lang.String"/>
+	<field name="Discount2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="0" width="25" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="0" width="221" height="13"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ProductDescription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="283" y="0" width="29" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Qty}+""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="0" width="43" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ListPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="0" width="21" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Per}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="0" width="35" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{Discount2}+"%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="0" width="39" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NetPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="489" y="0" width="24" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tax}+'%']]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

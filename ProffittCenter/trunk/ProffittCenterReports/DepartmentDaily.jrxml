@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Agency" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="6737622a-79ed-4d34-91b7-7e86b42fd12b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<parameter name="fromDate" class="java.util.Date">
+		<parameterDescription><![CDATA[from date for report]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new Date((new Date()).getTime()-10*24*60*60*1000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="toDate" class="java.util.Date">
+		<parameterDescription><![CDATA[date for report]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new Date((new Date()).getTime()-24*60*60*1000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="department" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT Departments.Description AS DepartmentDescription,
+SUM(SL.Quantity)AS ProductQuantity,
+FORMAT(SUM(SL.Quantity*SL.Price*10000/(10000+SL.taxRate))/100,2)AS ProductSales,
+FORMAT(SUM(IF(SL.packSize!=0,SL.Quantity*SL.Price*10000/(10000+SL.taxRate)
+-SL.wholesalePrice/SL.packSize,0)/100),2)AS Profit,
+SUM(SL.Quantity*SL.Price/100) AS amountu,
+P.Description AS Product,
+TIME(S.WhenCreated)AS aTime,
+DayName(S.WhenCreated)AS day,
+DATE(S.WhenCreated)AS date,
+S.ID AS sale,
+P.ID AS pid
+FROM `SaleLines` SL INNER JOIN `Sales` S ON SL.`Sale` = S.`ID`
+     INNER JOIN `Products` P ON SL.`Product` = P.`ID`
+     INNER JOIN `Skus` Skus ON P.`Sku` = Skus.`ID`
+     INNER JOIN Departments ON Skus.Department = Departments.ID
+WHERE
+ Skus.Department =$P{department}
+AND (S.Waste=0 OR S.Waste=4)
+AND SL.Encode=0
+AND DATE(S.WhenCreated)>=DATE($P{fromDate})
+AND DATE(S.WhenCreated)<=DATE($P{toDate})
+GROUP BY DATE(S.WhenCreated)
+ORDER BY date]]>
+	</queryString>
+	<field name="sale" class="java.lang.Long"/>
+	<field name="DepartmentDescription" class="java.lang.String"/>
+	<field name="ProductSales" class="java.lang.String"/>
+	<field name="Profit" class="java.lang.String"/>
+	<field name="Product" class="java.lang.String"/>
+	<field name="ProductQuantity" class="java.math.BigDecimal"/>
+	<field name="amountu" class="java.math.BigDecimal"/>
+	<field name="pid" class="java.math.BigInteger"/>
+	<field name="aTime" class="java.sql.Time"/>
+	<field name="day" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<variable name="dayTotal" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{amountu}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="productTotal" class="java.lang.Double" resetType="Group" resetGroup="pid" calculation="Sum">
+		<variableExpression><![CDATA[$F{amountu}]]></variableExpression>
+	</variable>
+	<group name="pid">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band height="22">
+				<staticText>
+					<reportElement uuid="7e40ce38-c4e6-4e8d-b277-0c3fa52324f5" x="202" y="0" width="100" height="20"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Quantity]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="88d2d601-3e40-44cc-bef7-a435eebf4124" x="355" y="0" width="100" height="20"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Value]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="36c0b74c-445f-4f81-ae88-a3eb383a0bf1" x="455" y="0" width="100" height="20"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Profit]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="f1ad11bd-ff2d-473c-8bf0-460b1c657668" x="0" y="0" width="100" height="20"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Day]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="6353acfa-8603-4dbd-a52a-85ccd9b0c937" x="100" y="0" width="100" height="20"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Date]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="25"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<textField>
+				<reportElement uuid="f9443883-f7bd-4aca-97ac-601fb41da269" style="Title" x="216" y="73" width="139" height="38"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fromDate}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f9443883-f7bd-4aca-97ac-601fb41da269" x="385" y="73" width="170" height="38"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{toDate}.toString()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="b4b84851-1f83-4bb6-b0e1-afb72faeb05c" x="266" y="10" width="289" height="63"/>
+				<imageExpression><![CDATA["leaf_banner_violet.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="4c4b2eb6-1d09-44b9-8b1d-d400d969ec4f" x="355" y="73" width="30" height="38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[ to ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dcf68dd4-ee3f-434d-8b8b-430a27ac2bb5" style="Title" x="0" y="0" width="263" height="33" forecolor="#990099"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Product sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ffcd56a4-c3d1-4d33-95cd-b656478299d2" style="SubTitle" x="31" y="33" width="232" height="22"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[Daily sales of a department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a9ba783-3c2d-42fe-a068-da4e36fe8274" x="0" y="58" width="69" height="15"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Department: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c3b2333a-76f9-4a99-9feb-153093f9e32a" x="69" y="58" width="194" height="15" backcolor="#666666"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DepartmentDescription}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement uuid="b2de5c01-5780-4cca-a2d3-e39ca5346674" x="202" y="3" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ProductQuantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0eeb2780-53ef-4953-8d61-5d355f89588f" x="355" y="3" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ProductSales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="53ae9305-d168-4d65-9d66-afcf51682335" x="455" y="3" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Profit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="acfe780a-7ba3-49fb-9c09-9a70487a8992" x="2" y="1" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{day}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e5723dce-bf85-427c-98b6-243a6746e152" x="102" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="21">
+			<staticText>
+				<reportElement uuid="d73b60a7-4a7c-4a84-9771-158d0724bee3" x="302" y="0" width="100" height="20"/>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Total]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

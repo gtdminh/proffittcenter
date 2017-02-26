@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2015-01-04T12:34:55 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1b6946f1-16e8-4579-aa7d-08adf25acf60">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="dGlsbC5jYXNodXBzICwxMzYsMjA7b3BlcmF0b3JzICwyMCw0ODk7dGlsbCAsMjYyLDUwODs="/>
+	<parameter name="Start_Date" class="java.util.Date"/>
+	<parameter name="End_Date" class="java.util.Date"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT till.cashups.`TillID` AS ID,
+	till.cashups.`WhenStarted` AS Start,
+	till.cashups.`WhenCreated` AS Finish,
+	FORMAT(till.cashups.`FixedFloat`/100,2) AS StartingFloat,
+	FORMAT(till.cashups.`Takings`,2) AS Takings,
+	FORMAT(till.cashups.`Charged`,2) AS Charged,
+	FORMAT(till.cashups.`Agency`,2) AS Agency,
+	till.operators.`Description` AS Operator
+FROM till.cashups,
+	till.operators
+WHERE 
+	 till.cashups.`Operator` = till.operators.`ID` 
+	 AND till.cashups.`WhenStarted`>= $P{Start_Date}
+	 AND till.cashups.`WhenCreated` <= $P{End_Date}
+ORDER BY till.cashups.`WhenCreated` DESC]]>
+	</queryString>
+	<field name="Start" class="java.util.Date"/>
+	<field name="Finish" class="java.util.Date"/>
+	<field name="Operator" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StartingFloat" class="java.lang.String">
+		<fieldDescription><![CDATA[Float at start of day]]></fieldDescription>
+	</field>
+	<field name="Takings" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Charged" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Agency" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="555" height="59" uuid="47a01a29-794c-4ea1-8fcb-2a839adafa51"/>
+				<textElement textAlignment="Center">
+					<font size="40"/>
+				</textElement>
+				<text><![CDATA[Cashing Up Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="75" height="20" uuid="b674b94b-ff53-4df6-a394-0e74da6d851e">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<text><![CDATA[Start date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="0" width="75" height="20" uuid="d03a206d-a211-46e7-be51-3a32913c2254">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[End date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="65" height="20" uuid="029c7c06-7a5e-48e8-9597-5921e2ee3dd8">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Operator]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="0" width="40" height="20" uuid="b984fa06-9ceb-4127-af65-6de9aea2b6e5">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Till ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="0" width="50" height="20" uuid="1640268b-0463-409b-bfcb-659a96918a1d"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Float]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="0" width="50" height="20" uuid="89d18581-4807-475c-afd7-8e895d1ecb54"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Takings]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="50" height="20" uuid="3dd14dad-442a-4883-ac8a-cdcf8d4690e0"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Charged]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="0" width="50" height="20" uuid="af16c6c2-c0bc-430a-bc2c-b96a2ad3b8b2"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Agency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="50" height="20" uuid="4b5135ab-b260-4210-bf95-77e70d4d84e5"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Coupons]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="0" width="50" height="20" uuid="cf228d99-e93b-4d47-8564-6e55786f3d9b"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Received]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="75" height="20" uuid="17287a77-1c53-4d9b-8b21-9d52fbc6fdb1"/>
+				<textFieldExpression><![CDATA[$F{Start}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="0" width="75" height="20" uuid="0cf3d398-9432-4725-befb-f87f2817ba6e"/>
+				<textFieldExpression><![CDATA[$F{Finish}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="65" height="20" uuid="d565d674-770e-4f95-abc8-bcc5730d5022"/>
+				<textFieldExpression><![CDATA[$F{Operator}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="0" width="40" height="20" uuid="a9e4322f-97d9-44d4-8a4b-cc0db5c43a0e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{ID}+" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="0" width="50" height="20" uuid="d2ce0af1-7513-4513-ae91-6d02a8adbf5b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{StartingFloat}+" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="50" height="20" uuid="f6db6017-e641-4924-99a9-da0f11231696"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Takings}+" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="50" height="20" uuid="f168e865-1645-45c0-8193-3e66f705a037"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Charged}+" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="0" width="50" height="20" uuid="d5179b0c-52bc-41dd-8fd1-40dcb4a82133"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Agency}+" "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

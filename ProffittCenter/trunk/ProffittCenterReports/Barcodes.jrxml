@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Barcodes" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a10b8949-90e1-4c5a-b44d-c6cf2355dadf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="652" splitType="Stretch">
+			<printWhenExpression><![CDATA[true]]></printWhenExpression>
+			<componentElement>
+				<reportElement uuid="2ce1d0a8-802f-452a-96ba-b347accb7245" x="0" y="0" width="353" height="50"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39 (Extended)" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[1000034]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="9a7d31a9-f0ba-43e2-8e88-ba4179fadf27" x="0" y="50" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[1000034]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a2b73de4-2180-41bb-b9aa-ee3426730073" x="0" y="70" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Charge]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="23348c4c-305a-4ca4-8399-2a3afc6347df" x="0" y="109" width="353" height="50"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39 (Extended)" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[1000035]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="2d5fbc69-b0fa-4e4a-b7b5-01f0f510dafd" x="0" y="159" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[1000035]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="57ea59dc-6073-4d45-9338-77526c4ff7bc" x="0" y="179" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Received]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="965f013a-6816-43f2-8963-fef1ca4b6fa7" x="0" y="215" width="353" height="50"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39 (Extended)" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[10000380000l]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="a5addbfb-5da6-463f-a5ee-b4cc3004d707" x="0" y="265" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[10000380000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bca6f483-303b-4a62-8719-62774a2d669e" x="0" y="285" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Customer]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="8413287b-5256-483a-9c95-5184f2265b38" x="0" y="320" width="353" height="50"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39 (Extended)" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[1000031]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="dfd7e2d5-948a-47e4-ab42-5a726c1e0165" x="0" y="370" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[1000031]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="46ccbdc4-18c9-4404-adf1-cd5bb7c35658" x="0" y="390" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Waste]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="624a9232-b6ae-4a35-974f-623bca75cd5d" x="0" y="423" width="353" height="50"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39 (Extended)" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[1000032]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="d913527e-6984-4f61-98f0-5006dcd795b1" x="0" y="473" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[1000032]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="174f8939-717f-47d5-83fc-4e06ab6cf8a1" x="0" y="493" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Returnable waste]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4816b3bf-907e-47ee-80d7-c793c7c545a3" x="0" y="598" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Credit customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b3aae2b2-b8b6-41e8-9eb9-10d27f2645e4" x="0" y="578" width="220" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[1000043]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="e9d18a8c-5ef5-4866-9183-898b0ee95400" x="0" y="528" width="353" height="50"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39 (Extended)" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[1000043]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

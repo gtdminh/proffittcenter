@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesByDepartments" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8d2bd888-998d-4c0b-a475-0d256c168b5a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="from" class="java.util.Date"/>
+	<parameter name="to" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[SELECT Products.Sku AS SKU,
+IF(SaleLines.Encode=2, SaleLines.Quantity*SaleLines.Price/10,
+SaleLines.Quantity*SaleLines.Price) AS Value,
+	Products.Description AS Product
+             FROM SaleLines,Sales,Skus,Products
+             WHERE
+             (Sales.WhenCreated)>=$P{from}
+             AND (DATE(Sales.WhenCreated))<= $P{to}
+             AND SaleLines.TaxID <>6
+             AND ((Sales.Waste= 0)OR(Sales.Waste=4))
+             AND Sales.ID=SaleLines.Sale
+             AND Products.ID=SaleLines.Product
+             AND Skus.ID=Products.Sku
+	ORDER BY Product]]>
+	</queryString>
+	<field name="SKU" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Value" class="java.math.BigDecimal"/>
+	<field name="Product" class="java.lang.String"/>
+	<variable name="total" class="java.lang.Double" resetType="Group" resetGroup="SKU" calculation="Sum">
+		<variableExpression><![CDATA[$F{Value}]]></variableExpression>
+	</variable>
+	<group name="SKU">
+		<groupExpression><![CDATA[$F{SKU}]]></groupExpression>
+		<groupHeader>
+			<band height="21">
+				<textField>
+					<reportElement uuid="e1ed8aad-38f3-44b7-84be-2d1c7e213f43" x="0" y="0" width="306" height="20"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$F{Product}+"     "]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="SKU" pattern="¤ #,##0.00">
+					<reportElement uuid="412f73fb-fc9e-465f-a5c5-06e3e3871f1a" x="306" y="1" width="63" height="20"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{total}/100]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="31935181-cbcd-41d4-a3c2-adca1d045ab1" x="0" y="0" width="555" height="41"/>
+				<textElement textAlignment="Center">
+					<font size="28"/>
+				</textElement>
+				<text><![CDATA[Sales by value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4ddfbf69-7f98-4821-9914-bc47548506e0" x="0" y="41" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[From: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4443bfe4-5338-4cba-b286-953e46b58af2" x="100" y="41" width="180" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{from}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2b219629-3432-4c79-8a1f-78369c754cff" x="280" y="41" width="109" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[To: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="7991543d-2183-4eef-9859-04dea3bb9ee3" x="389" y="41" width="166" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{to}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="purchaseHistory" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="sku" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[26]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT DeliveryLines.Product,DeliveryLines.Pack,
+FORMAT(DeliveryLines.PackPrice/100,2)AS PackPrice,DeliveryLines.PackSize,DeliveryLines.PackSupplier,
+Suppliers.Description AS SupplierDescription,Products.Description AS ProductDescription,
+DATE(Deliveries.WhenCreated) AS aDate,
+DeliveryLines.Quantity AS Quantity,
+FORMAT(DeliveryLines.PackPrice/(DeliveryLines.PackSize*100),2)AS UnitPrice
+FROM DeliveryLines,Suppliers,Products,Deliveries,PackSuppliers
+WHERE Products.Sku=$P{sku}
+AND DeliveryLines.Product=Products.ID
+AND DeliveryLines.PackSupplier=PackSuppliers.ID
+AND PackSuppliers.Supplier=Suppliers.ID
+AND DeliveryLines.Delivery=Deliveries.ID
+ORDER BY DeliveryLines.ID DESC]]>
+	</queryString>
+	<field name="Product" class="java.math.BigInteger"/>
+	<field name="Pack" class="java.lang.Long"/>
+	<field name="PackPrice" class="java.lang.String"/>
+	<field name="PackSize" class="java.lang.Integer"/>
+	<field name="PackSupplier" class="java.lang.Long"/>
+	<field name="SupplierDescription" class="java.lang.String"/>
+	<field name="ProductDescription" class="java.lang.String"/>
+	<field name="aDate" class="java.lang.String"/>
+	<field name="Quantity" class="java.lang.Integer"/>
+	<field name="UnitPrice" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="0" width="375" height="63"/>
+				<textElement textAlignment="Center">
+					<font size="44"/>
+				</textElement>
+				<text><![CDATA[Product history]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Product: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="182" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ProductDescription}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="206" y="0" width="201" height="20"/>
+				<textElement/>
+				<text><![CDATA[  Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="0" width="33" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Pack size ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="58" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Pack price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="0" width="63" height="20"/>
+				<textElement/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="0" width="48" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Delivered]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Supplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="0" width="57" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Unit price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="206" y="0" width="201" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ProductDescription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="409" y="0" width="33" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PackSize}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="58" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{PackPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="0" width="61" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{aDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="0" width="48" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{SupplierDescription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="498" y="0" width="57" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{UnitPrice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

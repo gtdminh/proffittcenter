@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Embedded barcodes</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo"
+        title="ProffittCenter logo" style="width: 124px; height: 124px;"
+        checked="true">Embedded barcodes</div>
+    <p class="rvps3"><span class="rvts10">Some barcodes have the price
+        or the weight encoded in the barcode; for a detailed description
+        of this, see WikiAnswers. </span></p>
+    <p class="rvps3"><span class="rvts10">The most common formats are:</span></p>
+    <p class="rvps3"><span class="rvts10">UPC-A: 2IIIIIVPPPPC</span></p>
+    <p class="rvps3"><span class="rvts10">UPC-B &amp; EAN-13:
+        02IIIIIVPPPPC</span></p>
+    <p class="rvps3"><span class="rvts10">In these formats the "02" or
+        "2" are the left-most digits of barcode. </span></p>
+    <p class="rvps3"><span class="rvts10">The 'I' characters are the
+        item code, and the 'P' characters are the price or weight codes.
+        The 'V' and 'C' are check digits.</span></p>
+    <p class="rvps3"><span class="rvts10">It is not possible to enter
+        such codes at the sales screen like other products, but if such
+        a code is scanned into the 'New product' screen either from
+        delivery or starting stock screens, then there is automatically
+        an additional option available - to choose encoded by weight or
+        by price. When one of these is chosen, the barcode is stripped
+        down to the initial digits and then the rest replaced with
+        zeroes. With price encoded products, the price entry is not
+        relevant and a zero will be stored. For weight encoded products,
+        the weight is specified in grams and the price entered should be
+        the price per kilogram.</span></p>
+    <p class="rvps3"><span class="rvts10">The encoded products can be
+        examined in the 'Table|Encoded products' screen.</span></p>
+    <p class="rvps3"><span class="rvts10">When sold via the sales
+        screen, the normal actions of the Enter key to increase quantity
+        by one, and to multiply by n by typing *n, do not work. Such
+        products should always be scanned singly.</span></p>
+    <p class="rvps3"><span class="rvts9"></span></p>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bookings" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2a07b019-501f-4ccc-9dca-5666e968b812">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="eventID" class="java.lang.Integer">
+		<parameterDescription><![CDATA[The ID of the event]]></parameterDescription>
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT events.ID,
+events.Name,
+events.DoorsOpen,
+StartTime,
+EndTime
+FROM events
+WHERE events.ID = $P{eventID}]]>
+	</queryString>
+	<field name="ID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DoorsOpen" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StartTime" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EndTime" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="66" splitType="Stretch">
+			<textField>
+				<reportElement uuid="cea684dd-eac8-40de-bb74-51f4134779ad" x="0" y="0" width="555" height="45"/>
+				<textElement textAlignment="Center">
+					<font size="30"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="eff30cd3-2444-4791-9a01-59777c653c58" x="2" y="45" width="57" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Open: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="87c01ccc-3842-4988-89bf-9adf509e9636" x="59" y="45" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DoorsOpen}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4020e866-a859-4110-97f4-2c10bbccc5f5" x="160" y="45" width="57" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Start: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="bba780d6-5234-4188-ae46-55939f58887e" x="217" y="45" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{StartTime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bb986fd0-63ef-4174-ae43-4429681e80ac" x="316" y="45" width="57" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[End: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9d8d56d7-f65b-43c4-a2be-f06536b84655" x="373" y="45" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EndTime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

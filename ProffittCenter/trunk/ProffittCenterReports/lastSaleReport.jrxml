@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2015-02-12T14:19:47 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lastSaleReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c0a9a13f-fabc-47a3-8197-b8146cc20ddb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<parameter name="department" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Normal" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Charge" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[4]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT MIN(DATEDIFF(NOW(),Sales.WhenCreated)) AS theDays,
+ Products.Description AS theProduct,
+ Products.Sku
+ FROM Sales,SaleLines,Products,Skus
+ WHERE Sales.ID = SaleLines.Sale
+ AND SaleLines.Product = Products.ID
+ AND Products.Sku = Skus.ID
+ AND (Skus.Department = $P{department} OR 0 = $P{department})
+ AND (Sales.Waste=$P{Normal} OR Sales.Waste=$P{Charge})
+ AND Skus.Stopped=FALSE
+ GROUP BY Skus.ID
+ ORDER BY theDays DESC, theProduct]]>
+	</queryString>
+	<field name="theDays" class="java.lang.Integer"/>
+	<field name="theProduct" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="131" y="0" width="278" height="63" uuid="7ddd8117-5084-424c-906e-d1711142c76f"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[Last Sale Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="212" y="0" width="274" height="20" uuid="fc64076d-72f9-4d0b-997d-2e74cd103a65"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{theProduct}+" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="1" width="69" height="20" uuid="14dd5047-6345-4987-994b-c945deeaa318"/>
+				<textFieldExpression><![CDATA[$F{theDays}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="1" width="100" height="20" uuid="b1598cc6-45cb-4d1f-b852-e5706f6bba1b"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

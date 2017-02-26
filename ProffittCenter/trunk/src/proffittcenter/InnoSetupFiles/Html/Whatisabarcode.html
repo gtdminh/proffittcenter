@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>What is a barcode?</title>
+    <meta content="Dave Proffitt" name="author">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header"> <img id="logo" src="Logo.gif" alt="ProffittCenter logo"
+        title="ProffittCenter logo" style="width: 124px; height: 124px;"
+        checked="true">What is a barcode?<br>
+    </div>
+    <p class="rvps3"><span class="rvts10">A barcode is simply a way of
+        encoding characters in a simple machine readable format of black
+        bars, normally printed onto a white background. The characters
+        encoded may be just numbers or both letters and numbers. There
+        are a variety of different codes used to translate between the
+        characters and the black and white bands. These codes are
+        generally known as symbologies. Products in a supermarket are
+        universally coded with an EAN13 or EAN8 symbology. EAN is for
+        the European Article Numbering Association, and the 13 or 8
+        refers to the number of digits (numbers only) encoded. In
+        America, the equivalent standard is UPC for Universal Product
+        Code and is broadly similar. EAN13 codes can also have an
+        extension code added. These are commonly used for issue
+        identification with magazines.</span></p>
+    <p class="rvps3"><span class="rvts10">Bars in the code are
+        distinguished by their width; normally a choice is made between
+        two widths, one unit or two units wide. </span></p>
+    <p class="rvps3"><span class="rvts10">There are a large number of
+        other codes available, but the main additional one of interest
+        is Code 39. This is used by this program for any bar codes that
+        are printed out. These are printed with a free bar code font
+        provided by Bar Codes, Inc. at </span><span class="rvts11">http://www.barcodesinc.com/free-barcode-font/</span><span
+        class="rvts10"> . You are free to use these fonts in other
+        applications. For instance, you might wish to generate bar code
+        labels with a spread sheet program, such as Excel. Any number
+        represented in Code 39 needs to have a * character both before
+        and after the number as start and stop codes. That is, if you
+        want a number 1003456, you need to have the string of characters
+        *1003456* printed in the Code 39 font. To see how this works, </span><span
+        class="rvts13">*1003456* </span><span class="rvts10">is the
+        same string in the Code 39 font. These need to be printed with a
+        high quality printer; ideally a high resolution laser printer,
+        although success can be achieved with an ink jet printer. A dot
+        matrix printer is not suitable.</span></p>
+    <p class="rvps3"><span class="rvts10">It is common practice to print
+        the number that is coded below the actual bar code as this makes
+        it possible to enter a code manually if the scanner fails to
+        read it successfully.</span></p>
+    <p class="rvps3"><span class="rvts10">The machine readable part is
+        satisfied by an optical system together with a unit that
+        converts light signals into an electrical signal. There are two
+        main ways of doing this. </span></p>
+    <p class="rvps3"><span class="rvts10">The bar code can be
+        illuminated, and then an image of the bar code is converted by a
+        device that is similar in principle to a video camera, except
+        that it only scans a single line, instead of a rectangular area.
+        These sensors are based on CCD (charge coupled device)
+        technology and hence the scanners based on them are known as CCD
+        scanners. The illumination is provided by a set or LEDs (light
+        emitting diodes) and such scanners are often recognised by the
+        pulsing red light that they give off. </span></p>
+    <p class="rvps3"><span class="rvts10">The other approach used is to
+        scan the barcode with an intense, collimated moving beam of
+        light, and to detect the reflected light with a simple
+        photo-detector. The intense beam of light is provided by a solid
+        state visible laser, normally red. These devices are robust and
+        have a long life. The power in the light beam is insufficient to
+        cause eye damage, although looking into the beam is not without
+        risk. The effective intensity is high because the laser light is
+        monochromatic, allowing much of the ambient light to be removed
+        by a simple filter before detection. The beam is scanned with a
+        mechanical system of rotating or nutating mirrors, either along
+        a straight line, or in a complex two dimensional pattern for an
+        omni-directional scanner. The use of a mechanical system makes
+        such scanners less rugged overall, but they have the advantage
+        of high readability and fast acquisition. They can read bar
+        codes at a distance, including the larger case codes, and are
+        far less dependent upon the actual distance that the bar code is
+        from the scanner, as image focusing is not involved. Most types
+        will scan continuously or will start scanning when presented
+        with an object at the scanning aperture, allowing hands-free
+        operation. They are generally the preferred option for retail
+        use, but are not the cheapest option. They can be recognised by
+        the sharp red line, or pattern of lines, emitted when in
+        operation.</span></p>
+  </body>
+</html>

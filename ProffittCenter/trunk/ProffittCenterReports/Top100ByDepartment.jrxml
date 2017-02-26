@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Top100" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2c5283e4-e817-4c6b-abe3-6fb816f5e2d8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="month" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[5]]></defaultValueExpression>
+	</parameter>
+	<parameter name="year" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2011]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kgSymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["kg"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="department" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select products.id as Barcode,trim(products.description)as description,
+products.Price/100 as Retail,
+trim(departments.Description)as DepartmentDescription,
+if(products.encoded =2,round(sum(salelines.quantity/1000),3),null)as
+KgSold,
+products.encoded,
+if(products.encoded !=2, sum(salelines.quantity),count(salelines.id)) as UnitsSold,
+d.sdate,
+if(products.encoded!=2, skus.quantity,skus.quantity/1000)as inStock,
+
+
+
+
+if((select product from deliverylines
+where deliverylines.product=Barcode limit 0,1 ) is not null
+,
+(select deliverylines.packsupplier from deliverylines
+where deliverylines.product=Barcode order by deliverylines.id desc limit 0,1),
+
+(select packsuppliers.id from packsuppliers
+inner join packs on packsuppliers.pack=packs.id
+where packs.product=Barcode
+order by packsuppliers.id desc limit 0,1)
+)as packsuppliersID,
+
+#Find a cost price for the product
+@cost:=(select round((packsuppliers.price/100)/packs.size,2) from packsuppliers
+inner join packs on packsuppliers.pack=packs.id where packsuppliers.id=packsuppliersID)as cost,
+
+(select suppliers.Description from packsuppliers
+inner join suppliers on packsuppliers.supplier=suppliers.id where packsuppliers.id=packsuppliersID)as SupplierName,
+
+(1-((@cost+(@cost*(taxes.rate/1000)))/(products.price/100))) as margin
+
+
+from
+(select @a:=CONCAT($P{year},'-',LPAD($P{month},2,'00'),'-','01')as Sdate ,last_day(@a)as
+Ldate)d,
+salelines
+inner join sales on sales.id=salelines.sale
+left join products on salelines.product=products.id
+inner join skus on skus.id=products.sku
+inner join departments on departments.id=skus.department
+inner join taxes on taxes.id=skus.tax
+
+where
+(sales.whencreated between d.Sdate  and d.Ldate and sales.waste=4
+or
+sales.whencreated between d.Sdate  and d.Ldate and sales.waste=0)
+and Departments.ID=$P{department}
+group by salelines.product order by UnitsSold desc limit 0,100;]]>
+	</queryString>
+	<field name="Barcode" class="java.math.BigInteger"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="Retail" class="java.math.BigDecimal"/>
+	<field name="DepartmentDescription" class="java.lang.String"/>
+	<field name="KgSold" class="java.math.BigDecimal"/>
+	<field name="encoded" class="java.lang.Integer"/>
+	<field name="UnitsSold" class="java.math.BigDecimal"/>
+	<field name="sdate" class="java.lang.String"/>
+	<field name="inStock" class="java.math.BigDecimal"/>
+	<field name="packsuppliersID" class="java.math.BigInteger"/>
+	<field name="cost" class="java.math.BigDecimal"/>
+	<field name="SupplierName" class="java.lang.String"/>
+	<field name="margin" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ccb4cd8b-f625-4703-aacf-51d1325907a4" x="0" y="0" width="249" height="33"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Top 100 Sellers For]]></text>
+			</staticText>
+			<textField pattern="MMMMM yyyy">
+				<reportElement uuid="f93da9dd-8e73-4ec4-93df-919b3d874287" x="249" y="0" width="239" height="33" forecolor="#0033CC"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sdate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="57d68f75-8c5d-4bb9-9853-1e054561032f" x="195" y="0" width="249" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="106802ff-13af-4eff-95ca-6b02b8a8e6ba" x="0" y="0" width="85" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Barcode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="95f1fc54-34ee-4c17-acbe-df1ae77489f4" x="605" y="0" width="40" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Retail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b60ce874-4306-4b5a-b74a-0ec0d6b0fbac" x="444" y="0" width="67" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Units Sold]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7c9e6bb7-b894-406d-bb47-a7493db8d83e" x="645" y="0" width="48" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Per]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d7f7a38f-511f-4014-a6de-597769fda194" x="745" y="0" width="57" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[In stock]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ea4491f6-2d47-4b13-85ce-7f82aaa372b6" x="85" y="0" width="110" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d61a88f8-61db-4a86-90e8-92f5156786b6" x="557" y="0" width="48" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="81583ff2-5b24-433e-b494-ab1947853955" x="693" y="0" width="52" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Margin]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e0e99859-60f6-413c-85db-55f7f2df2bfb" x="511" y="0" width="46" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kgSymbol} + " Sold"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement uuid="38583dcb-b819-4acd-93bb-484dd2047321" x="195" y="0" width="249" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement uuid="a977274b-1df5-4601-81bf-6911cf8d8999" x="605" y="0" width="40" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Retail}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="815cfeec-95fd-4e81-9341-6603fe4b5e60" x="511" y="0" width="46" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{KgSold}.toPlainString()+ " "+ $P{kgSymbol}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement uuid="a6a58c1d-53fa-4a30-854a-3ff87ab3d752" x="444" y="0" width="67" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{UnitsSold}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="11f86715-63b2-4fb3-99fe-8eba013a5fd9" x="0" y="0" width="85" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Barcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3d85493-bf45-4989-9e8d-57d52e7347f8" x="645" y="0" width="48" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[($F{encoded}.equals(2)?$P{kgSymbol}:"unit")]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement uuid="df875a24-eb25-4277-9e13-50929d335204" x="745" y="0" width="57" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inStock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cc214260-9bf3-4671-b98e-f8413ee246b8" x="85" y="0" width="110" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DepartmentDescription}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement uuid="64398894-6307-4d3c-8c81-62783b5c69c8" x="557" y="0" width="48" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cost}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00 %">
+				<reportElement uuid="236efde3-75f2-4535-a414-e5d79f060ad9" x="693" y="0" width="52" height="15"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{margin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="a13c66d0-f8aa-4a9c-85d0-819b4a63bdb7" x="682" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="fd977f66-b66d-4f8e-ba6f-45ea1b2978cf" x="762" y="0" width="40" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement uuid="6bcc46ec-1298-45df-a796-2518bce38dbd" x="0" y="0" width="144" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

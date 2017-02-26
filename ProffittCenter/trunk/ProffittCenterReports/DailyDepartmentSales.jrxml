@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DailyDepartmentSales" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="80063259-0b78-4b0e-9448-d184a85c2b13">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="department" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<parameter name="poundSymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["£"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fromDate" class="java.util.Date"/>
+	<parameter name="toDate" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[SELECT Departments.Description AS DepartmentDescription,
+IFNULL(SUM(SaleLines.Quantity),0)AS ProductQuantity,
+(IFNULL(SUM(SaleLines.Quantity*SaleLines.Price*10000/(10000+SaleLines.taxRate)/100),0))
+AS ProductSales,
+ Departments.Description,
+EXTRACT(DAY FROM DATE(Sales.WhenCreated)) AS theDate,
+MONTHNAME(Sales.WhenCreated)AS monthName,
+YEAR(Sales.WhenCreated) AS yearName,
+DAY(Sales.WhenCreated) AS G,
+FORMAT (SUM(IFNULL(IF(SaleLines.packSize!=0,SaleLines.Quantity*SaleLines.Price*10000/(10000+SaleLines.taxRate)
+-SaleLines.wholesalePrice/SaleLines.packSize,0)/100,0)),2)AS Profit
+ FROM SaleLines,Sales,Departments,Skus,Products
+ WHERE SaleLines.Encode=0
+ AND SaleLines.Product=Products.ID
+#0 is normal, 4 is charged
+ AND (Sales.Waste=0 OR sales.Waste=4)
+ AND Products.Sku=Skus.ID
+ AND Skus.Department=Departments.ID
+ AND SaleLines.Sale=Sales.ID
+ AND Skus.Department=$P{department}
+ AND Sales.WhenCreated>=$P{fromDate}
+ AND DATE(Sales.WhenCreated)<=$P{toDate}
+ GROUP BY DATE(Sales.WhenCreated)
+ ORDER BY MONTH(Sales.WhenCreated),(Sales.WhenCreated)]]>
+	</queryString>
+	<field name="DepartmentDescription" class="java.lang.String"/>
+	<field name="ProductQuantity" class="java.math.BigDecimal"/>
+	<field name="ProductSales" class="java.math.BigDecimal"/>
+	<field name="Description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="theDate" class="java.lang.Long"/>
+	<field name="monthName" class="java.lang.String"/>
+	<field name="yearName" class="java.lang.Long"/>
+	<field name="G" class="java.lang.Long"/>
+	<field name="Profit" class="java.lang.String"/>
+	<variable name="dailySales" class="java.lang.Float" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{ProductSales}]]></variableExpression>
+	</variable>
+	<group name="Group" minHeightToStartNewPage="100">
+		<groupExpression><![CDATA[$F{monthName}]]></groupExpression>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement uuid="f37ca505-1b50-4b07-a2ce-feff2f87daf9" x="275" y="0" width="300" height="64"/>
+				<imageExpression><![CDATA["leaf_banner_violet.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="c8b6139c-2393-4786-a93a-d1377b2e2560" style="Title" x="0" y="13" width="263" height="33" forecolor="#990099"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Department sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="51b89398-f789-4619-854c-769f6ad05b03" style="SubTitle" x="36" y="46" width="227" height="22"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Daily sales of a department]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="16adb41b-685e-4fbb-8472-c07dc6c4df07" style="Column header" x="0" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Department: ]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="2057c106-e48b-422e-ada0-9218dae1622b" positionType="FixRelativeToBottom" x="0" y="40" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="22059247-c89f-46a7-ba44-80aa62d574d0" x="100" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DepartmentDescription}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7fed9cc6-54c2-40fc-b3b7-4d79a69e9177" x="275" y="20" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[To: ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="2a5d621c-acb1-41e6-8dda-9c9853a5e678" x="375" y="20" width="181" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{toDate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="acee19c9-d07e-48f6-b188-ef5f27be800b" x="101" y="20" width="174" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{fromDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="397f58fc-69a4-4013-bc15-6d73572cb4d1" x="1" y="20" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[From: ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e1b67d3e-d25c-462e-8e4f-3d58697a8cdf" x="0" y="0" width="100" height="24" forecolor="#990099"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="73826706-ac83-4b26-b169-6092b968275c" x="121" y="2" width="76" height="24" forecolor="#990099"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2ee28bef-d2bf-48a7-aaf7-f7169dd124a6" x="199" y="2" width="100" height="22" forecolor="#990099"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Value"+" ("+$P{poundSymbol}+")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1d6fbdf7-f75f-4280-aa5c-eb3d0a14dfde" x="299" y="2" width="67" height="20" forecolor="#990099"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Profit"+" ("+$P{poundSymbol}+")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e53eeac2-1c07-4f4f-b7f3-f5280d5a8bff" x="418" y="2" width="94" height="22" forecolor="#990099"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monthName}+" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2057d83d-259e-41e9-a2e8-7e910f227642" x="512" y="2" width="40" height="22" forecolor="#990099"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yearName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<line>
+				<reportElement uuid="2fa3e8db-5ede-42b0-b107-83d4960b2bc3" positionType="FixRelativeToBottom" x="10" y="15" width="538" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement uuid="37c394ce-0f23-4c38-b092-589f61a16c33" style="Detail" x="199" y="2" width="100" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ProductSales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7e98aaef-9b08-4dde-8d65-5478843d97f9" x="2" y="1" width="119" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{theDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d369f3e7-722a-4b37-a62e-1bc97efbeff5" x="299" y="1" width="67" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Profit}+"  "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="42987d87-ff84-424f-8a71-2e3acf687e45" x="123" y="1" width="76" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ProductQuantity}+"  "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="27" splitType="Stretch">
+			<line>
+				<reportElement uuid="3e1301c3-844d-4fc0-9e40-8bf4f0e03dac" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="1a30d369-ddfa-4749-b1f6-21d1e1782ab1" x="199" y="4" width="99" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{dailySales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="01c288e9-d70c-43e9-8269-3aae5c594898" x="118" y="3" width="79" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[" Total value("+$P{poundSymbol}+") "]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement uuid="4be3ad65-62f9-4524-818f-d8631ebf1b33" style="Column header" x="432" y="0" width="80" height="26"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="d304d59a-51e2-4b8b-9d7a-77723500e9d9" style="Column header" x="513" y="0" width="40" height="26"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="afb58179-c262-45de-807d-86340edcf505" style="Column header" x="0" y="0" width="197" height="26"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
