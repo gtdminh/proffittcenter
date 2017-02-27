@@ -148,7 +148,7 @@ public class Departments extends EscapeDialog {
         closeButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Departments"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Departments"); // NOI18N
         setTitle(bundle.getString("Departments.title")); // NOI18N
         setName("Departments"); // NOI18N
 

@@ -284,7 +284,7 @@
     <Component class="javax.swing.JButton" name="okButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/proffittcenterworkingcopy/resource/OK.png"/>
+          <Image iconType="3" name="/proffittcenter/resource/OK.png"/>
         </Property>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="okButton" noResource="true"/>
@@ -297,7 +297,7 @@
     <Component class="javax.swing.JButton" name="cancelButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/proffittcenterworkingcopy/resource/Close24.png"/>
+          <Image iconType="3" name="/proffittcenter/resource/Close24.png"/>
         </Property>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="cancelButton" noResource="true"/>

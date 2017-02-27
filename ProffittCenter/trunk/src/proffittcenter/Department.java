@@ -219,7 +219,7 @@ public class Department extends EscapeDialog {
             }
         });
 
-        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/OK.png"))); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/OK.png"))); // NOI18N
         okButton.setContentAreaFilled(false);
         okButton.setName("okButton"); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -233,7 +233,7 @@ public class Department extends EscapeDialog {
             }
         });
 
-        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenterworkingcopy/resource/Close24.png"))); // NOI18N
+        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
         cancelButton.setContentAreaFilled(false);
         cancelButton.setName("cancelButton"); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
