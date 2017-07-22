@@ -295,7 +295,7 @@ public class Customers extends EscapeDialog {
         FormListener formListener = new FormListener();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customers"); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenterworkingcopy/resource/Customers"); // NOI18N
         setTitle(bundle.getString("Customers.title_1")); // NOI18N
         setLocationByPlatform(true);
         setModal(true);
@@ -315,12 +315,13 @@ public class Customers extends EscapeDialog {
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.setToolTipText(bundle.getString("Customers.newButton.toolTipText")); // NOI18N
+        java.util.ResourceBundle bundle1 = java.util.ResourceBundle.getBundle("proffittcenter/resource/Customers"); // NOI18N
+        jPanel1.setToolTipText(bundle1.getString("Customers.newButton.toolTipText")); // NOI18N
         jPanel1.setFocusable(false);
         jPanel1.addFocusListener(formListener);
 
         closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Close24.png"))); // NOI18N
-        closeButton.setToolTipText(bundle.getString("Customers.closeButton.toolTipText")); // NOI18N
+        closeButton.setToolTipText(bundle1.getString("Customers.closeButton.toolTipText")); // NOI18N
         closeButton.setBorderPainted(false);
         closeButton.setContentAreaFilled(false);
         closeButton.addActionListener(formListener);
@@ -331,7 +332,7 @@ public class Customers extends EscapeDialog {
         okBtn.addActionListener(formListener);
 
         infoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Info.png"))); // NOI18N
-        infoButton.setToolTipText(bundle.getString("Customers.infoButton.toolTipText")); // NOI18N
+        infoButton.setToolTipText(bundle1.getString("Customers.infoButton.toolTipText")); // NOI18N
         infoButton.setBorderPainted(false);
         infoButton.setContentAreaFilled(false);
         infoButton.addActionListener(formListener);
@@ -342,11 +343,11 @@ public class Customers extends EscapeDialog {
         newButton.setContentAreaFilled(false);
         newButton.addActionListener(formListener);
 
-        jCustomerCode.setToolTipText(bundle.getString("jCustomerCode.tooltip")); // NOI18N
+        jCustomerCode.setToolTipText(bundle1.getString("jCustomerCode.tooltip")); // NOI18N
         jCustomerCode.addFocusListener(formListener);
         jCustomerCode.addKeyListener(formListener);
 
-        stoppedCheckBox.setText(bundle.getString("Customers.stoppedCheckBox.text")); // NOI18N
+        stoppedCheckBox.setText(bundle1.getString("Customers.stoppedCheckBox.text")); // NOI18N
         stoppedCheckBox.addActionListener(formListener);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
