@@ -48,7 +48,7 @@ public class ResultsModel extends AbstractTableModel {
                     return (Main.salesScreenFunctions.getTotal() == 0) ? "" : bundle1.getString("Total");
                 } else if (columnIndex == 1) {
                     
-                    return (Main.salesScreenFunctions.getTotal() == 0) ? "" : Main.salesScreenFunctions.getTotal();
+                    return (Main.salesScreenFunctions.getTotal() == 0) ? "" : StringOps.asPounds(Main.salesScreenFunctions.getTotal());
                 } else {
                     return null;
                 }
