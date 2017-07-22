@@ -39,6 +39,7 @@
  */
 package proffittcenter;
 
+import java.awt.Component;
 import java.awt.Frame;
 import java.awt.Toolkit;
 import java.io.BufferedReader;
@@ -48,6 +49,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.URL;
 import java.sql.*;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -66,7 +68,6 @@ import javax.swing.JOptionPane;
  * @author David Proffitt
  */
 public class Main {
-
     public static LineList sale = new LineList();
     private static Connection connection = null;
     private static final String driverName = "com.mysql.jdbc.Driver";
@@ -139,7 +140,7 @@ public class Main {
     public static HelpBroker mainHelpBroker = null;
     public static CSH.DisplayHelpFromSource csh = null;
     public static final String mainHelpSetName = "InnoSetupFiles/Html/ProffittCenter.hs";
-    private static final ResourceBundle bundle = ResourceBundle.getBundle("proffittcenter/resource/Main");
+    private static ResourceBundle bundle;
     public static final Logger logger = Logger.getLogger("");
     static FileHandler fHandler;
     public static TempProducts tempProducts;
@@ -174,10 +175,11 @@ public class Main {
     public static AddToStock addToStock;
     public static SelectYear selectYear;
     public static CashUp cashUp;
+    private static Component frame;
 
     public static void makeConnection() {
         // Make the driver class available.
-
+System.out.println( "z" );
         if (settingsTab != null) {
             String serverName,mydatabase,userName;
             serverName="";
@@ -298,6 +300,11 @@ public class Main {
      * @param args the command line arguments 
      */
     public static void main(String[] args) {
+        
+//        JOptionPane.showMessageDialog(frame, "302");
+        Locale localeGiven= Locale.getDefault();
+
+        bundle = ResourceBundle.getBundle("proffittcenter/resource/Main");
         root = Preferences.userNodeForPackage(Main.class);
         String secondLine;
         String fileString="";
@@ -307,7 +314,8 @@ public class Main {
             
             FileReader f=SalesScreen.getAppData();
             if(f!=null){
-                try {                
+                try {
+                    JOptionPane.showMessageDialog(frame, "314");
                     //we want second line of f
                     BufferedReader text = new BufferedReader(f);
                     String firstLine = text.readLine();
