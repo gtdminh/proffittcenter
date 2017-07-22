@@ -276,6 +276,7 @@ public class Takings extends EscapeDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dateChooserDialog1 = new datechooser.beans.DateChooserDialog();
         jPanel1 = new javax.swing.JPanel();
         closeButton = new javax.swing.JButton();
         printButton = new javax.swing.JButton();
@@ -356,21 +357,18 @@ public class Takings extends EscapeDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(tillIdSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tillIdSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 895, Short.MAX_VALUE)
-                        .addComponent(calculateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(printButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(calculateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(printButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -387,8 +385,8 @@ public class Takings extends EscapeDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(calculateButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
-                        .addComponent(printButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)))
+                        .addComponent(calculateButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE)
+                        .addComponent(printButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -421,7 +419,7 @@ public class Takings extends EscapeDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1087, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1160, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -431,20 +429,20 @@ public class Takings extends EscapeDialog {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void closeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeButtonActionPerformed
-        setVisible(false);
-}//GEN-LAST:event_closeButtonActionPerformed
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        rowData.clear();
+}//GEN-LAST:event_jTabbedPane1StateChanged
 
-    private void printButtonKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_printButtonKeyReleased
-        //ToDo
-}//GEN-LAST:event_printButtonKeyReleased
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        setVisible(false);
+    }//GEN-LAST:event_formWindowClosing
 
     private void calculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateButtonActionPerformed
         Audio.play("Beep");
@@ -458,8 +456,8 @@ public class Takings extends EscapeDialog {
         }
         if (jTabbedPane1.getSelectedIndex() == 0) {//Daily
             for (Calendar currentCal = startCal;
-                    currentCal.before(endCal);
-                    currentCal.add(Calendar.DAY_OF_MONTH, 1)) {
+                currentCal.before(endCal);
+                currentCal.add(Calendar.DAY_OF_MONTH, 1)) {
                 Calendar newCal = (Calendar) currentCal.clone();
                 newCal.add(Calendar.DAY_OF_MONTH, 1);
                 calculate(currentCal, newCal);
@@ -467,43 +465,43 @@ public class Takings extends EscapeDialog {
             }
         } else if (jTabbedPane1.getSelectedIndex() == 1) {//Weekly
             for (Calendar currentCal = startCal;
-                    currentCal.before(endCal);
-                    currentCal.add(Calendar.WEEK_OF_YEAR, 1)) {
+                currentCal.before(endCal);
+                currentCal.add(Calendar.WEEK_OF_YEAR, 1)) {
                 Calendar newCal = (Calendar) currentCal.clone();
                 newCal.add(Calendar.WEEK_OF_YEAR, 1);
                 calculate(currentCal, newCal);
             }
         } else if (jTabbedPane1.getSelectedIndex() == 2) {//Monthly
             for (Calendar currentCal = startCal;
-                    currentCal.before(endCal);
-                    currentCal.add(Calendar.MONTH, 1)) {
+                currentCal.before(endCal);
+                currentCal.add(Calendar.MONTH, 1)) {
                 Calendar newCal = (Calendar) currentCal.clone();
                 newCal.add(Calendar.MONTH, 1);
                 calculate(currentCal, newCal);
             }
         } else if (jTabbedPane1.getSelectedIndex() == 3) {//Yearly
             for (Calendar currentCal = startCal;
-                    currentCal.before(endCal);
-                    currentCal.add(Calendar.YEAR, 1)) {
+                currentCal.before(endCal);
+                currentCal.add(Calendar.YEAR, 1)) {
                 Calendar newCal = (Calendar) currentCal.clone();
                 newCal.add(Calendar.YEAR, 1);
                 calculate(currentCal, newCal);
             }
         }
         Audio.play("Beep");
-}//GEN-LAST:event_calculateButtonActionPerformed
+    }//GEN-LAST:event_calculateButtonActionPerformed
 
-    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
-        rowData.clear();
-}//GEN-LAST:event_jTabbedPane1StateChanged
-
-    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        setVisible(false);
-    }//GEN-LAST:event_formWindowClosing
+    private void printButtonKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_printButtonKeyReleased
+        //ToDo
+    }//GEN-LAST:event_printButtonKeyReleased
 
     private void printButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printButtonActionPerformed
         // TODO add print function
     }//GEN-LAST:event_printButtonActionPerformed
+
+    private void closeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeButtonActionPerformed
+        setVisible(false);
+    }//GEN-LAST:event_closeButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -902,6 +900,7 @@ public class Takings extends EscapeDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton calculateButton;
     private javax.swing.JButton closeButton;
+    private datechooser.beans.DateChooserDialog dateChooserDialog1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
