@@ -37,19 +37,19 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jUserName" alignment="0" max="32767" attributes="1"/>
-                              <Component id="jDatabase" alignment="0" pref="110" max="32767" attributes="1"/>
-                              <Component id="jPassword1" pref="110" max="32767" attributes="1"/>
-                              <Component id="jPassword2" alignment="0" max="32767" attributes="1"/>
-                              <Component id="jServerName" alignment="0" max="32767" attributes="1"/>
-                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="internetCheckbox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="connectButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="connectionLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jUserName" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jDatabase" alignment="0" pref="110" max="32767" attributes="1"/>
+                              <Component id="jPassword1" alignment="0" pref="110" max="32767" attributes="1"/>
+                              <Component id="jPassword2" alignment="0" max="32767" attributes="1"/>
+                              <Component id="jServerName" alignment="0" max="32767" attributes="1"/>
                           </Group>
                       </Group>
                   </Group>
@@ -270,19 +270,6 @@
         <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jLabel1KeyPressed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jUserName">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="1">
-            <StringItem index="0" value=" "/>
-          </StringArray>
-        </Property>
-        <Property name="name" type="java.lang.String" value="jUserName" noResource="true"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jUserNameActionPerformed"/>
-      </Events>
-    </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="name" type="java.lang.String" value="jPanel1" noResource="true"/>
@@ -385,6 +372,17 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dropboxButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jUserName">
+      <Properties>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="proffittcenter/resource/Settings.properties" key="Server.jUserName.text" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="jUserName" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jUserNameActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

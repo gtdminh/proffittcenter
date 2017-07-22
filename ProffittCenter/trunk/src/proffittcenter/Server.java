@@ -13,6 +13,7 @@ package proffittcenter;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.io.File;
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Arrays;
@@ -78,7 +79,6 @@ public class Server extends javax.swing.JPanel {
         createTablesButton = new javax.swing.JButton();
         internetCheckbox = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
-        jUserName = new javax.swing.JComboBox();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -88,6 +88,7 @@ public class Server extends javax.swing.JPanel {
         connectionLabel = new javax.swing.JLabel();
         testConnectionButton = new javax.swing.JButton();
         dropboxButton = new javax.swing.JButton();
+        jUserName = new javax.swing.JTextField();
 
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proffittcenter/resource/Settings"); // NOI18N
         setName(bundle.getString("Server.name")); // NOI18N
@@ -160,14 +161,6 @@ public class Server extends javax.swing.JPanel {
             }
         });
 
-        jUserName.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " " }));
-        jUserName.setName("jUserName"); // NOI18N
-        jUserName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jUserNameActionPerformed(evt);
-            }
-        });
-
         jPanel1.setName("jPanel1"); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -185,12 +178,11 @@ public class Server extends javax.swing.JPanel {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        java.util.ResourceBundle bundle2 = java.util.ResourceBundle.getBundle("proffittcenter/resource/Settings"); // NOI18N
-        jTextArea1.setText(bundle2.getString("Server.jTextArea1.text")); // NOI18N
+        jTextArea1.setText(bundle.getString("Server.jTextArea1.text")); // NOI18N
         jTextArea1.setName("jTextArea1"); // NOI18N
         jScrollPane1.setViewportView(jTextArea1);
 
-        locateDropbox.setText(bundle2.getString("Server.locateDropbox.text")); // NOI18N
+        locateDropbox.setText(bundle.getString("Server.locateDropbox.text")); // NOI18N
         locateDropbox.setName("locateDropbox"); // NOI18N
         locateDropbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,7 +193,7 @@ public class Server extends javax.swing.JPanel {
         dropboxLocation.setText(bundle.getString("Server.dropboxLocation.text")); // NOI18N
         dropboxLocation.setName("dropboxLocation"); // NOI18N
 
-        connectButton.setText(bundle2.getString("Server.connectButton.text")); // NOI18N
+        connectButton.setText(bundle.getString("Server.connectButton.text")); // NOI18N
         connectButton.setName("connectButton"); // NOI18N
         connectButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,7 +201,7 @@ public class Server extends javax.swing.JPanel {
             }
         });
 
-        connectionLabel.setText(bundle2.getString("Server.connectionLabel.text")); // NOI18N
+        connectionLabel.setText(bundle.getString("Server.connectionLabel.text")); // NOI18N
         connectionLabel.setName("connectionLabel"); // NOI18N
 
         testConnectionButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proffittcenter/resource/Test.png"))); // NOI18N
@@ -222,11 +214,19 @@ public class Server extends javax.swing.JPanel {
             }
         });
 
-        dropboxButton.setText(bundle2.getString("Server.dropboxButton.text")); // NOI18N
+        dropboxButton.setText(bundle.getString("Server.dropboxButton.text")); // NOI18N
         dropboxButton.setName("dropboxButton"); // NOI18N
         dropboxButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dropboxButtonActionPerformed(evt);
+            }
+        });
+
+        jUserName.setText(bundle.getString("Server.jUserName.text")); // NOI18N
+        jUserName.setName("jUserName"); // NOI18N
+        jUserName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jUserNameActionPerformed(evt);
             }
         });
 
@@ -247,18 +247,18 @@ public class Server extends javax.swing.JPanel {
                                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jUserName, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jDatabase, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                                .addComponent(jPassword1, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                                .addComponent(jPassword2)
-                                .addComponent(jServerName))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(internetCheckbox)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(connectButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(connectionLabel))))
+                                .addComponent(connectionLabel))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jUserName, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jDatabase, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                                .addComponent(jPassword1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                                .addComponent(jPassword2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jServerName, javax.swing.GroupLayout.Alignment.LEADING))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -361,7 +361,7 @@ public class Server extends javax.swing.JPanel {
         password = new String(input1);
         serverName = jServerName.getText();
         database = jDatabase.getText();
-        userName = (String) jUserName.getSelectedItem();
+        userName = jUserName.getText();
         if (!DatabaseCreate.connectionQuery()) {//returns true if till found
 //            testConnectionButton.setEnabled(false);
             CSH.setHelpIDString(getRootPane(), "xampp");
@@ -459,8 +459,8 @@ private void dropboxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         root.put("ServerName",jServerName.getText());
         database=jDatabase.getText();
         root.put("Database",jDatabase.getText());
-        userName=(String) jUserName.getSelectedItem();
-        root.put("UserName", (String) jUserName.getSelectedItem());        
+        userName=(String) jUserName.getText();
+        root.put("UserName", (String) jUserName.getText());        
         if(connectionQuery()){
             Audio.play("Beep");
             connectionLabel.setText("Connected");
@@ -474,8 +474,8 @@ private void dropboxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN
             root.put("ServerName",jServerName.getText());
             database=jDatabase.getText();
             root.put("Database",jDatabase.getText());
-            userName=(String) jUserName.getSelectedItem();
-            root.put("UserName", (String) jUserName.getSelectedItem());
+            userName=(String) jUserName.getText();
+            root.put("UserName", userName);
         } else {
             connectionLabel.setText("Not onnected");
         }
@@ -513,7 +513,7 @@ private void dropboxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jServerName;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JComboBox jUserName;
+    private javax.swing.JTextField jUserName;
     private javax.swing.JButton locateDropbox;
     private javax.swing.JButton testConnectionButton;
     // End of variables declaration//GEN-END:variables
@@ -560,9 +560,24 @@ private void dropboxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         dropboxDirectoryAsString = root.get("dropboxDirectory","");
         dropboxLocation.setText(dropboxDirectoryAsString);
         connectButton.setName("Connect"); 
-        jUserName.removeAllItems();
-        jUserName.addItem(userName);
-    }
+//       
+//for (int i=1;i<255;i++){
+//        String subnet;
+//            subnet = "192.168.8";
+//        String host=subnet + "." + i;
+//            try {
+//                if (InetAddress.getByName(host).isReachable(timeout)){
+//                    System.out.println(host + " is reachable");
+//                }   } catch (UnknownHostException ex) {
+//                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (IOException ex) {
+//                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//   }
+        userName = root.get("UserName","root");
+        jUserName.setText(userName);
+        }
+
 
     public boolean ok() {
         input1 = Main.server.getPassword1();
@@ -586,8 +601,8 @@ private void dropboxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         root.put("ServerName",jServerName.getText());
         database=jDatabase.getText();
         root.put("Database",jDatabase.getText());
-        userName=(String) jUserName.getSelectedItem();
-        root.put("UserName", (String) jUserName.getSelectedItem());
+        userName= jUserName.getText();
+        root.put("UserName",  jUserName.getText());
         if (!DatabaseCreate.connectionQuery()) {
             return false;
         }
@@ -602,7 +617,7 @@ private void dropboxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         }
         root.put("ServerName", jServerName.getText());
         root.put("Database", jDatabase.getText());
-        root.put("UserName", (String) jUserName.getSelectedItem());
+        root.put("UserName", (String) jUserName.getText());
         root.put("Password", password);
         internetEnabled = internetCheckbox.isSelected();
         root.putBoolean("InternetEnabled", internetEnabled);
