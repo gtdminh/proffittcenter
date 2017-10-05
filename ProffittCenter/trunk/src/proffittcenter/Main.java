@@ -424,13 +424,16 @@ System.out.println( "z" );
                 JOptionPane.showMessageDialog(null, "Splash image not found! " + imageURL, "error", JOptionPane.ERROR_MESSAGE);
                 Main.logger.log(Level.SEVERE, null, "Main: Splash image not found");
             }
+//            JOptionPane.showMessageDialog(frame, "427");
             server = new Server();
+//            JOptionPane.showMessageDialog(frame, "428");
             hardware = new Hardware();
             settingsTab = new SettingsTabbed(null, true);
             createDatabase = new DatabaseCreate();
             boolean b = true;
             if (!DatabaseCreate.connectionQuery()) {
                 //connection does not exist
+                JOptionPane.showMessageDialog(frame, "Main-436");
                 settingsTab.setLocation(20, 20);
                 b = settingsTab.execute(true);
             } else if (!DatabaseCreate.databaseQuery()) {
